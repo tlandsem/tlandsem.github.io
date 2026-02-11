@@ -59,3 +59,31 @@ document.addEventListener("keydown", (e) => {
 document.querySelectorAll("img").forEach(img => {
   img.addEventListener("contextmenu", e => e.preventDefault());
 });
+
+let touchStartX = 0;
+let touchEndX = 0;
+
+lightbox.addEventListener("touchstart", (e) => {
+  touchStartX = e.changedTouches[0].screenX;
+});
+
+lightbox.addEventListener("touchend", (e) => {
+  touchEndX = e.changedTouches[0].screenX;
+  handleSwipe();
+});
+
+function handleSwipe() {
+  const swipeDistance = touchEndX - touchStartX;
+
+  // hvor langt må du swipe for å trigge
+  const threshold = 50;
+
+  if (swipeDistance > threshold) {
+    prevImage(); // swipe høyre
+  }
+
+  if (swipeDistance < -threshold) {
+    nextImage(); // swipe venstre
+  }
+}
+
