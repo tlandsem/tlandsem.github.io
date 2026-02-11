@@ -360,6 +360,7 @@ h1 {
 
 .social-row {
   display: flex;
+  justify-content: center;
   align-items: center;
   gap: 10px;
   margin-top: 6px;
@@ -376,5 +377,6 @@ h1 {
   transform: scale(1.15);
   opacity: 0.8;
 }
+
 
 
