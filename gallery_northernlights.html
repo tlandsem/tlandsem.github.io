@@ -19,32 +19,64 @@
 <div class="galleri">
 </div>
 
-    <img src="gallery/northernlights/IMG_9585.JPEG" onclick="openLightbox(this)">
-    <img src="gallery/northernlights/IMG_9118.JPEG" onclick="openLightbox(this)">
-    <img src="gallery/northernlights/IMG_9121.JPEG" onclick="openLightbox(this)">
-    <img src="gallery/northernlights/IMG_9342.JPEG" onclick="openLightbox(this)">
-    <img src="/gallery/northernlights/IMG_9596.JPEG" onclick="openLightbox(this)">
+    <img src="gallery/northernlights/IMG_9585.JPEG" onclick="openLightbox(0)">
+    <img src="gallery/northernlights/IMG_9118.JPEG" onclick="openLightbox(1)">
+    <img src="gallery/northernlights/IMG_9121.JPEG" onclick="openLightbox(2)">
+    <img src="gallery/northernlights/IMG_9342.JPEG" onclick="openLightbox(3)">
+    <img src="/gallery/northernlights/IMG_9596.JPEG" onclick="openLightbox(4)">
 
 </div>
 
 <!-- Lightbox -->
-
-<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+<div id="lightbox" class="lightbox">
+<span class="arrow left" onclick="prevImage(event)">❮</span>
 <img id="lightbox-img" class="lightbox-img">
+<span class="arrow right" onclick="nextImage(event)">❯</span>
+<span class="close" onclick="closeLightbox()">×</span>
 </div>
 
 <script>
 
-function openLightbox(img) {
+const images = [
+"/gallery/northernlights/IMG_9585.JPEG",
+"/gallery/northernlights/IMG_9118.JPEG",
+"/gallery/northernlights/IMG_9121.JPEG",
+"/gallery/northernlights/IMG_9342.JPEG",
+"/gallery/northernlights/IMG_9596.JPEG",
+];
+
+let currentIndex = 0;
+
+function openLightbox(index) {
+  currentIndex = index;
   document.getElementById("lightbox").style.display = "flex";
-  document.getElementById("lightbox-img").src = img.src;
+  document.getElementById("lightbox-img").src = images[currentIndex];
 }
 
 function closeLightbox() {
   document.getElementById("lightbox").style.display = "none";
 }
 
+function nextImage(event) {
+  event.stopPropagation();
+  currentIndex = (currentIndex + 1) % images.length;
+  document.getElementById("lightbox-img").src = images[currentIndex];
+}
+
+function prevImage(event) {
+  event.stopPropagation();
+  currentIndex = (currentIndex - 1 + images.length) % images.length;
+  document.getElementById("lightbox-img").src = images[currentIndex];
+}
+
+document.addEventListener("keydown", function(e) {
+  if (e.key === "ArrowRight") nextImage(e);
+  if (e.key === "ArrowLeft") prevImage(e);
+  if (e.key === "Escape") closeLightbox();
+});
+
 </script>
 
 </body>
 </html>
+
