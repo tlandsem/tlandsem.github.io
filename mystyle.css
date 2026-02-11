@@ -84,26 +84,6 @@ h1 {
   text-align: center;
 }
 
-.galleri {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 15px;
-}
-
-.galleri img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 10px;
-    transition: transform 0.3s ease;
-    cursor: pointer;
-    margin-top: 40px;
-}
-
-.galleri img:hover {
-  transform: scale(1.05);
-}
-
 .button {
     display: inline-block;
     padding: 12px 28px;
@@ -128,6 +108,27 @@ h1 {
     transform: translateY(0); /* trykk-effekt */
 }
 
+.galleri {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.galleri img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.galleri img:hover {
+  transform: scale(1.05);
+}
+
+/* Lightbox */
+
 .lightbox {
   display: none;
   position: fixed;
@@ -138,7 +139,6 @@ h1 {
   background: rgba(0,0,0,0.9);
   justify-content: center;
   align-items: center;
-  animation: fadeIn 0.3s;
 }
 
 .lightbox-img {
@@ -218,3 +218,4 @@ h1 {
 .contact-form button:hover {
   background: #3b5f3b;
 }
+
