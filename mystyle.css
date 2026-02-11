@@ -1,0 +1,358 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+
+    background-image: linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0.9)),
+                    url("naturemountain.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.meny {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(4px);
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+    z-index: 9999;
+}
+
+.meny ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.meny li {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+.meny a {
+    text-decoration: none;
+    font-family: "Trirong";
+    font-size: 1.1rem;
+    color: #2f4f4f;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.meny a:hover {
+    color: darkolivegreen;
+}
+
+/* HERO BACKGROUND */
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+    margin: 0;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    animation: cinematicDrift 20s ease-in-out infinite alternate;
+    z-index: -1;
+}
+
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    background: url("naturemountain.png") center/cover no-repeat;
+    z-index: -1;
+}
+
+/* Calm-style slow movement */
+@keyframes cinematicDrift {
+    from {
+        transform: scale(1) translateY(0);
+    }
+    to {
+        transform: scale(1.08) translateY(-10px);
+    }
+}
+
+.hero-content {
+    animation: heroFade 2s ease forwards;
+    opacity: 0;
+}
+
+@keyframes heroFade {
+    to {
+        opacity: 1;
+    }
+}
+
+.hero h1 {
+    color: rgba(255,255,255,0.95);
+    font-size: 4rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+
+    text-shadow:
+        0 4px 20px rgba(0,0,0,0.6),
+        0 2px 8px rgba(0,0,0,0.4);
+}
+
+.hero p {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+/* BUTTONS */
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.button.primary {
+    background: linear-gradient(135deg, #4f6f52, #2f4f4f);
+}
+
+.button.secondary {
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(255,255,255,0.3);
+}
+
+h1 {
+    color: black;
+    margin-top: 40px;
+    text-align: center;
+    text-shadow: 2px 2px grey;
+    font-family: "Trirong", serif;
+    font-size: 50px;
+}
+
+.introbox {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 40px 50px;
+    background: rgba(255, 255, 255, 0.75);
+    border-radius: 12px;
+    backdrop-filter: blur(4px);
+    box-shadow: 0 4px 25px rgba(0,0,0,0.18);
+    font-family: "Merriweather";
+    font-size: 0.9rem;
+    line-height: 1.7;
+    text-align: center;
+}
+
+.profilbilde {
+    position: center;
+    width: 80px;
+    height: 100px;
+    object-fit: cover;
+    margin: 20px auto;
+}
+
+.galleri {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+.galleri img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.galleri img:hover {
+    transform: scale(1.08);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+.gallery-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 30px 0;
+  flex-wrap: wrap; /* viktig for mobil */
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 28px;
+    background-color: #456a45;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    font-family: Trirong;
+    border: none;
+    border-radius: 10px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    margin-bottom: 20px;
+}
+
+.button:hover {
+    background-color: #243c24; /* litt mørkere grønn */
+    transform: translateY(-2px); /* løfter knappen litt */
+}
+
+.button:active {
+    transform: translateY(0); /* trykk-effekt */
+}
+
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s;
+}
+
+.lightbox-img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    font-size: 50px;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    user-select: none;
+}
+
+.left {
+    left: 30px;
+}
+
+.right {
+    right: 30px;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.contact-form {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 30px;
+    background: rgba(255,255,255,0.9);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+.contact-form button {
+    margin-top: 20px;
+    padding: 12px;
+    background: darkolivegreen;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background: #3b5f3b;
+}
+
+.footer {
+    transition: opacity 0.3s ease;
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 12px 20px;
+
+    background: rgba(0,0,0,0.35);
+    backdrop-filter: blur(8px);
+
+    color: white;
+    font-size: 0.85rem;
+    text-align: center;
+    border-radius: 12px;
+}
+
+.home .footer {
+  margin: -115px auto 40px auto;
+}
+
+.footer a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.privacy-text {
+  font-size: 0.8rem;
+  padding: 0 40px; /* juster tallet */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
