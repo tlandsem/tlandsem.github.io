@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Trine's website - Gallery</title>
+    <link rel="stylesheet" href="mystyle.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
+</head>
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox">
+  <span class="close">&times;</span>
+  <span class="arrow left">&#10094;</span>
+  <img class="lightbox-img" id="lightbox-img">
+  <span class="arrow right">&#10095;</span>
+</div>
+<script src="lightbox.js" defer></script>
+<body>
+<nav class="meny">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About me</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+<h1>Gallery</h1>
+
+<a href="gallery_nature.html" class="button">Nature</a>
+<a href="gallery_northernlights.html" class="button">Northern Lights</a>
+<a href="gallery_norway.html" class="button">Norway</a>
+<a href="gallery_svalbard.html" class="button">Svalbard</a>
+<div id="galleri" class="galleri"></div>
+<p style="font-size: 0.8rem;"><i>© All photographs on this website are the intellectual property of the owner and are protected by international copyright laws.
+    Unauthorized use, reproduction, or distribution is strictly prohibited. For licensing or usage inquiries, please contact me for
+    written permission.</i></p>
+<script src="script.js"></script>
+
+<div class="galleri">
+    <img src="/gallery/IMG_1.JPEG">
+    <img src="/gallery/IMG_2.JPEG">
+    <img src="/gallery/IMG_3.JPEG">
+    <img src="/gallery/IMG_4.JPEG">
+    <img src="/gallery/IMG_5.JPEG">
+    <img src="/gallery/IMG_6.JPEG">
+    <img src="/gallery/IMG_7.JPEG">
+    <img src="/gallery/IMG_8.JPEG">
+    <img src="/gallery/IMG_9.JPEG">
+    <img src="/gallery/IMG_10.JPEG">
+    <img src="/gallery/IMG_11.JPEG">
+    <img src="/gallery/IMG_12.JPEG">
+    <img src="/gallery/IMG_13.JPEG">
+    <img src="/gallery/IMG_14.JPEG">
+    <img src="/gallery/IMG_15.JPEG">
+    <img src="/gallery/IMG_16.JPEG">
+</div>
+
+<script>
+document.addEventListener("contextmenu", event => event.preventDefault());
+</script>
+
+<footer class="footer">
+  <p>© 2026 Trine Landsem. All rights reserved.</p>
+   <p>
+       <a href="https://www.instagram.com/landsemtrine/" target="_blank">
+        Instagram
+       </a> •
+       <a href="https://www.linkedin.com/in/trinelandsem/" target="_blank">
+        LinkedIn
+       </a> •
+       <a href="contact.html">Contact</a>
+  </p>
+</footer>
+
+</body>
+</html>
+
