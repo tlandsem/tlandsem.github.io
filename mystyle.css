@@ -366,8 +366,8 @@ h1 {
 }
 
 .icon {
-  width: 28px;
-  height: 28px;
+  width: 16px;
+  height: 16px;
   fill: #2f4f4f;
   opacity: 0.8;
   transition: transform 0.25s ease, opacity 0.25s ease;
@@ -377,3 +377,4 @@ h1 {
   transform: scale(1.2);
   opacity: 1;
 }
+
