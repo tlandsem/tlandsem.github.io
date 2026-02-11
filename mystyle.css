@@ -356,3 +356,7 @@ h1 {
   margin: 0 auto;
   padding: 0 20px;
 }
+
+.back-btn {
+  margin-left: 20px;  /* flytter mot høyre */
+}
