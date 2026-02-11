@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Trine's website - Gallery</title>
+    <link rel="stylesheet" href="mystyle.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
+</head>
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox">
+  <span class="close">&times;</span>
+  <span class="arrow left">&#10094;</span>
+  <img class="lightbox-img" id="lightbox-img">
+  <span class="arrow right">&#10095;</span>
+</div>
+<script src="lightbox.js" defer></script>
+
+<body>
+<nav class="meny">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About me</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+<h1>Gallery - Northern Lights</h1>
+<a href="gallery.html" class="button">Back</a>
+<p style="font-size: 0.8rem;"><i>© All photographs on this website are the intellectual property of the owner and are protected by international copyright laws.
+    Unauthorized use, reproduction, or distribution is strictly prohibited. For licensing or usage inquiries, please contact me for
+    written permission.</i></p>
+
+<div class="galleri">
+    <img src="gallery/northernlights/IMG_9585.JPEG">
+    <img src="gallery/northernlights/IMG_9118.JPEG">
+    <img src="gallery/northernlights/IMG_9121.JPEG">
+    <img src="gallery/northernlights/IMG_9342.JPEG">
+    <img src="gallery/northernlights/IMG_9596.JPEG">
+</div>
+
+<script>
+document.addEventListener("contextmenu", event => event.preventDefault());
+</script>
+
+</body>
+</html>
