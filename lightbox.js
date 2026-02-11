@@ -12,7 +12,7 @@ function showImage(index) {
   currentIndex = index;
   lightboxImg.src = images[currentIndex].src;
   lightbox.style.display = "flex";
-  footer.style.display = "none";
+  footer.classList.add("hidden");
 }
 
 images.forEach((img, index) => {
@@ -35,13 +35,13 @@ prevBtn.addEventListener("click", prevImage);
 
 closeBtn.addEventListener("click", () => {
   lightbox.style.display = "none";
-  footer.style.display = "block";
+  footer.classList.remove("hidden");
 });
 
 lightbox.addEventListener("click", (e) => {
   if (e.target === lightbox) {
     lightbox.style.display = "none";
-    footer.style.display = "block";
+    footer.classList.remove("hidden");
   }
 });
 
@@ -51,7 +51,7 @@ document.addEventListener("keydown", (e) => {
     if (e.key === "ArrowLeft") prevImage();
     if (e.key === "Escape") {
         lightbox.style.display = "none";
-        footer.style.display = "block";
+        footer.classList.remove("hidden");
    }
   }
 });
@@ -86,4 +86,5 @@ function handleSwipe() {
     nextImage(); // swipe venstre
   }
 }
+
 
