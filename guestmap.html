@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trine Landsem | Guestbook</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+    <link rel="stylesheet" href="mystyle.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
+    <style>
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            border: none;
+        }
+
+        button {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            background: #4f6f6f;
+            color: white;
+            cursor: pointer;
+        }
+
+        #map {
+            height: 400px;
+            margin-top: 40px;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+<nav class="meny">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About me</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+<div class="container">
+<h1>Guestbook Map</h1>
+
+<input type="text" id="name" placeholder="Name">
+<input type="text" id="location" placeholder="City, Country">
+<textarea id="message" placeholder="Write a message..."></textarea>
+<button onclick="addMessage()">Send</button>
+
+<div id="map"></div>
+</div>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+import { getFirestore, collection, addDoc, getDocs } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyB6xTimCHkoT3JS8MMkZhfdj1B5iCLBSQM",
+  authDomain: "guestmap-b116d.firebaseapp.com",
+  projectId: "guestmap-b116d",
+  storageBucket: "guestmap-b116d.firebasestorage.app",
+  messagingSenderId: "994758338890",
+  appId: "1:994758338890:web:90d77bcfdbf51ec18979b3",
+  measurementId: "G-SLKQJWRSLZ"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+const map = L.map('map').setView([20, 0], 2);
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+}).addTo(map);
+
+window.addMessage = async function() {
+  const name = document.getElementById("name").value;
+  const message = document.getElementById("message").value;
+  const location = document.getElementById("location").value;
+
+  if (!name || !message || !location) return;
+
+  const response = await fetch(
+    `https://nominatim.openstreetmap.org/search?format=json&q=${location}`
+  );
+
+  const data = await response.json();
+
+  if (data.length > 0) {
+    const lat = data[0].lat;
+    const lon = data[0].lon;
+
+    await addDoc(collection(db, "guestmap"), {
+      name,
+      message,
+      location,
+      lat,
+      lon
+    });
+
+    location.reload();
+  }
+};
+
+async function loadMarkers() {
+  const querySnapshot = await getDocs(collection(db, "guestmap"));
+
+  querySnapshot.forEach((doc) => {
+    const data = doc.data();
+    L.circleMarker([data.lat, data.lon], {
+        radius: 6,
+        fillOpacity: 0.8
+    })
+    .addTo(map)
+    .bindPopup(`<strong>${data.name}</strong><br>${data.message}<br><em>${data.location}</em>`);
+  });
+}
+
+loadMarkers();
+</script>
+<script>
+const map = L.map('map').setView([20, 0], 2);
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap contributors'
+}).addTo(map);
+</script>
+
+</body>
+</html>
