@@ -74,13 +74,8 @@ const firebaseConfig = {
   projectId: "guestmap-b116d",
   storageBucket: "guestmap-b116d.firebasestorage.app",
   messagingSenderId: "994758338890",
-  appId: "1:994758338890:web:90d77bcfdbf51ec18979b3",
-  measurementId: "G-SLKQJWRSLZ"
+  appId: "1:994758338890:web:90d77bcfdbf51ec18979b3"
 };
-
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
@@ -88,9 +83,10 @@ const db = getFirestore(app);
 const map = L.map('map').setView([20, 0], 2);
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '&copy; OpenStreetMap contributors'
 }).addTo(map);
 
-window.addMessage = async function() {
+async function addMessage() {
   const name = document.getElementById("name").value;
   const message = document.getElementById("message").value;
   const location = document.getElementById("location").value;
@@ -117,16 +113,20 @@ window.addMessage = async function() {
 
     location.reload();
   }
-};
+}
+
+document.getElementById("sendBtn").addEventListener("click", addMessage);
 
 async function loadMarkers() {
   const querySnapshot = await getDocs(collection(db, "guestmap"));
 
   querySnapshot.forEach((doc) => {
     const data = doc.data();
+
     L.circleMarker([data.lat, data.lon], {
-        radius: 6,
-        fillOpacity: 0.8
+      radius: 6,
+      color: "#4f6f6f",
+      fillOpacity: 0.8
     })
     .addTo(map)
     .bindPopup(`<strong>${data.name}</strong><br>${data.message}<br><em>${data.location}</em>`);
@@ -135,13 +135,8 @@ async function loadMarkers() {
 
 loadMarkers();
 </script>
-<script>
-const map = L.map('map').setView([20, 0], 2);
 
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; OpenStreetMap contributors'
-}).addTo(map);
-</script>
 
 </body>
 </html>
+
