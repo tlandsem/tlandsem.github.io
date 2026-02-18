@@ -87,4 +87,40 @@ function handleSwipe() {
   }
 }
 
+import { doc, getDoc, setDoc, updateDoc, increment }
+from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+
+async function updateDailyVisitors() {
+
+  const today = new Date().toISOString().split("T")[0];
+  const storedDate = localStorage.getItem("lastVisitDate");
+
+  const docRef = doc(db, "dailyStats", today);
+
+  if (storedDate !== today) {
+
+    const snap = await getDoc(docRef);
+
+    if (snap.exists()) {
+      await updateDoc(docRef, {
+        count: increment(1)
+      });
+    } else {
+      await setDoc(docRef, {
+        count: 1
+      });
+    }
+
+    localStorage.setItem("lastVisitDate", today);
+  }
+
+  const updatedSnap = await getDoc(docRef);
+
+  if (updatedSnap.exists()) {
+    document.getElementById("visitorCount").textContent =
+      updatedSnap.data().count;
+  }
+}
+
+updateDailyVisitors();
 
