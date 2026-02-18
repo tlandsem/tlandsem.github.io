@@ -90,23 +90,22 @@ function handleSwipe() {
 import { doc, getDoc, setDoc, updateDoc, increment }
 from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
 
-async function updateDailyVisitors() {
+async function updateUniqueVisitors() {
 
   const today = new Date().toISOString().split("T")[0];
   const storedDate = localStorage.getItem("lastVisitDate");
 
-  const docRef = doc(db, "dailyStats", today);
+  const counterRef = doc(db, "siteStats", "uniqueVisitors");
+  const snap = await getDoc(counterRef);
 
   if (storedDate !== today) {
 
-    const snap = await getDoc(docRef);
-
     if (snap.exists()) {
-      await updateDoc(docRef, {
+      await updateDoc(counterRef, {
         count: increment(1)
       });
     } else {
-      await setDoc(docRef, {
+      await setDoc(counterRef, {
         count: 1
       });
     }
@@ -114,7 +113,7 @@ async function updateDailyVisitors() {
     localStorage.setItem("lastVisitDate", today);
   }
 
-  const updatedSnap = await getDoc(docRef);
+  const updatedSnap = await getDoc(counterRef);
 
   if (updatedSnap.exists()) {
     document.getElementById("visitorCount").textContent =
@@ -122,5 +121,7 @@ async function updateDailyVisitors() {
   }
 }
 
-updateDailyVisitors();
+updateUniqueVisitors();
+
+
 
