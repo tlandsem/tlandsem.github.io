@@ -87,41 +87,6 @@ function handleSwipe() {
   }
 }
 
-import { doc, getDoc, setDoc, updateDoc, increment }
-from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
-
-async function updateUniqueVisitors() {
-
-  const today = new Date().toISOString().split("T")[0];
-  const storedDate = localStorage.getItem("lastVisitDate");
-
-  const counterRef = doc(db, "siteStats", "uniqueVisitors");
-  const snap = await getDoc(counterRef);
-
-  if (storedDate !== today) {
-
-    if (snap.exists()) {
-      await updateDoc(counterRef, {
-        count: increment(1)
-      });
-    } else {
-      await setDoc(counterRef, {
-        count: 1
-      });
-    }
-
-    localStorage.setItem("lastVisitDate", today);
-  }
-
-  const updatedSnap = await getDoc(counterRef);
-
-  if (updatedSnap.exists()) {
-    document.getElementById("visitorCount").textContent =
-      updatedSnap.data().count;
-  }
-}
-
-updateUniqueVisitors();
 
 
 
