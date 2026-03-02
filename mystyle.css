@@ -229,6 +229,7 @@ h1 {
     transform: translateY(0); /* trykk-effekt */
 }
 
+/* GALLERY */
 .lightbox {
     display: none;
     position: fixed;
@@ -281,6 +282,7 @@ h1 {
     to {opacity: 1;}
 }
 
+/* CONTACT */
 .contact-form {
     max-width: 500px;
     margin: 40px auto;
@@ -321,6 +323,7 @@ h1 {
     background: #3b5f3b;
 }
 
+/* FOOTER */
 .footer {
     transition: opacity 0.3s ease;
     max-width: 700px;
@@ -354,6 +357,7 @@ h1 {
   pointer-events: none;
 }
 
+/* VIDEO */
 .video-wrapper {
     display: flex;
     justify-content: center;
@@ -363,9 +367,19 @@ h1 {
 
 .video-wrapper iframe {
     width: 100%;
-    max-width: 1300px; /* gjør videoen større – juster etter smak */
+    max-width: 1300px;
     aspect-ratio: 16/9;
     border: none;
+}
+
+/* SO-ME-icons */
+.social-row img {
+    width: 24px;
+    height: auto;
+}
+
+.social-row a {
+    margin-right: 10px;
 }
 
 
