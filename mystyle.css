@@ -363,10 +363,11 @@ h1 {
 
 .video-wrapper iframe {
     width: 100%;
-    max-width: 900px; /* gjør videoen større – juster etter smak */
+    max-width: 1100px; /* gjør videoen større – juster etter smak */
     aspect-ratio: 16/9;
     border: none;
 }
+
 
 
 
