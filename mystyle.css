@@ -143,6 +143,12 @@ body {
     border: 1px solid rgba(255,255,255,0.3);
 }
 
+.button.tertiary {
+    background-color: #ffffff;
+    color: #333;
+    border: 2px solid #ffffff;
+}
+
 h1 {
     color: black;
     margin-top: 40px;
@@ -381,6 +387,7 @@ h1 {
 .social-row a {
     margin-right: 10px;
 }
+
 
 
 
