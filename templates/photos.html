@@ -290,6 +290,23 @@
     if (e.key === 'ArrowLeft')  stepLightbox(-1);
     if (e.key === 'Escape')     closeLightbox();
   });
+
+  // Swipe-støtte for mobil
+let touchStartX = 0;
+let touchEndX = 0;
+
+document.getElementById('lightbox').addEventListener('touchstart', function(e) {
+  touchStartX = e.changedTouches[0].screenX;
+});
+
+document.getElementById('lightbox').addEventListener('touchend', function(e) {
+  touchEndX = e.changedTouches[0].screenX;
+  const diff = touchStartX - touchEndX;
+  if (Math.abs(diff) > 50) {
+    if (diff > 0) stepLightbox(1);  // swipe venstre = neste
+    else stepLightbox(-1);           // swipe høyre = forrige
+  }
+});
 </script>
 <div style="text-align: center; padding: 20px 24px 48px; color: rgba(0,200,160,0.35); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; border-top: 1px solid rgba(0,200,160,0.08); max-width: 1100px; margin: 0 auto;">
   © Trine Landsem · All photographs are protected by copyright.<br>
