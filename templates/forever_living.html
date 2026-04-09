@@ -1,0 +1,163 @@
+{% extends 'base.html' %}
+
+{% block title %}Trine Landsem - Forever Living{% endblock %}
+
+{% block content %}
+<style>
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .forever-wrap {
+    max-width: 820px;
+    margin: 60px auto;
+    padding: 0 24px 80px;
+    animation: fadeUp 1.4s cubic-bezier(0.22, 1, 0.36, 1) both;
+    animation-delay: 0.3s;
+    opacity: 0;
+  }
+
+  .forever-card {
+    background: rgba(8,20,30,0.75);
+    border: 1px solid rgba(0,200,160,0.2);
+    border-radius: 12px;
+    padding: 36px 40px;
+    backdrop-filter: blur(8px);
+    margin-bottom: 20px;
+  }
+
+  .forever-card h1 {
+    color: #00e5b3;
+    font-size: 13px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(0,200,160,0.15);
+  }
+
+  .forever-card h2 {
+    color: rgba(0,200,160,0.7);
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  .forever-card p {
+    color: rgba(200,240,230,0.75);
+    font-size: 15px;
+    line-height: 1.85;
+  }
+
+  .video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 8px;
+    border: 1px solid rgba(0,200,160,0.15);
+    margin-bottom: 0;
+  }
+
+  .video-wrapper iframe {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    border: none;
+  }
+
+  .store-btn {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: rgba(0,200,160,0.07);
+    border: 1px solid rgba(0,200,160,0.25);
+    border-radius: 10px;
+    padding: 18px 24px;
+    text-decoration: none;
+    transition: background 0.2s, border-color 0.2s;
+    margin-bottom: 12px;
+  }
+
+  .store-btn:last-child { margin-bottom: 0; }
+
+  .store-btn:hover {
+    background: rgba(0,200,160,0.13);
+    border-color: rgba(0,200,160,0.5);
+  }
+
+  .store-btn-icon {
+    font-size: 22px;
+    flex-shrink: 0;
+  }
+
+  .store-btn-text {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .store-btn-title {
+    color: #00e5b3;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+  }
+
+  .store-btn-desc {
+    color: rgba(160,220,210,0.55);
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    margin-top: 2px;
+  }
+
+  .store-btn-arrow {
+    margin-left: auto;
+    color: rgba(0,200,160,0.4);
+    font-size: 18px;
+  }
+</style>
+
+<div class="forever-wrap">
+
+  <!-- Header -->
+  <div class="forever-card">
+    <h1>// Forever Living</h1>
+    <p>
+      I am a Forever Business Owner and offer products produced by Forever Living.
+      <br><br>
+      Forever Living is the world's largest grower, manufacturer, and distributor of Aloe vera —
+      and when it comes to Aloe vera, we are simply the experts.
+      <br><br>
+      Since our beginnings in 1978, we have continuously searched the world for the finest natural ingredients.
+      These are then processed using the latest scientific advancements with one clear purpose:
+      to offer you and your family a balanced and healthy lifestyle.
+    </p>
+  </div>
+
+  <!-- Video -->
+  <div class="forever-card">
+    <h2>// About Forever Living</h2>
+    <div class="video-wrapper">
+      <iframe src="https://player.vimeo.com/video/379740990" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <!-- Store links -->
+  <div class="forever-card">
+    <h2>// Visit my store</h2>
+
+    <a class="store-btn" href="https://thealoeveraco.shop/drG74yKD" target="_blank" rel="noopener">
+      <span class="store-btn-icon">🛒</span>
+      <span class="store-btn-text">
+        <span class="store-btn-title">Online Store</span>
+        <span class="store-btn-desc">Go directly to my store and shop now</span>
+      </span>
+      <span class="store-btn-arrow">›</span>
+    </a>
+
+  </div>
+
+</div>
+{% endblock %}

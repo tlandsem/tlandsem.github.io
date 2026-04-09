@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+{% block title %}Trine Landsem - About me{% endblock %}
+
+{% block content %}
+<div style="max-width: 700px; margin: 60px auto; padding: 0 24px;">
+  <div style="background: rgba(8,20,30,0.75); border: 1px solid rgba(0,200,160,0.2); border-radius: 12px; padding: 40px; backdrop-filter: blur(8px);">
+      <img src="{{ url_for('static', filename='images/profilbilde.png') }}"
+       alt="Trine Landsem"
+       style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover;
+              border: 2px solid rgba(0,200,160,0.4); display: block; margin: 0 auto 28px;">
+    <h1 style="color: #00e5b3; font-size: 22px; letter-spacing: 0.08em; margin-bottom: 16px;">// ABOUT ME</h1>
+    <p style="color: rgba(200,240,230,0.85); line-height: 1.8; font-size: 15px;">
+        I hold a degree in early childhood education and have extensive experience in the kindergarten sector, where I currently work as a pedagogical leader and HSE coordinator. In this role, I am responsible for leading the educational work in my department,
+        as well as ensuring that health, safety, and information security standards are upheld across the entire organization — a responsibility I take very seriously.
+      <br>
+      <br>
+        A belief that people deserve to be protected, seen, and respected for who they are runs as a common thread through everything I do.
+        It was this conviction that drew me into cybersecurity — a field I am now studying with great enthusiasm. I aspire to help protect individuals, privacy,
+        and critical societal infrastructure in a world where digital threats are continuously growing.
+      <br>
+        I am driven by curiosity and a strong desire to grow, learn, and understand connections. To me, professional development is not simply about building competence
+        — it is about becoming a better version of myself, and about being able to contribute more meaningfully to the people I serve.
+      <br>
+      <br>
+        When I am not immersed in security or education, I find my balance in nature. A hike in the forest, a night in the mountains,
+        or quiet moments by a fishing lake recharge my energy and offer perspective. Camera in hand, I often capture moments along the way —
+        from sweeping landscapes to the small details that are easily overlooked.
+      </p>
+
+        <div style="margin-top: 28px; padding-top: 20px; border-top: 1px solid rgba(0,200,160,0.15); display: flex; gap: 16px; justify-content: center;">
+
+  <a href="https://www.linkedin.com/in/trinelandsem" target="_blank" rel="noopener"
+     style="display: flex; align-items: center; gap: 8px; background: rgba(0,200,160,0.07); border: 1px solid rgba(0,200,160,0.2); border-radius: 8px; padding: 10px 16px; text-decoration: none; transition: background 0.2s, border-color 0.2s;"
+     onmouseover="this.style.background='rgba(0,200,160,0.14)';this.style.borderColor='rgba(0,200,160,0.45)'"
+     onmouseout="this.style.background='rgba(0,200,160,0.07)';this.style.borderColor='rgba(0,200,160,0.2)'">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00e5b3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+      <rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>
+    </svg>
+    <span style="color: rgba(0,200,160,0.75); font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase;">LinkedIn</span>
+  </a>
+
+  <a href="https://www.facebook.com/trine.landsem" target="_blank" rel="noopener"
+     style="display: flex; align-items: center; gap: 8px; background: rgba(0,200,160,0.07); border: 1px solid rgba(0,200,160,0.2); border-radius: 8px; padding: 10px 16px; text-decoration: none; transition: background 0.2s, border-color 0.2s;"
+     onmouseover="this.style.background='rgba(0,200,160,0.14)';this.style.borderColor='rgba(0,200,160,0.45)'"
+     onmouseout="this.style.background='rgba(0,200,160,0.07)';this.style.borderColor='rgba(0,200,160,0.2)'">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00e5b3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+    </svg>
+    <span style="color: rgba(0,200,160,0.75); font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase;">Facebook</span>
+  </a>
+
+  <a href="https://www.instagram.com/landsemtrine" target="_blank" rel="noopener"
+     style="display: flex; align-items: center; gap: 8px; background: rgba(0,200,160,0.07); border: 1px solid rgba(0,200,160,0.2); border-radius: 8px; padding: 10px 16px; text-decoration: none; transition: background 0.2s, border-color 0.2s;"
+     onmouseover="this.style.background='rgba(0,200,160,0.14)';this.style.borderColor='rgba(0,200,160,0.45)'"
+     onmouseout="this.style.background='rgba(0,200,160,0.07)';this.style.borderColor='rgba(0,200,160,0.2)'">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00e5b3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+    </svg>
+    <span style="color: rgba(0,200,160,0.75); font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase;">Instagram</span>
+  </a>
+
+        </div>
+
+  </div>
+</div>
+{% endblock %}
