@@ -7,8 +7,8 @@ A cyberpunk-themed personal portfolio featuring an animated network background, 
 
 ## Pages
 - **Home** — Landing page
-- **About me** — Biography and background
-- **CV** — Work experience, education, and certifications
+- **About me** — Information and background
+- **CV** — Work experience, education and certifications
 - **Projects** — Portfolio of projects
 - **Photos** — Photography gallery with lightbox and swipe support
 - **Forever Living** — Forever Living products
