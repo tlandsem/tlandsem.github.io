@@ -47,6 +47,8 @@ trinelandsem.no/
 │           └── other/
 └── README.md
 ```
+## Tools
+Developed with assistance from AI tools for code generation and debugging.
 
 ## Deployment
 Hosted on GitHub Pages with a custom domain configured through Cloudflare DNS — including A-records and CNAME setup with HTTPS enforcement.
