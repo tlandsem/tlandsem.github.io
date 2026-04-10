@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trine Landsem - About me</title>
+  <link rel="icon" type="image/png" href="static/images/favicon.png">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { width: 100%; height: 100%; font-family: 'Rajdhani', sans-serif; background: #080d12; }
+    canvas { display: block; position: fixed; top: 0; left: 0; z-index: 0; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+    .hamburger span { display: block; width: 24px; height: 2px; background: #00e5b3; transition: 0.3s; }
+    nav { position: fixed; top: 0; left: 0; width: 100%; z-index: 100; background: rgba(10,15,20,0.75); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0,200,160,0.18); padding: 14px 40px; display: flex; align-items: center; justify-content: space-between; }
+    nav .logo { color: #00e5b3; font-weight: 700; font-size: 16px; letter-spacing: 0.12em; text-decoration: none; text-shadow: 0 0 18px rgba(0,220,180,0.35); }
+    nav ul { list-style: none; display: flex; gap: 32px; }
+    nav ul a { color: rgba(160,220,210,0.75); text-decoration: none; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; transition: color 0.2s; }
+    nav ul a:hover { color: #00e5b3; }
+    nav ul a.active { color: #00e5b3; border-bottom: 1.5px solid rgba(0,220,180,0.5); padding-bottom: 2px; }
+    @media (max-width: 768px) {
+      .hamburger { display: flex; }
+      nav ul { display: none; flex-direction: column; position: fixed; top: 52px; left: 0; width: 100%; background: rgba(10,15,20,0.95); padding: 20px; gap: 20px; border-bottom: 1px solid rgba(0,200,160,0.18); }
+      nav ul.open { display: flex; }
+    }
+    .page-content { position: relative; z-index: 10; padding-top: 80px; }
+    .status { position: fixed; bottom: 18px; right: 24px; font-size: 11px; color: rgba(0,180,140,0.45); letter-spacing: 0.1em; z-index: 1; }
+    .corner { position: fixed; width: 18px; height: 18px; border-color: rgba(0,200,160,0.35); border-style: solid; z-index: 1; }
+    .corner.tl { top: 12px; left: 12px; border-width: 1.5px 0 0 1.5px; }
+    .corner.tr { top: 12px; right: 12px; border-width: 1.5px 1.5px 0 0; }
+    .corner.bl { bottom: 12px; left: 12px; border-width: 0 0 1.5px 1.5px; }
+    .corner.br { bottom: 12px; right: 12px; border-width: 0 1.5px 1.5px 0; }
+  </style>
+</head>
+<body>
+<canvas id="c"></canvas>
+<div class="corner tl"></div><div class="corner tr"></div><div class="corner bl"></div><div class="corner br"></div>
+<div class="status" id="status">ONLINE</div>
+<nav>
+  <button class="hamburger" onclick="toggleMenu()" id="hamburger"><span></span><span></span><span></span></button>
+  <a class="logo" href="index.html">[ Trine Landsem ]</a>
+  <ul id="nav-menu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html" class="active">About me</a></li>
+    <li><a href="cv.html">CV</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="photos.html">Photos</a></li>
+    <li><a href="forever.html">Forever Living</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+<div class="page-content">
+<div style="max-width: 700px; margin: 60px auto; padding: 0 24px;">
+  <div style="background: rgba(8,20,30,0.75); border: 1px solid rgba(0,200,160,0.2); border-radius: 12px; padding: 40px; backdrop-filter: blur(8px);">
+    <img src="static/images/profilbilde.png" alt="Trine Landsem" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 2px solid rgba(0,200,160,0.4); display: block; margin: 0 auto 28px;">
+    <h1 style="color: #00e5b3; font-size: 22px; letter-spacing: 0.08em; margin-bottom: 16px;">// ABOUT ME</h1>
+    <p style="color: rgba(200,240,230,0.85); line-height: 1.8; font-size: 15px;">
+      I hold a degree in early childhood education and have extensive experience in the kindergarten sector, where I currently work as a pedagogical leader and HSE coordinator. In this role, I am responsible for leading the educational work in my department, as well as ensuring that health, safety, and information security standards are upheld across the entire organization — a responsibility I take very seriously.
+      <br><br>
+      A belief that people deserve to be protected, seen, and respected for who they are runs as a common thread through everything I do. It was this conviction that drew me into cybersecurity — a field I am now studying with great enthusiasm. I aspire to help protect individuals, privacy, and critical societal infrastructure in a world where digital threats are continuously growing.
+      <br>
+      I am driven by curiosity and a strong desire to grow, learn, and understand connections. To me, professional development is not simply about building competence — it is about becoming a better version of myself, and about being able to contribute more meaningfully to the people I serve.
+      <br><br>
+      When I am not immersed in security or education, I find my balance in nature. A hike in the forest, a night in the mountains, or quiet moments by a fishing lake recharge my energy and offer perspective. Camera in hand, I often capture moments along the way — from sweeping landscapes to the small details that are easily overlooked.
+    </p>
+    <div style="margin-top: 28px; padding-top: 20px; border-top: 1px solid rgba(0,200,160,0.15); display: flex; flex-wrap: wrap; gap: 12px; justify-content: center;">
+      <a href="https://www.linkedin.com/in/trinelandsem" target="_blank" rel="noopener" style="display: flex; align-items: center; gap: 8px; background: rgba(0,200,160,0.07); border: 1px solid rgba(0,200,160,0.2); border-radius: 8px; padding: 10px 16px; text-decoration: none;" onmouseover="this.style.background='rgba(0,200,160,0.14)';this.style.borderColor='rgba(0,200,160,0.45)'" onmouseout="this.style.background='rgba(0,200,160,0.07)';this.style.borderColor='rgba(0,200,160,0.2)'">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00e5b3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        <span style="color: rgba(0,200,160,0.75); font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase;">LinkedIn</span>
+      </a>
+      <a href="https://www.facebook.com/trine.landsem" target="_blank" rel="noopener" style="display: flex; align-items: center; gap: 8px; background: rgba(0,200,160,0.07); border: 1px solid rgba(0,200,160,0.2); border-radius: 8px; padding: 10px 16px; text-decoration: none;" onmouseover="this.style.background='rgba(0,200,160,0.14)';this.style.borderColor='rgba(0,200,160,0.45)'" onmouseout="this.style.background='rgba(0,200,160,0.07)';this.style.borderColor='rgba(0,200,160,0.2)'">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00e5b3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        <span style="color: rgba(0,200,160,0.75); font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase;">Facebook</span>
+      </a>
+      <a href="https://www.instagram.com/landsemtrine" target="_blank" rel="noopener" style="display: flex; align-items: center; gap: 8px; background: rgba(0,200,160,0.07); border: 1px solid rgba(0,200,160,0.2); border-radius: 8px; padding: 10px 16px; text-decoration: none;" onmouseover="this.style.background='rgba(0,200,160,0.14)';this.style.borderColor='rgba(0,200,160,0.45)'" onmouseout="this.style.background='rgba(0,200,160,0.07)';this.style.borderColor='rgba(0,200,160,0.2)'">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00e5b3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        <span style="color: rgba(0,200,160,0.75); font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase;">Instagram</span>
+      </a>
+    </div>
+  </div>
+</div>
+</div>
+<footer style="position: relative; z-index: 10; text-align: center; padding: 24px; border-top: 1px solid rgba(0,200,160,0.1); margin-top: 40px;">
+  <div style="margin-bottom: 12px; display: flex; justify-content: center; gap: 28px;">
+    <a href="https://www.linkedin.com/in/trinelandsem" target="_blank" rel="noopener" style="color: rgba(0,200,160,0.55); font-size: 13px; letter-spacing: 0.1em; text-decoration: none; text-transform: uppercase;" onmouseover="this.style.color='#00e5b3'" onmouseout="this.style.color='rgba(0,200,160,0.55)'">LinkedIn</a>
+    <a href="https://www.facebook.com/trine.landsem" target="_blank" rel="noopener" style="color: rgba(0,200,160,0.55); font-size: 13px; letter-spacing: 0.1em; text-decoration: none; text-transform: uppercase;" onmouseover="this.style.color='#00e5b3'" onmouseout="this.style.color='rgba(0,200,160,0.55)'">Facebook</a>
+    <a href="https://www.instagram.com/landsemtrine/" target="_blank" rel="noopener" style="color: rgba(0,200,160,0.55); font-size: 13px; letter-spacing: 0.1em; text-decoration: none; text-transform: uppercase;" onmouseover="this.style.color='#00e5b3'" onmouseout="this.style.color='rgba(0,200,160,0.55)'">Instagram</a>
+  </div>
+  <p style="color: rgba(0,200,160,0.25); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; margin: 0;">© 2026 Trine Landsem · All rights reserved</p>
+</footer>
+<script>
+function toggleMenu() { document.getElementById('nav-menu').classList.toggle('open'); }
+document.querySelectorAll('#nav-menu a').forEach(link => { link.addEventListener('click', () => { document.getElementById('nav-menu').classList.remove('open'); }); });
+const canvas = document.getElementById('c'); const ctx = canvas.getContext('2d');
+function resize() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
+resize(); window.addEventListener('resize', () => { resize(); initNodes(); });
+const GLYPHS = '01アイウエオABCDEF<>{}[]//\\&&||::?!#$%^*'.split('');
+let nodes = [], links = [], packets = [], glyphs = [];
+function rand(a, b) { return a + Math.random() * (b - a); }
+function initNodes() {
+  const W = canvas.width, H = canvas.height; const count = Math.floor(W * H / 13000); nodes = [];
+  for (let i = 0; i < count; i++) { nodes.push({ x: rand(40,W-40), y: rand(40,H-40), r: rand(2,4.5), vx: rand(-0.03,0.03), vy: rand(-0.03,0.03), pulseT: rand(0,Math.PI*2), type: Math.random()<0.1?'hub':'node' }); }
+  links = [];
+  for (let i = 0; i < nodes.length; i++) { for (let j = i+1; j < nodes.length; j++) { const dx=nodes[i].x-nodes[j].x,dy=nodes[i].y-nodes[j].y,d=Math.sqrt(dx*dx+dy*dy),maxDist=nodes[i].type==='hub'||nodes[j].type==='hub'?190:115; if(d<maxDist)links.push({a:i,b:j,d}); } }
+  packets = []; glyphs = [];
+  for (let k = 0; k < 28; k++) { glyphs.push({ x:rand(0,W), y:rand(0,H), char:GLYPHS[Math.floor(Math.random()*GLYPHS.length)], alpha:rand(0.03,0.1), size:rand(10,20), vy:rand(0.07,0.22) }); }
+}
+function spawnPacket() { if(links.length===0)return; const link=links[Math.floor(Math.random()*links.length)]; const isCritical=Math.random()<0.08; packets.push({link,t:0,speed:rand(0.002,0.006),fwd:Math.random()<0.5,color:isCritical?'rgba(255,80,100,0.85)':'rgba(0,230,180,0.8)'}); }
+let frame=0; const statusTexts=['ONLINE','FIREWALL: ACTIVE','ENCRYPTION: AES-256','PACKETS: 0 LOSS','TLS 1.3','THREAT LEVEL: LOW','NODES: SECURE']; let statusIdx=0;
+function draw() {
+  const W=canvas.width,H=canvas.height; ctx.fillStyle='#080d12'; ctx.fillRect(0,0,W,H);
+  const gStep=50; ctx.strokeStyle='rgba(0,180,140,0.055)'; ctx.lineWidth=0.5;
+  for(let x=0;x<W;x+=gStep){ctx.beginPath();ctx.moveTo(x,0);ctx.lineTo(x,H);ctx.stroke();}
+  for(let y=0;y<H;y+=gStep){ctx.beginPath();ctx.moveTo(0,y);ctx.lineTo(W,y);ctx.stroke();}
+  const vg=ctx.createRadialGradient(W/2,H/2,H*0.2,W/2,H/2,H*0.85); vg.addColorStop(0,'rgba(0,0,0,0)'); vg.addColorStop(1,'rgba(0,0,0,0.55)'); ctx.fillStyle=vg; ctx.fillRect(0,0,W,H);
+  for(const g of glyphs){ctx.save();ctx.globalAlpha=g.alpha;ctx.fillStyle='#00e5b3';ctx.font=`${g.size}px 'Courier New', monospace`;ctx.fillText(g.char,g.x,g.y);ctx.restore();g.y+=g.vy;if(g.y>H+30){g.y=-30;g.x=rand(0,W);g.char=GLYPHS[Math.floor(Math.random()*GLYPHS.length)];}}
+  for(const lk of links){const a=nodes[lk.a],b=nodes[lk.b];const alpha=Math.max(0,1-lk.d/160)*0.55;ctx.strokeStyle=`rgba(0,200,160,${alpha*0.22})`;ctx.lineWidth=0.5;ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke();}
+  for(let i=packets.length-1;i>=0;i--){const pk=packets[i];pk.t+=pk.speed;if(pk.t>=1){packets.splice(i,1);continue;}const a=nodes[pk.link.a],b=nodes[pk.link.b];const t=pk.fwd?pk.t:1-pk.t;const px=a.x+(b.x-a.x)*t,py=a.y+(b.y-a.y)*t;ctx.beginPath();ctx.arc(px,py,2.2,0,Math.PI*2);ctx.fillStyle=pk.color;ctx.fill();ctx.beginPath();ctx.arc(px,py,5.5,0,Math.PI*2);ctx.fillStyle=pk.color.replace('0.8','0.12').replace('0.85','0.12');ctx.fill();}
+  const t=frame*0.012;
+  for(const n of nodes){n.x+=n.vx;n.y+=n.vy;if(n.x<10||n.x>W-10)n.vx*=-1;if(n.y<10||n.y>H-10)n.vy*=-1;const pulse=0.5+0.5*Math.sin(t+n.pulseT);const r=n.type==='hub'?n.r*1.8:n.r;if(n.type==='hub'){ctx.beginPath();ctx.arc(n.x,n.y,r+7+pulse*5,0,Math.PI*2);ctx.fillStyle=`rgba(0,220,170,${0.04+pulse*0.05})`;ctx.fill();}ctx.beginPath();ctx.arc(n.x,n.y,r,0,Math.PI*2);ctx.fillStyle=n.type==='hub'?`rgba(0,230,180,${0.75+pulse*0.2})`:`rgba(0,190,150,${0.35+pulse*0.25})`;ctx.fill();if(n.type==='hub'){ctx.beginPath();ctx.arc(n.x,n.y,r*0.35,0,Math.PI*2);ctx.fillStyle='rgba(200,255,240,0.8)';ctx.fill();}}
+  if(frame%38===0)spawnPacket();
+  if(frame%200===0){statusIdx=(statusIdx+1)%statusTexts.length;document.getElementById('status').textContent=statusTexts[statusIdx];}
+  frame++;requestAnimationFrame(draw);
+}
+initNodes();draw();
+</script>
+</body>
+</html>

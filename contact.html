@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trine Landsem - Contact</title>
+  <link rel="icon" type="image/png" href="static/images/favicon.png">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { width: 100%; height: 100%; font-family: 'Rajdhani', sans-serif; background: #080d12; }
+    canvas { display: block; position: fixed; top: 0; left: 0; z-index: 0; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+    .hamburger span { display: block; width: 24px; height: 2px; background: #00e5b3; transition: 0.3s; }
+    nav { position: fixed; top: 0; left: 0; width: 100%; z-index: 100; background: rgba(10,15,20,0.75); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0,200,160,0.18); padding: 14px 40px; display: flex; align-items: center; justify-content: space-between; }
+    nav .logo { color: #00e5b3; font-weight: 700; font-size: 16px; letter-spacing: 0.12em; text-decoration: none; }
+    nav ul { list-style: none; display: flex; gap: 32px; }
+    nav ul a { color: rgba(160,220,210,0.75); text-decoration: none; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; transition: color 0.2s; }
+    nav ul a:hover { color: #00e5b3; }
+    nav ul a.active { color: #00e5b3; border-bottom: 1.5px solid rgba(0,220,180,0.5); padding-bottom: 2px; }
+    @media (max-width: 768px) { .hamburger { display: flex; } nav ul { display: none; flex-direction: column; position: fixed; top: 52px; left: 0; width: 100%; background: rgba(10,15,20,0.95); padding: 20px; gap: 20px; border-bottom: 1px solid rgba(0,200,160,0.18); } nav ul.open { display: flex; } }
+    .page-content { position: relative; z-index: 10; padding-top: 80px; }
+    .status { position: fixed; bottom: 18px; right: 24px; font-size: 11px; color: rgba(0,180,140,0.45); letter-spacing: 0.1em; z-index: 1; }
+    .corner { position: fixed; width: 18px; height: 18px; border-color: rgba(0,200,160,0.35); border-style: solid; z-index: 1; }
+    .corner.tl { top: 12px; left: 12px; border-width: 1.5px 0 0 1.5px; }
+    .corner.tr { top: 12px; right: 12px; border-width: 1.5px 1.5px 0 0; }
+    .corner.bl { bottom: 12px; left: 12px; border-width: 0 0 1.5px 1.5px; }
+    .corner.br { bottom: 12px; right: 12px; border-width: 0 1.5px 1.5px 0; }
+  </style>
+</head>
+<body>
+<canvas id="c"></canvas>
+<div class="corner tl"></div><div class="corner tr"></div><div class="corner bl"></div><div class="corner br"></div>
+<div class="status" id="status">ONLINE</div>
+<nav>
+  <button class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+  <a class="logo" href="index.html">[ Trine Landsem ]</a>
+  <ul id="nav-menu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About me</a></li>
+    <li><a href="cv.html">CV</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="photos.html">Photos</a></li>
+    <li><a href="forever.html">Forever Living</a></li>
+    <li><a href="contact.html" class="active">Contact</a></li>
+  </ul>
+</nav>
+<div class="page-content">
+<div style="max-width: 600px; margin: 60px auto; padding: 0 24px;">
+  <div style="background: rgba(255,255,255,0.75); border: 1px solid rgba(20,180,120,0.3); border-radius: 12px; padding: 40px; backdrop-filter: blur(8px);">
+    <h1 style="color: #0f4c35; font-size: 22px; letter-spacing: 0.08em; margin-bottom: 24px;">// CONTACT</h1>
+    <form method="POST" action="https://formspree.io/f/xdalagwr">
+      <label style="display: block; color: #0f4c35; font-size: 13px; letter-spacing: 0.08em; margin-bottom: 6px;">NAME</label>
+      <input type="text" name="navn" required style="width: 100%; padding: 10px 14px; margin-bottom: 20px; border: 1px solid rgba(20,180,120,0.3); border-radius: 8px; background: rgba(255,255,255,0.8); font-family: 'Rajdhani', sans-serif; font-size: 15px; color: #0f4c35; outline: none;">
+      <label style="display: block; color: #0f4c35; font-size: 13px; letter-spacing: 0.08em; margin-bottom: 6px;">E-MAIL</label>
+      <input type="email" name="epost" required style="width: 100%; padding: 10px 14px; margin-bottom: 20px; border: 1px solid rgba(20,180,120,0.3); border-radius: 8px; background: rgba(255,255,255,0.8); font-family: 'Rajdhani', sans-serif; font-size: 15px; color: #0f4c35; outline: none;">
+      <label style="display: block; color: #0f4c35; font-size: 13px; letter-spacing: 0.08em; margin-bottom: 6px;">MESSAGE</label>
+      <textarea name="melding" rows="6" required style="width: 100%; padding: 10px 14px; margin-bottom: 24px; border: 1px solid rgba(20,180,120,0.3); border-radius: 8px; background: rgba(255,255,255,0.8); font-family: 'Rajdhani', sans-serif; font-size: 15px; color: #0f4c35; outline: none; resize: vertical;"></textarea>
+      <button type="submit" style="width: 100%; padding: 12px; background: rgba(20,180,120,0.15); border: 1px solid rgba(20,180,120,0.4); border-radius: 8px; color: #0f4c35; font-family: 'Rajdhani', sans-serif; font-size: 15px; font-weight: 600; letter-spacing: 0.08em; cursor: pointer;">SEND MESSAGE</button>
+    </form>
+  </div>
+</div>
+</div>
+<footer style="position: relative; z-index: 10; text-align: center; padding: 24px; border-top: 1px solid rgba(0,200,160,0.1); margin-top: 40px;">
+  <div style="margin-bottom: 12px; display: flex; justify-content: center; gap: 28px;">
+    <a href="https://www.linkedin.com/in/trinelandsem" target="_blank" rel="noopener" style="color: rgba(0,200,160,0.55); font-size: 13px; letter-spacing: 0.1em; text-decoration: none; text-transform: uppercase;" onmouseover="this.style.color='#00e5b3'" onmouseout="this.style.color='rgba(0,200,160,0.55)'">LinkedIn</a>
+    <a href="https://www.facebook.com/trine.landsem" target="_blank" rel="noopener" style="color: rgba(0,200,160,0.55); font-size: 13px; letter-spacing: 0.1em; text-decoration: none; text-transform: uppercase;" onmouseover="this.style.color='#00e5b3'" onmouseout="this.style.color='rgba(0,200,160,0.55)'">Facebook</a>
+    <a href="https://www.instagram.com/landsemtrine/" target="_blank" rel="noopener" style="color: rgba(0,200,160,0.55); font-size: 13px; letter-spacing: 0.1em; text-decoration: none; text-transform: uppercase;" onmouseover="this.style.color='#00e5b3'" onmouseout="this.style.color='rgba(0,200,160,0.55)'">Instagram</a>
+  </div>
+  <p style="color: rgba(0,200,160,0.25); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; margin: 0;">© 2026 Trine Landsem · All rights reserved</p>
+</footer>
+<script src="static/js/bg.js"></script>
+</body>
+</html>
