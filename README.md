@@ -11,7 +11,6 @@ A cyberpunk-themed personal portfolio featuring an animated network background, 
 - **CV** — Work experience, education and certifications
 - **Projects** — Portfolio of projects
 - **Photos** — Photography gallery with lightbox and swipe support
-- **Forever Living** — Forever Living products
 - **Contact** — Contact form via Formspree
 
 ## Tech Stack
@@ -30,7 +29,6 @@ trinelandsem.no/
 ├── cv.html
 ├── projects.html
 ├── photos.html
-├── forever.html
 ├── contact.html
 ├── static/
 │   ├── js/
