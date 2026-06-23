@@ -42,11 +42,7 @@
 <canvas id="c"></canvas>
 <div class="corner tl"></div><div class="corner tr"></div><div class="corner bl"></div><div class="corner br"></div>
 <div class="status" id="status">ONLINE</div>
-<nav>
-  <button class="hamburger" onclick="toggleMenu()" id="hamburger"><span></span><span></span><span></span></button>
-  <a class="logo" href="index.html">[ Trine Landsem ]</a>
-<script src="nav.js" defer></script>
-</nav>
+<nav id="site-nav"></nav>
 <div class="page-content">
 <div style="max-width: 700px; margin: 60px auto; padding: 0 24px;">
   <div style="background: rgba(8,20,30,0.75); border: 1px solid rgba(0,200,160,0.2); border-radius: 12px; padding: 40px; backdrop-filter: blur(8px);">
@@ -122,5 +118,6 @@ function draw() {
 }
 initNodes();draw();
 </script>
+  <script src="nav.js" defer></script>
 </body>
 </html>
