@@ -1,6 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trine Landsem - Download</title>
+    <!-- Open Graph -->
+    <meta property="og:title" content="Trine Landsem">
+    <meta property="og:description" content="Where compassion meets cybersecurity.">
+    <meta property="og:image" content="https://trinelandsem.no/static/images/logo_512.png">
+    <meta property="og:url" content="https://trinelandsem.no">
+    <meta property="og:type" content="website">
+  <link rel="icon" type="image/png" href="static/images/favicon.png">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { width: 100%; height: 100%; font-family: 'Rajdhani', sans-serif; background: #080d12; }
+    canvas { display: block; position: fixed; top: 0; left: 0; z-index: 0; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+    .hamburger span { display: block; width: 24px; height: 2px; background: #00e5b3; transition: 0.3s; }
+    nav { position: fixed; top: 0; left: 0; width: 100%; z-index: 100; background: rgba(10,15,20,0.75); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0,200,160,0.18); padding: 14px 40px; display: flex; align-items: center; justify-content: space-between; }
+    nav .logo { color: #00e5b3; font-weight: 700; font-size: 16px; letter-spacing: 0.12em; text-decoration: none; }
+    nav ul { list-style: none; display: flex; gap: 32px; }
+    nav ul a { color: rgba(160,220,210,0.75); text-decoration: none; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; transition: color 0.2s; }
+    nav ul a:hover { color: #00e5b3; }
+    nav ul a.active { color: #00e5b3; border-bottom: 1.5px solid rgba(0,220,180,0.5); padding-bottom: 2px; }
+    @media (max-width: 768px) { .hamburger { display: flex; } nav ul { display: none; flex-direction: column; position: fixed; top: 52px; left: 0; width: 100%; background: rgba(10,15,20,0.95); padding: 20px; gap: 20px; border-bottom: 1px solid rgba(0,200,160,0.18); } nav ul.open { display: flex; } }
+    .page-content { position: relative; z-index: 10; padding-top: 80px; }
+    .status { position: fixed; bottom: 18px; right: 24px; font-size: 11px; color: rgba(0,180,140,0.45); letter-spacing: 0.1em; z-index: 1; }
+    .corner { position: fixed; width: 18px; height: 18px; border-color: rgba(0,200,160,0.35); border-style: solid; z-index: 1; }
+    .corner.tl { top: 12px; left: 12px; border-width: 1.5px 0 0 1.5px; } .corner.tr { top: 12px; right: 12px; border-width: 1.5px 1.5px 0 0; } .corner.bl { bottom: 12px; left: 12px; border-width: 0 0 1.5px 1.5px; } .corner.br { bottom: 12px; right: 12px; border-width: 0 1.5px 1.5px 0; }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+  </style>
+</head>
+<body>
+<canvas id="c"></canvas>
+<div class="corner tl"></div><div class="corner tr"></div><div class="corner bl"></div><div class="corner br"></div>
+<div class="status" id="status">ONLINE</div>
+<nav>
+  <button class="hamburger" onclick="toggleMenu()"></button>
+  <a class="logo" href="index.html">[ Trine Landsem ]</a>
+  <ul id="nav-menu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About me</a></li>
+    <li><a href="cv.html" class="active">CV</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="husk-share.html">Download</a></li>
+    <li><a href="photos.html">Photos</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+<div class="page-content">
+<head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>HUSK // reminders</title>
@@ -8,98 +57,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --bg:#05090b; --panel:rgba(10,16,20,.55); --panel-solid:#0a1014;
-    --teal:#2ff0d0; --teal-dim:#1aa78f; --teal-glow:rgba(47,240,208,.5);
-    --text:#cdd8d6; --muted:#708079; --line:rgba(47,240,208,.22);
-  }
-  *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
-  body{
-    font-family:'Chakra Petch',system-ui,sans-serif;background:var(--bg);color:var(--text);
-    -webkit-font-smoothing:antialiased;line-height:1.55;overflow-x:hidden;
-  }
-  a{color:inherit}
-
-  .hero{position:relative;min-height:100svh;display:flex;align-items:center;justify-content:center;
-    padding:48px 20px;overflow:hidden}
-  #net{position:absolute;inset:0;width:100%;height:100%;display:block}
-  .hero::after{content:"";position:absolute;inset:0;pointer-events:none;
-    background:radial-gradient(ellipse at center, transparent 40%, rgba(5,9,11,.7) 100%)}
-
-  .panel{position:relative;z-index:2;width:100%;max-width:560px;text-align:center;
-    background:var(--panel);border:1px solid var(--line);border-radius:14px;
-    padding:34px 28px 30px;backdrop-filter:blur(6px);
-    box-shadow:0 0 0 1px rgba(47,240,208,.04), 0 30px 80px rgba(0,0,0,.55), inset 0 0 60px rgba(47,240,208,.03)}
-
-  .eyebrow{font-family:'Share Tech Mono',monospace;font-size:13px;letter-spacing:.32em;
-    color:var(--teal);opacity:.85;margin-bottom:20px}
-  .appicon{width:74px;height:74px;border-radius:18px;display:block;margin:0 auto 18px;
-    border:1px solid var(--line);box-shadow:0 0 26px var(--teal-glow),0 10px 24px rgba(0,0,0,.5)}
-  h1{font-weight:700;font-size:54px;letter-spacing:.14em;color:#eafffb;
-    text-shadow:0 0 18px var(--teal-glow);line-height:1}
-  .sub{font-family:'Share Tech Mono',monospace;font-size:13.5px;letter-spacing:.18em;
-    color:var(--text);opacity:.78;margin-top:14px;text-transform:uppercase}
-
-  .demo{margin:26px auto 24px;max-width:380px;text-align:left}
-  .said{font-family:'Share Tech Mono',monospace;font-size:13.5px;color:var(--text);
-    background:rgba(47,240,208,.05);border:1px solid var(--line);border-radius:10px;padding:11px 13px;
-    display:flex;gap:9px;align-items:flex-start}
-  .said .gt{color:var(--teal)}
-  .arrow{text-align:center;color:var(--teal-dim);font-size:16px;margin:7px 0;font-family:'Share Tech Mono',monospace}
-  .rcard{display:flex;align-items:center;gap:12px;background:var(--panel-solid);
-    border:1px solid var(--line);border-radius:10px;padding:12px 14px}
-  .rcard .bar{width:3px;align-self:stretch;border-radius:2px;background:var(--teal);box-shadow:0 0 8px var(--teal-glow)}
-  .rtitle{font-weight:600;font-size:15px;letter-spacing:.02em}
-  .rmeta{font-family:'Share Tech Mono',monospace;font-size:11.5px;color:var(--muted);margin-top:2px}
-  .rrem{margin-left:auto;font-family:'Share Tech Mono',monospace;font-size:11.5px;color:var(--teal);white-space:nowrap}
-
-  .cta{display:inline-block;font-family:'Share Tech Mono',monospace;font-size:15px;letter-spacing:.18em;
-    text-decoration:none;color:var(--teal);background:rgba(47,240,208,.06);
-    border:1px solid var(--teal);border-radius:10px;padding:14px 30px;margin-top:6px;
-    transition:background .15s,box-shadow .15s,transform .12s;text-transform:uppercase}
-  .cta:hover{background:rgba(47,240,208,.15);box-shadow:0 0 24px var(--teal-glow);transform:translateY(-1px)}
-  .cta:active{transform:translateY(0)}
-  .cta:focus-visible{outline:2px solid var(--teal);outline-offset:3px}
-  .status{font-family:'Share Tech Mono',monospace;font-size:11px;letter-spacing:.22em;color:var(--muted);margin-top:18px}
-
-  main{position:relative;z-index:2;max-width:620px;margin:0 auto;padding:10px 22px 0}
-  .block{border-top:1px solid var(--line);padding:34px 0}
-  h2{font-family:'Share Tech Mono',monospace;font-size:14px;letter-spacing:.2em;color:var(--teal);
-    margin-bottom:22px;text-transform:uppercase}
-  ol.steps{list-style:none;display:grid;gap:18px;counter-reset:s}
-  ol.steps li{counter-increment:s;display:flex;gap:16px;align-items:flex-start}
-  ol.steps li::before{content:"0" counter(s);font-family:'Share Tech Mono',monospace;color:var(--teal);
-    font-size:13px;letter-spacing:.05em;flex:none;width:30px;padding-top:2px;
-    text-shadow:0 0 10px var(--teal-glow)}
-  ol.steps b{font-weight:600}
-  ol.steps p{font-size:15.5px}
-  ol.steps .d{color:var(--muted);font-size:13.5px;margin-top:3px}
-  .note{display:flex;gap:12px;align-items:flex-start;font-size:15px}
-  .note + .note{margin-top:14px}
-  .note .gt{color:var(--teal);font-family:'Share Tech Mono',monospace;flex:none}
-  .note b{font-weight:600}
-
-  footer{position:relative;z-index:2;max-width:620px;margin:0 auto;
-    border-top:1px solid var(--line);padding:22px;text-align:center;
-    font-family:'Share Tech Mono',monospace;font-size:11px;letter-spacing:.2em;color:var(--muted)}
-  footer .sep{opacity:.4;margin:0 8px}
-
-  .legal{position:relative;z-index:2;max-width:620px;margin:0 auto;padding:30px 22px 4px;border-top:1px solid var(--line)}
-  .legal h3{font-family:'Share Tech Mono',monospace;font-size:11.5px;letter-spacing:.18em;color:var(--teal-dim);text-transform:uppercase;margin:20px 0 8px}
-  .legal h3:first-child{margin-top:0}
-  .legal p{font-size:11.5px;line-height:1.65;color:var(--muted)}
-  .legal p + p{margin-top:5px}
-  .legal b{color:var(--text);font-weight:600}
-  .legal a{color:var(--teal-dim)}
-
-  @media (max-width:520px){ h1{font-size:44px} .panel{padding:28px 20px 26px} }
-  @media (prefers-reduced-motion:reduce){.cta{transition:none}}
-</style>
 </head>
 <body>
-
   <section class="hero">
     <canvas id="net"></canvas>
     <div class="panel">
