@@ -1,224 +1,294 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>HUSK // reminders</title>
-<meta name="description" content="Husk — a tiny reminder app you talk to. Say what you need to remember, get notified before the deadline.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --bg:#05090b; --panel:rgba(10,16,20,.55); --panel-solid:#0a1014;
-    --teal:#2ff0d0; --teal-dim:#1aa78f; --teal-glow:rgba(47,240,208,.5);
-    --text:#cdd8d6; --muted:#708079; --line:rgba(47,240,208,.22);
-  }
-  *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
-  body{
-    font-family:'Chakra Petch',system-ui,sans-serif;background:var(--bg);color:var(--text);
-    -webkit-font-smoothing:antialiased;line-height:1.55;overflow-x:hidden;
-  }
-  a{color:inherit}
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trine Landsem - Download</title>
+    <!-- Open Graph -->
+    <meta property="og:title" content="Trine Landsem">
+    <meta property="og:description" content="Where compassion meets cybersecurity.">
+    <meta property="og:image" content="https://trinelandsem.no/static/images/logo_512.png">
+    <meta property="og:url" content="https://trinelandsem.no">
+    <meta property="og:type" content="website">
+  <link rel="icon" type="image/png" href="static/images/favicon.png">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { width: 100%; height: 100%; font-family: 'Rajdhani', sans-serif; background: #080d12; }
+    canvas { display: block; position: fixed; top: 0; left: 0; z-index: 0; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+    .hamburger span { display: block; width: 24px; height: 2px; background: #00e5b3; transition: 0.3s; }
+    nav { position: fixed; top: 0; left: 0; width: 100%; z-index: 100; background: rgba(10,15,20,0.75); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0,200,160,0.18); padding: 14px 40px; display: flex; align-items: center; justify-content: space-between; }
+    nav .logo { color: #00e5b3; font-weight: 700; font-size: 16px; letter-spacing: 0.12em; text-decoration: none; text-shadow: 0 0 18px rgba(0,220,180,0.35); }
+    nav ul { list-style: none; display: flex; gap: 32px; }
+    nav ul a { color: rgba(160,220,210,0.75); text-decoration: none; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; transition: color 0.2s; }
+    nav ul a:hover { color: #00e5b3; }
+    nav ul a.active { color: #00e5b3; border-bottom: 1.5px solid rgba(0,220,180,0.5); padding-bottom: 2px; }
+    @media (max-width: 768px) {
+      .hamburger { display: flex; }
+      nav ul { display: none; flex-direction: column; position: fixed; top: 52px; left: 0; width: 100%; background: rgba(10,15,20,0.95); padding: 20px; gap: 20px; border-bottom: 1px solid rgba(0,200,160,0.18); }
+      nav ul.open { display: flex; }
+    }
+    .page-content { position: relative; z-index: 10; padding-top: 80px; }
+    .status { position: fixed; bottom: 18px; right: 24px; font-size: 11px; color: rgba(0,180,140,0.45); letter-spacing: 0.1em; z-index: 1; }
+    .corner { position: fixed; width: 18px; height: 18px; border-color: rgba(0,200,160,0.35); border-style: solid; z-index: 1; }
+    .corner.tl { top: 12px; left: 12px; border-width: 1.5px 0 0 1.5px; }
+    .corner.tr { top: 12px; right: 12px; border-width: 1.5px 1.5px 0 0; }
+    .corner.bl { bottom: 12px; left: 12px; border-width: 0 0 1.5px 1.5px; }
+    .corner.br { bottom: 12px; right: 12px; border-width: 0 1.5px 1.5px 0; }
+    @media (max-width: 768px) {
+      .hero-box h1 { font-size: clamp(14px, 5vw, 30px); white-space: nowrap; }
+      .hero-box p { font-size: clamp(11px, 3vw, 18px); }
+    }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: translateY(0); } }
+    .hero-box { animation: fadeUp 3.2s cubic-bezier(0.22, 1, 0.36, 1) both; animation-delay: 0.3s; opacity: 0; }
+     * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { width: 100%; height: 100%; font-family: 'Rajdhani', sans-serif; background: #080d12; }
+    canvas { display: block; position: fixed; top: 0; left: 0; z-index: 0; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+    .hamburger span { display: block; width: 24px; height: 2px; background: #00e5b3; transition: 0.3s; }
+    nav { position: fixed; top: 0; left: 0; width: 100%; z-index: 100; background: rgba(10,15,20,0.75); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0,200,160,0.18); padding: 14px 40px; display: flex; align-items: center; justify-content: space-between; }
+    nav .logo { color: #00e5b3; font-weight: 700; font-size: 16px; letter-spacing: 0.12em; text-decoration: none; text-shadow: 0 0 18px rgba(0,220,180,0.35); }
+    nav ul { list-style: none; display: flex; gap: 32px; }
+    nav ul a { color: rgba(160,220,210,0.75); text-decoration: none; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; transition: color 0.2s; }
+    nav ul a:hover { color: #00e5b3; }
+    nav ul a.active { color: #00e5b3; border-bottom: 1.5px solid rgba(0,220,180,0.5); padding-bottom: 2px; }
+    @media (max-width: 768px) {
+      .hamburger { display: flex; }
+      nav ul { display: none; flex-direction: column; position: fixed; top: 52px; left: 0; width: 100%; background: rgba(10,15,20,0.95); padding: 20px; gap: 20px; border-bottom: 1px solid rgba(0,200,160,0.18); }
+      nav ul.open { display: flex; }
+    }
+    .page-content { position: relative; z-index: 10; padding-top: 80px; }
+    .status { position: fixed; bottom: 18px; right: 24px; font-size: 11px; color: rgba(0,180,140,0.45); letter-spacing: 0.1em; z-index: 1; }
+    .corner { position: fixed; width: 18px; height: 18px; border-color: rgba(0,200,160,0.35); border-style: solid; z-index: 1; }
+    .corner.tl { top: 12px; left: 12px; border-width: 1.5px 0 0 1.5px; }
+    .corner.tr { top: 12px; right: 12px; border-width: 1.5px 1.5px 0 0; }
+    .corner.bl { bottom: 12px; left: 12px; border-width: 0 0 1.5px 1.5px; }
+    .corner.br { bottom: 12px; right: 12px; border-width: 0 1.5px 1.5px 0; }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: translateY(0); } }
 
-  .hero{position:relative;min-height:100svh;display:flex;align-items:center;justify-content:center;
-    padding:48px 20px;overflow:hidden}
-  #net{position:absolute;inset:0;width:100%;height:100%;display:block}
-  .hero::after{content:"";position:absolute;inset:0;pointer-events:none;
-    background:radial-gradient(ellipse at center, transparent 40%, rgba(5,9,11,.7) 100%)}
-
-  .panel{position:relative;z-index:2;width:100%;max-width:560px;text-align:center;
-    background:var(--panel);border:1px solid var(--line);border-radius:14px;
-    padding:34px 28px 30px;backdrop-filter:blur(6px);
-    box-shadow:0 0 0 1px rgba(47,240,208,.04), 0 30px 80px rgba(0,0,0,.55), inset 0 0 60px rgba(47,240,208,.03)}
-
-  .eyebrow{font-family:'Share Tech Mono',monospace;font-size:13px;letter-spacing:.32em;
-    color:var(--teal);opacity:.85;margin-bottom:20px}
-  .appicon{width:74px;height:74px;border-radius:18px;display:block;margin:0 auto 18px;
-    border:1px solid var(--line);box-shadow:0 0 26px var(--teal-glow),0 10px 24px rgba(0,0,0,.5)}
-  h1{font-weight:700;font-size:54px;letter-spacing:.14em;color:#eafffb;
-    text-shadow:0 0 18px var(--teal-glow);line-height:1}
-  .sub{font-family:'Share Tech Mono',monospace;font-size:13.5px;letter-spacing:.18em;
-    color:var(--text);opacity:.78;margin-top:14px;text-transform:uppercase}
-
-  .demo{margin:26px auto 24px;max-width:380px;text-align:left}
-  .said{font-family:'Share Tech Mono',monospace;font-size:13.5px;color:var(--text);
-    background:rgba(47,240,208,.05);border:1px solid var(--line);border-radius:10px;padding:11px 13px;
-    display:flex;gap:9px;align-items:flex-start}
-  .said .gt{color:var(--teal)}
-  .arrow{text-align:center;color:var(--teal-dim);font-size:16px;margin:7px 0;font-family:'Share Tech Mono',monospace}
-  .rcard{display:flex;align-items:center;gap:12px;background:var(--panel-solid);
-    border:1px solid var(--line);border-radius:10px;padding:12px 14px}
-  .rcard .bar{width:3px;align-self:stretch;border-radius:2px;background:var(--teal);box-shadow:0 0 8px var(--teal-glow)}
-  .rtitle{font-weight:600;font-size:15px;letter-spacing:.02em}
-  .rmeta{font-family:'Share Tech Mono',monospace;font-size:11.5px;color:var(--muted);margin-top:2px}
-  .rrem{margin-left:auto;font-family:'Share Tech Mono',monospace;font-size:11.5px;color:var(--teal);white-space:nowrap}
-
-  .cta{display:inline-block;font-family:'Share Tech Mono',monospace;font-size:15px;letter-spacing:.18em;
-    text-decoration:none;color:var(--teal);background:rgba(47,240,208,.06);
-    border:1px solid var(--teal);border-radius:10px;padding:14px 30px;margin-top:6px;
-    transition:background .15s,box-shadow .15s,transform .12s;text-transform:uppercase}
-  .cta:hover{background:rgba(47,240,208,.15);box-shadow:0 0 24px var(--teal-glow);transform:translateY(-1px)}
-  .cta:active{transform:translateY(0)}
-  .cta:focus-visible{outline:2px solid var(--teal);outline-offset:3px}
-  .status{font-family:'Share Tech Mono',monospace;font-size:11px;letter-spacing:.22em;color:var(--muted);margin-top:18px}
-
-  main{position:relative;z-index:2;max-width:620px;margin:0 auto;padding:10px 22px 0}
-  .block{border-top:1px solid var(--line);padding:34px 0}
-  h2{font-family:'Share Tech Mono',monospace;font-size:14px;letter-spacing:.2em;color:var(--teal);
-    margin-bottom:22px;text-transform:uppercase}
-  ol.steps{list-style:none;display:grid;gap:18px;counter-reset:s}
-  ol.steps li{counter-increment:s;display:flex;gap:16px;align-items:flex-start}
-  ol.steps li::before{content:"0" counter(s);font-family:'Share Tech Mono',monospace;color:var(--teal);
-    font-size:13px;letter-spacing:.05em;flex:none;width:30px;padding-top:2px;
-    text-shadow:0 0 10px var(--teal-glow)}
-  ol.steps b{font-weight:600}
-  ol.steps p{font-size:15.5px}
-  ol.steps .d{color:var(--muted);font-size:13.5px;margin-top:3px}
-  .note{display:flex;gap:12px;align-items:flex-start;font-size:15px}
-  .note + .note{margin-top:14px}
-  .note .gt{color:var(--teal);font-family:'Share Tech Mono',monospace;flex:none}
-  .note b{font-weight:600}
-
-  footer{position:relative;z-index:2;max-width:620px;margin:0 auto;
-    border-top:1px solid var(--line);padding:22px;text-align:center;
-    font-family:'Share Tech Mono',monospace;font-size:11px;letter-spacing:.2em;color:var(--muted)}
-  footer .sep{opacity:.4;margin:0 8px}
-
-  .legal{position:relative;z-index:2;max-width:620px;margin:0 auto;padding:30px 22px 4px;border-top:1px solid var(--line)}
-  .legal h3{font-family:'Share Tech Mono',monospace;font-size:11.5px;letter-spacing:.18em;color:var(--teal-dim);text-transform:uppercase;margin:20px 0 8px}
-  .legal h3:first-child{margin-top:0}
-  .legal p{font-size:11.5px;line-height:1.65;color:var(--muted)}
-  .legal p + p{margin-top:5px}
-  .legal b{color:var(--text);font-weight:600}
-  .legal a{color:var(--teal-dim)}
-
-  @media (max-width:520px){ h1{font-size:44px} .panel{padding:28px 20px 26px} }
-  @media (prefers-reduced-motion:reduce){.cta{transition:none}}
-</style>
+    /* --- Husk download page --- */
+    .husk-wrap { max-width: 620px; margin: 0 auto; padding: 0 22px 60px; animation: fadeUp 1.4s cubic-bezier(0.22,1,0.36,1) both; }
+    .husk-card { background: rgba(8,20,30,0.75); border: 1px solid rgba(0,200,160,0.2); border-radius: 12px; padding: 32px 28px; backdrop-filter: blur(8px); margin-bottom: 22px; }
+    .husk-hero { text-align: center; }
+    .husk-eyebrow { color: #00e5b3; font-size: 12px; letter-spacing: 0.28em; text-transform: uppercase; opacity: 0.85; margin-bottom: 18px; }
+    .husk-icon { width: 74px; height: 74px; border-radius: 18px; display: block; margin: 0 auto 16px; border: 1px solid rgba(0,200,160,0.3); box-shadow: 0 0 26px rgba(0,229,179,0.45), 0 10px 24px rgba(0,0,0,0.5); }
+    .husk-hero h1 { color: #00e5b3; font-size: 46px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; text-shadow: 0 0 18px rgba(0,220,180,0.4); line-height: 1; }
+    .husk-sub { color: rgba(200,240,230,0.75); font-size: 14px; letter-spacing: 0.16em; text-transform: uppercase; margin-top: 12px; }
+    .husk-demo { max-width: 380px; margin: 24px auto 22px; text-align: left; }
+    .husk-said { background: rgba(0,229,179,0.05); border: 1px solid rgba(0,200,160,0.2); border-radius: 10px; padding: 11px 13px; color: rgba(200,240,230,0.85); font-size: 14px; letter-spacing: 0.03em; display: flex; gap: 9px; }
+    .husk-said .gt { color: #00e5b3; }
+    .husk-arrow { text-align: center; color: rgba(0,200,160,0.6); margin: 7px 0; }
+    .husk-rcard { display: flex; align-items: center; gap: 12px; background: rgba(10,15,20,0.85); border: 1px solid rgba(0,200,160,0.2); border-radius: 10px; padding: 12px 14px; }
+    .husk-rcard .bar { width: 3px; align-self: stretch; border-radius: 2px; background: #00e5b3; box-shadow: 0 0 8px rgba(0,229,179,0.5); }
+    .husk-rtitle { color: #dffaf3; font-size: 15px; font-weight: 600; }
+    .husk-rmeta { color: rgba(160,220,210,0.6); font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; margin-top: 2px; }
+    .husk-rrem { margin-left: auto; color: #00e5b3; font-size: 11.5px; letter-spacing: 0.06em; text-transform: uppercase; white-space: nowrap; }
+    .husk-cta { display: inline-block; color: #00e5b3; background: rgba(0,229,179,0.06); border: 1px solid #00e5b3; border-radius: 10px; padding: 13px 30px; font-size: 14px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; text-decoration: none; transition: 0.2s; }
+    .husk-cta:hover { background: rgba(0,229,179,0.16); box-shadow: 0 0 22px rgba(0,229,179,0.5); }
+    .husk-statusline { color: rgba(0,180,140,0.5); font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; margin-top: 16px; }
+    .husk-h2 { color: #00e5b3; font-size: 14px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 20px; }
+    .husk-steps { list-style: none; display: grid; gap: 16px; counter-reset: s; }
+    .husk-steps li { counter-increment: s; display: flex; gap: 14px; align-items: flex-start; }
+    .husk-steps li::before { content: "0" counter(s); color: #00e5b3; font-weight: 700; font-size: 14px; letter-spacing: 0.05em; flex: none; width: 28px; padding-top: 1px; text-shadow: 0 0 10px rgba(0,229,179,0.5); }
+    .husk-steps b { color: #dffaf3; font-weight: 600; }
+    .husk-steps p { color: rgba(200,240,230,0.8); font-size: 15px; }
+    .husk-steps .d { color: rgba(160,220,210,0.55); font-size: 13px; margin-top: 2px; }
+    .husk-divider { height: 1px; background: rgba(0,200,160,0.15); margin: 28px 0; }
+    .husk-note { display: flex; gap: 11px; color: rgba(200,240,230,0.8); font-size: 15px; }
+    .husk-note + .husk-note { margin-top: 13px; }
+    .husk-note .gt { color: #00e5b3; flex: none; }
+    .husk-note b { color: #dffaf3; }
+    .husk-legal h3 { color: rgba(0,200,160,0.7); font-size: 12px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; margin: 18px 0 7px; }
+    .husk-legal h3:first-child { margin-top: 0; }
+    .husk-legal p { color: rgba(160,200,190,0.6); font-size: 11.5px; line-height: 1.65; }
+    .husk-legal p + p { margin-top: 5px; }
+    .husk-legal b { color: rgba(200,240,230,0.85); }
+    @media (max-width: 768px) { .husk-hero h1 { font-size: 38px; } }
+  </style>
 </head>
 <body>
+<canvas id="c"></canvas>
+<div class="corner tl"></div><div class="corner tr"></div><div class="corner bl"></div><div class="corner br"></div>
+<div class="status" id="status">ONLINE</div>
 <nav>
-  <button class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+  <button class="hamburger" onclick="toggleMenu()" id="hamburger"><span></span><span></span><span></span></button>
   <a class="logo" href="index.html">[ Trine Landsem ]</a>
   <ul id="nav-menu">
-    <li><a href="index.html">Home</a></li>
+    <li><a href="index.html" class="active">Home</a></li>
     <li><a href="about.html">About me</a></li>
     <li><a href="cv.html">CV</a></li>
     <li><a href="projects.html">Projects</a></li>
     <li><a href="husk-share.html">Download</a></li>
-    <li><a href="photos.html" class="active">Photos</a></li>
+    <li><a href="photos.html">Photos</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
 </nav>
-  <section class="hero">
-    <canvas id="net"></canvas>
-    <div class="panel">
-      <div class="eyebrow">// REMINDERS</div>
-      <img class="appicon" src="https://husk-jdwj.onrender.com/icon-512.png" alt="Husk app icon" width="74" height="74">
-      <h1>HUSK</h1>
-      <div class="sub">[ Say it. We'll remind you. ]</div>
+<div class="page-content">
+  <div style="display: flex; align-items: center; justify-content: center; height: 80vh;">
+    <div class="hero-box" style="background: rgba(8,20,30,0.75); border: 1px solid rgba(0,200,160,0.2); border-radius: 12px; padding: 28px 48px; text-align: center; backdrop-filter: blur(8px);">
+      <h1 style="color: #00e5b3; font-size: 30px; letter-spacing: 0.08em; text-transform: uppercase;">Trine Landsem // 2026</h1>
+      <p style="color: rgba(200,240,230,0.75); font-size: 18px; margin-top: 6px; letter-spacing: 0.12em;">[ WHERE COMPASSION MEETS CYBERSECURITY. ]</p>
+    </div>
+  </div>
+</div>
+<footer style="position: relative; z-index: 10; text-align: center; padding: 24px; border-top: 1px solid rgba(0,200,160,0.1); margin-top: 40px;">
+  <div style="margin-bottom: 12px; display: flex; justify-content: center; gap: 28px;">
+    <a href="https://www.linkedin.com/in/trinelandsem" target="_blank" rel="noopener" style="color: rgba(0,200,160,0.55); font-size: 13px; letter-spacing: 0.1em; text-decoration: none; text-transform: uppercase;" onmouseover="this.style.color='#00e5b3'" onmouseout="this.style.color='rgba(0,200,160,0.55)'">LinkedIn</a>
+    <a href="https://www.facebook.com/trine.landsem" target="_blank" rel="noopener" style="color: rgba(0,200,160,0.55); font-size: 13px; letter-spacing: 0.1em; text-decoration: none; text-transform: uppercase;" onmouseover="this.style.color='#00e5b3'" onmouseout="this.style.color='rgba(0,200,160,0.55)'">Facebook</a>
+    <a href="https://www.instagram.com/landsemtrine/" target="_blank" rel="noopener" style="color: rgba(0,200,160,0.55); font-size: 13px; letter-spacing: 0.1em; text-decoration: none; text-transform: uppercase;" onmouseover="this.style.color='#00e5b3'" onmouseout="this.style.color='rgba(0,200,160,0.55)'">Instagram</a>
+  </div>
+  <p style="color: rgba(0,200,160,0.25); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; margin: 0;">© 2026 Trine Landsem · All rights reserved</p>
+</footer>
+<script>
+function toggleMenu() { document.getElementById('nav-menu').classList.toggle('open'); }
+document.querySelectorAll('#nav-menu a').forEach(link => { link.addEventListener('click', () => { document.getElementById('nav-menu').classList.remove('open'); }); });
+const canvas = document.getElementById('c'); const ctx = canvas.getContext('2d');
+function resize() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
+resize(); window.addEventListener('resize', () => { resize(); initNodes(); });
+const GLYPHS = '01アイウエオABCDEF<>{}[]//\\&&||::?!#$%^*'.split('');
+let nodes = [], links = [], packets = [], glyphs = [];
+function rand(a, b) { return a + Math.random() * (b - a); }
+function initNodes() {
+  const W = canvas.width, H = canvas.height;
+  const count = Math.floor(W * H / 13000);
+  nodes = [];
+  for (let i = 0; i < count; i++) { nodes.push({ x: rand(40, W-40), y: rand(40, H-40), r: rand(2, 4.5), vx: rand(-0.03, 0.03), vy: rand(-0.03, 0.03), pulseT: rand(0, Math.PI*2), type: Math.random() < 0.1 ? 'hub' : 'node' }); }
+  links = [];
+  for (let i = 0; i < nodes.length; i++) { for (let j = i+1; j < nodes.length; j++) { const dx = nodes[i].x-nodes[j].x, dy = nodes[i].y-nodes[j].y, d = Math.sqrt(dx*dx+dy*dy), maxDist = nodes[i].type==='hub'||nodes[j].type==='hub' ? 190 : 115; if (d < maxDist) links.push({a:i,b:j,d}); } }
+  packets = []; glyphs = [];
+  for (let k = 0; k < 28; k++) { glyphs.push({ x: rand(0,W), y: rand(0,H), char: GLYPHS[Math.floor(Math.random()*GLYPHS.length)], alpha: rand(0.03,0.1), size: rand(10,20), vy: rand(0.07,0.22) }); }
+}
+function spawnPacket() { if (links.length===0) return; const link = links[Math.floor(Math.random()*links.length)]; const isCritical = Math.random()<0.08; packets.push({link, t:0, speed:rand(0.002,0.006), fwd:Math.random()<0.5, color:isCritical?'rgba(255,80,100,0.85)':'rgba(0,230,180,0.8)'}); }
+let frame = 0;
+const statusTexts = ['ONLINE','FIREWALL: ACTIVE','ENCRYPTION: AES-256','PACKETS: 0 LOSS','TLS 1.3','THREAT LEVEL: LOW','NODES: SECURE'];
+let statusIdx = 0;
+function draw() {
+  const W = canvas.width, H = canvas.height;
+  ctx.fillStyle = '#080d12'; ctx.fillRect(0,0,W,H);
+  const gStep = 50; ctx.strokeStyle = 'rgba(0,180,140,0.055)'; ctx.lineWidth = 0.5;
+  for (let x=0; x<W; x+=gStep) { ctx.beginPath(); ctx.moveTo(x,0); ctx.lineTo(x,H); ctx.stroke(); }
+  for (let y=0; y<H; y+=gStep) { ctx.beginPath(); ctx.moveTo(0,y); ctx.lineTo(W,y); ctx.stroke(); }
+  const vg = ctx.createRadialGradient(W/2,H/2,H*0.2,W/2,H/2,H*0.85); vg.addColorStop(0,'rgba(0,0,0,0)'); vg.addColorStop(1,'rgba(0,0,0,0.55)'); ctx.fillStyle=vg; ctx.fillRect(0,0,W,H);
+  for (const g of glyphs) { ctx.save(); ctx.globalAlpha=g.alpha; ctx.fillStyle='#00e5b3'; ctx.font=`${g.size}px 'Courier New', monospace`; ctx.fillText(g.char,g.x,g.y); ctx.restore(); g.y+=g.vy; if(g.y>H+30){g.y=-30;g.x=rand(0,W);g.char=GLYPHS[Math.floor(Math.random()*GLYPHS.length)];} }
+  for (const lk of links) { const a=nodes[lk.a],b=nodes[lk.b]; const alpha=Math.max(0,1-lk.d/160)*0.55; ctx.strokeStyle=`rgba(0,200,160,${alpha*0.22})`; ctx.lineWidth=0.5; ctx.beginPath(); ctx.moveTo(a.x,a.y); ctx.lineTo(b.x,b.y); ctx.stroke(); }
+  for (let i=packets.length-1; i>=0; i--) { const pk=packets[i]; pk.t+=pk.speed; if(pk.t>=1){packets.splice(i,1);continue;} const a=nodes[pk.link.a],b=nodes[pk.link.b]; const t=pk.fwd?pk.t:1-pk.t; const px=a.x+(b.x-a.x)*t,py=a.y+(b.y-a.y)*t; ctx.beginPath(); ctx.arc(px,py,2.2,0,Math.PI*2); ctx.fillStyle=pk.color; ctx.fill(); ctx.beginPath(); ctx.arc(px,py,5.5,0,Math.PI*2); ctx.fillStyle=pk.color.replace('0.8','0.12').replace('0.85','0.12'); ctx.fill(); }
+  const t=frame*0.012;
+  for (const n of nodes) { n.x+=n.vx; n.y+=n.vy; if(n.x<10||n.x>W-10)n.vx*=-1; if(n.y<10||n.y>H-10)n.vy*=-1; const pulse=0.5+0.5*Math.sin(t+n.pulseT); const r=n.type==='hub'?n.r*1.8:n.r; if(n.type==='hub'){ctx.beginPath();ctx.arc(n.x,n.y,r+7+pulse*5,0,Math.PI*2);ctx.fillStyle=`rgba(0,220,170,${0.04+pulse*0.05})`;ctx.fill();} ctx.beginPath();ctx.arc(n.x,n.y,r,0,Math.PI*2);ctx.fillStyle=n.type==='hub'?`rgba(0,230,180,${0.75+pulse*0.2})`:`rgba(0,190,150,${0.35+pulse*0.25})`;ctx.fill(); if(n.type==='hub'){ctx.beginPath();ctx.arc(n.x,n.y,r*0.35,0,Math.PI*2);ctx.fillStyle='rgba(200,255,240,0.8)';ctx.fill();} }
+  if(frame%38===0)spawnPacket();
+  if(frame%200===0){statusIdx=(statusIdx+1)%statusTexts.length;document.getElementById('status').textContent=statusTexts[statusIdx];}
+  frame++; requestAnimationFrame(draw);
+}
+initNodes(); draw();
+<div class="page-content">
+  <div class="husk-wrap">
 
-      <div class="demo">
-        <div class="said"><span class="gt">&gt;</span><span>"Call the dentist tomorrow at ten"</span></div>
-        <div class="arrow">&#9660;</div>
-        <div class="rcard">
+    <div class="husk-card husk-hero">
+      <div class="husk-eyebrow">// REMINDERS</div>
+      <img class="husk-icon" src="https://husk-jdwj.onrender.com/icon-512.png" alt="Husk app icon" width="74" height="74">
+      <h1>HUSK</h1>
+      <div class="husk-sub">[ Say it. We'll remind you. ]</div>
+
+      <div class="husk-demo">
+        <div class="husk-said"><span class="gt">&gt;</span><span>"Call the dentist tomorrow at ten"</span></div>
+        <div class="husk-arrow">&#9660;</div>
+        <div class="husk-rcard">
           <span class="bar"></span>
           <div>
-            <div class="rtitle">Call the dentist</div>
-            <div class="rmeta">TOMORROW — 10:00</div>
+            <div class="husk-rtitle">Call the dentist</div>
+            <div class="husk-rmeta">Tomorrow — 10:00</div>
           </div>
-          <div class="rrem">ALERT 1H BEFORE</div>
+          <div class="husk-rrem">Alert 1h before</div>
         </div>
       </div>
 
-      <a class="cta" href="https://husk-jdwj.onrender.com">[ Open Husk ]</a>
-      <div class="status">STATUS: LIVE — REGION: EU / FRANKFURT</div>
+      <a class="husk-cta" href="https://husk-jdwj.onrender.com">[ Open Husk ]</a>
+      <div class="husk-statusline">Status: Live — Region: EU / Frankfurt</div>
     </div>
-  </section>
 
-  <main>
-    <div class="block">
-      <h2>// How to get notifications on iPhone</h2>
-      <ol class="steps">
+    <div class="husk-card">
+      <div class="husk-h2">// How to get notifications on iPhone</div>
+      <ol class="husk-steps">
         <li><div><p><b>Open Husk in Safari</b> — tap the button above.</p></div></li>
         <li><div><p><b>Add it to your Home Screen</b></p><p class="d">Tap the Share button, then "Add to Home Screen".</p></div></li>
         <li><div><p><b>Open Husk from the Home Screen</b></p><p class="d">Your new icon — not the Safari tab.</p></div></li>
         <li><div><p><b>Tap "Turn on notifications" and allow</b></p><p class="d">Now you'll get alerts even when the app is closed.</p></div></li>
       </ol>
+
+      <div class="husk-divider"></div>
+
+      <div class="husk-h2">// Good to know</div>
+      <div class="husk-note"><span class="gt">&gt;</span><div><b>Your own private list.</b> Only you can see what you add.</div></div>
+      <div class="husk-note"><span class="gt">&gt;</span><div><b>Using more than one device?</b> Keep your access key — it's at the bottom of the app.</div></div>
+      <div class="husk-note"><span class="gt">&gt;</span><div><b>Works on Android and desktop too.</b> Just open the link; alerts arrive in the browser.</div></div>
     </div>
 
-    <div class="block">
-      <h2>// Good to know</h2>
-      <div class="note"><span class="gt">&gt;</span><div><b>Your own private list.</b> Only you can see what you add.</div></div>
-      <div class="note"><span class="gt">&gt;</span><div><b>Using more than one device?</b> Keep your access key — it's at the bottom of the app.</div></div>
-      <div class="note"><span class="gt">&gt;</span><div><b>Works on Android and desktop too.</b> Just open the link; alerts arrive in the browser.</div></div>
+    <div class="husk-card husk-legal">
+      <h3>// Privacy</h3>
+      <p>Husk is a personal project, not a commercial service. <b>No ads, no tracking, no analytics.</b></p>
+      <p>You don't create an account with a name or email. The app automatically generates a private <b>access key</b> that is stored in your browser on your device.</p>
+      <p>The only things stored are <b>your reminders</b> (text and deadline), your notification choice, and a push subscription so your device can receive alerts. Your list is private — no other user can see it.</p>
+      <p>Data is stored on a server and database in the <b>EU (Frankfurt)</b>. The data controller is Trine Landsem. For questions or to have your data deleted, get in touch via the contact page. You can also delete your reminders yourself in the app at any time.</p>
+
+      <h3>// Security</h3>
+      <p>All traffic is encrypted (HTTPS/TLS), and the content of notifications is encrypted. Every request is tied to your own access key, so you only ever reach your own data.</p>
+      <p><b>Note:</b> this is a free hobby service. Avoid putting sensitive information (health, passwords, etc.) in your reminders, since data "at rest" is not necessarily encrypted on the free tier.</p>
+
+      <h3>// Installation &amp; access key</h3>
+      <p><b>iPhone:</b> open in Safari → Share button → "Add to Home Screen" → open the app from the Home Screen → tap "Turn on notifications".</p>
+      <p><b>Android / desktop:</b> open the link, and add it to your home screen if you like. Alerts arrive right in the browser.</p>
+      <p>Your access key is your <b>only login</b>. To use Husk on another device, copy the key at the bottom of the app and paste it there. If you clear your browser data or lose the key, you lose access to the list — there is no password recovery.</p>
     </div>
-  </main>
 
-  <section class="legal">
-    <h3>// Privacy</h3>
-    <p>Husk is a personal project, not a commercial service. <b>No ads, no tracking, no analytics.</b></p>
-    <p>You don't create an account with a name or email. The app automatically generates a private <b>access key</b> that is stored in your browser on your device.</p>
-    <p>The only things stored are <b>your reminders</b> (text and deadline), your notification choice, and a push subscription so your device can receive alerts. Your list is private — no other user can see it.</p>
-    <p>Data is stored on a server and database in the <b>EU (Frankfurt)</b>. The data controller is Trine Landsem. For questions or to have your data deleted, get in touch via the contact page. You can also delete your reminders yourself in the app at any time.</p>
-
-    <h3>// Security</h3>
-    <p>All traffic is encrypted (HTTPS/TLS), and the content of notifications is encrypted. Every request is tied to your own access key, so you only ever reach your own data.</p>
-    <p><b>Note:</b> this is a free hobby service. Avoid putting sensitive information (health, passwords, etc.) in your reminders, since data "at rest" is not necessarily encrypted on the free tier.</p>
-
-    <h3>// Installation &amp; access key</h3>
-    <p><b>iPhone:</b> open in Safari → Share button → "Add to Home Screen" → open the app from the Home Screen → tap "Turn on notifications".</p>
-    <p><b>Android / desktop:</b> open the link, and add it to your home screen if you like. Alerts arrive right in the browser.</p>
-    <p>Your access key is your <b>only login</b>. To use Husk on another device, copy the key at the bottom of the app and paste it there. If you clear your browser data or lose the key, you lose access to the list — there is no password recovery.</p>
-  </section>
-
-  <footer>HUSK <span class="sep">·</span> PWA <span class="sep">·</span> ENCRYPTION: TLS</footer>
-
-<script>
-(function(){
-  var c=document.getElementById('net'); if(!c) return;
-  var ctx=c.getContext('2d'), DPR=Math.min(window.devicePixelRatio||1,2);
-  var w,h,pts,raf, reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var TEAL='47,240,208';
-  function size(){ var r=c.parentElement.getBoundingClientRect(); w=c.width=Math.max(1,r.width*DPR); h=c.height=Math.max(1,r.height*DPR); }
-  function init(){
-    size();
-    var n=Math.min(80, Math.floor((w/DPR)/16));
-    pts=[];
-    for(var i=0;i<n;i++){
-      pts.push({x:Math.random()*w,y:Math.random()*h,
-        vx:(Math.random()-.5)*0.16*DPR, vy:(Math.random()-.5)*0.16*DPR,
-        glow:Math.random()<0.18});
-    }
-  }
-  function draw(){
-    ctx.clearRect(0,0,w,h);
-    var D=120*DPR;
-    for(var i=0;i<pts.length;i++){
-      var p=pts[i];
-      if(!reduce){ p.x+=p.vx; p.y+=p.vy;
-        if(p.x<0||p.x>w)p.vx*=-1; if(p.y<0||p.y>h)p.vy*=-1; }
-      for(var j=i+1;j<pts.length;j++){
-        var q=pts[j], dx=p.x-q.x, dy=p.y-q.y, d=Math.sqrt(dx*dx+dy*dy);
-        if(d<D){ ctx.strokeStyle='rgba('+TEAL+','+(0.16*(1-d/D))+')';
-          ctx.lineWidth=DPR; ctx.beginPath(); ctx.moveTo(p.x,p.y); ctx.lineTo(q.x,q.y); ctx.stroke(); }
-      }
-    }
-    for(var k=0;k<pts.length;k++){
-      var pt=pts[k];
-      ctx.beginPath();
-      ctx.arc(pt.x,pt.y, (pt.glow?2.2:1.4)*DPR, 0, Math.PI*2);
-      if(pt.glow){ ctx.fillStyle='rgba('+TEAL+',0.95)'; ctx.shadowColor='rgba('+TEAL+',0.9)'; ctx.shadowBlur=10*DPR; }
-      else { ctx.fillStyle='rgba('+TEAL+',0.5)'; ctx.shadowBlur=0; }
-      ctx.fill(); ctx.shadowBlur=0;
-    }
-    if(!reduce) raf=requestAnimationFrame(draw);
-  }
-  init(); draw();
-  var t; window.addEventListener('resize',function(){ clearTimeout(t); t=setTimeout(function(){ cancelAnimationFrame(raf); init(); draw(); },200); });
-})();
+  </div>
+  <footer style="position: relative; z-index: 10; text-align: center; padding: 24px; border-top: 1px solid rgba(0,200,160,0.1); margin-top: 40px;">
+  <div style="margin-bottom: 12px; display: flex; justify-content: center; gap: 28px;">
+    <a href="https://www.linkedin.com/in/trinelandsem" target="_blank" rel="noopener" style="color: rgba(0,200,160,0.55); font-size: 13px; letter-spacing: 0.1em; text-decoration: none; text-transform: uppercase;" onmouseover="this.style.color='#00e5b3'" onmouseout="this.style.color='rgba(0,200,160,0.55)'">LinkedIn</a>
+    <a href="https://www.facebook.com/trine.landsem" target="_blank" rel="noopener" style="color: rgba(0,200,160,0.55); font-size: 13px; letter-spacing: 0.1em; text-decoration: none; text-transform: uppercase;" onmouseover="this.style.color='#00e5b3'" onmouseout="this.style.color='rgba(0,200,160,0.55)'">Facebook</a>
+    <a href="https://www.instagram.com/landsemtrine/" target="_blank" rel="noopener" style="color: rgba(0,200,160,0.55); font-size: 13px; letter-spacing: 0.1em; text-decoration: none; text-transform: uppercase;" onmouseover="this.style.color='#00e5b3'" onmouseout="this.style.color='rgba(0,200,160,0.55)'">Instagram</a>
+  </div>
+  <p style="color: rgba(0,200,160,0.25); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; margin: 0;">© 2026 Trine Landsem · All rights reserved</p>
+</footer>
+function toggleMenu() { document.getElementById('nav-menu').classList.toggle('open'); }
+document.querySelectorAll('#nav-menu a').forEach(link => { link.addEventListener('click', () => { document.getElementById('nav-menu').classList.remove('open'); }); });
+const canvas = document.getElementById('c'); const ctx = canvas.getContext('2d');
+function resize() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
+resize(); window.addEventListener('resize', () => { resize(); initNodes(); });
+const GLYPHS = '01アイウエオABCDEF<>{}[]//\\&&||::?!#$%^*'.split('');
+let nodes = [], links = [], packets = [], glyphs = [];
+function rand(a, b) { return a + Math.random() * (b - a); }
+function initNodes() {
+  const W = canvas.width, H = canvas.height;
+  const count = Math.floor(W * H / 13000);
+  nodes = [];
+  for (let i = 0; i < count; i++) { nodes.push({ x: rand(40, W-40), y: rand(40, H-40), r: rand(2, 4.5), vx: rand(-0.03, 0.03), vy: rand(-0.03, 0.03), pulseT: rand(0, Math.PI*2), type: Math.random() < 0.1 ? 'hub' : 'node' }); }
+  links = [];
+  for (let i = 0; i < nodes.length; i++) { for (let j = i+1; j < nodes.length; j++) { const dx = nodes[i].x-nodes[j].x, dy = nodes[i].y-nodes[j].y, d = Math.sqrt(dx*dx+dy*dy), maxDist = nodes[i].type==='hub'||nodes[j].type==='hub' ? 190 : 115; if (d < maxDist) links.push({a:i,b:j,d}); } }
+  packets = []; glyphs = [];
+  for (let k = 0; k < 28; k++) { glyphs.push({ x: rand(0,W), y: rand(0,H), char: GLYPHS[Math.floor(Math.random()*GLYPHS.length)], alpha: rand(0.03,0.1), size: rand(10,20), vy: rand(0.07,0.22) }); }
+}
+function spawnPacket() { if (links.length===0) return; const link = links[Math.floor(Math.random()*links.length)]; const isCritical = Math.random()<0.08; packets.push({link, t:0, speed:rand(0.002,0.006), fwd:Math.random()<0.5, color:isCritical?'rgba(255,80,100,0.85)':'rgba(0,230,180,0.8)'}); }
+let frame = 0;
+const statusTexts = ['ONLINE','FIREWALL: ACTIVE','ENCRYPTION: AES-256','PACKETS: 0 LOSS','TLS 1.3','THREAT LEVEL: LOW','NODES: SECURE'];
+let statusIdx = 0;
+function draw() {
+  const W = canvas.width, H = canvas.height;
+  ctx.fillStyle = '#080d12'; ctx.fillRect(0,0,W,H);
+  const gStep = 50; ctx.strokeStyle = 'rgba(0,180,140,0.055)'; ctx.lineWidth = 0.5;
+  for (let x=0; x<W; x+=gStep) { ctx.beginPath(); ctx.moveTo(x,0); ctx.lineTo(x,H); ctx.stroke(); }
+  for (let y=0; y<H; y+=gStep) { ctx.beginPath(); ctx.moveTo(0,y); ctx.lineTo(W,y); ctx.stroke(); }
+  const vg = ctx.createRadialGradient(W/2,H/2,H*0.2,W/2,H/2,H*0.85); vg.addColorStop(0,'rgba(0,0,0,0)'); vg.addColorStop(1,'rgba(0,0,0,0.55)'); ctx.fillStyle=vg; ctx.fillRect(0,0,W,H);
+  for (const g of glyphs) { ctx.save(); ctx.globalAlpha=g.alpha; ctx.fillStyle='#00e5b3'; ctx.font=`${g.size}px 'Courier New', monospace`; ctx.fillText(g.char,g.x,g.y); ctx.restore(); g.y+=g.vy; if(g.y>H+30){g.y=-30;g.x=rand(0,W);g.char=GLYPHS[Math.floor(Math.random()*GLYPHS.length)];} }
+  for (const lk of links) { const a=nodes[lk.a],b=nodes[lk.b]; const alpha=Math.max(0,1-lk.d/160)*0.55; ctx.strokeStyle=`rgba(0,200,160,${alpha*0.22})`; ctx.lineWidth=0.5; ctx.beginPath(); ctx.moveTo(a.x,a.y); ctx.lineTo(b.x,b.y); ctx.stroke(); }
+  for (let i=packets.length-1; i>=0; i--) { const pk=packets[i]; pk.t+=pk.speed; if(pk.t>=1){packets.splice(i,1);continue;} const a=nodes[pk.link.a],b=nodes[pk.link.b]; const t=pk.fwd?pk.t:1-pk.t; const px=a.x+(b.x-a.x)*t,py=a.y+(b.y-a.y)*t; ctx.beginPath(); ctx.arc(px,py,2.2,0,Math.PI*2); ctx.fillStyle=pk.color; ctx.fill(); ctx.beginPath(); ctx.arc(px,py,5.5,0,Math.PI*2); ctx.fillStyle=pk.color.replace('0.8','0.12').replace('0.85','0.12'); ctx.fill(); }
+  const t=frame*0.012;
+  for (const n of nodes) { n.x+=n.vx; n.y+=n.vy; if(n.x<10||n.x>W-10)n.vx*=-1; if(n.y<10||n.y>H-10)n.vy*=-1; const pulse=0.5+0.5*Math.sin(t+n.pulseT); const r=n.type==='hub'?n.r*1.8:n.r; if(n.type==='hub'){ctx.beginPath();ctx.arc(n.x,n.y,r+7+pulse*5,0,Math.PI*2);ctx.fillStyle=`rgba(0,220,170,${0.04+pulse*0.05})`;ctx.fill();} ctx.beginPath();ctx.arc(n.x,n.y,r,0,Math.PI*2);ctx.fillStyle=n.type==='hub'?`rgba(0,230,180,${0.75+pulse*0.2})`:`rgba(0,190,150,${0.35+pulse*0.25})`;ctx.fill(); if(n.type==='hub'){ctx.beginPath();ctx.arc(n.x,n.y,r*0.35,0,Math.PI*2);ctx.fillStyle='rgba(200,255,240,0.8)';ctx.fill();} }
+  if(frame%38===0)spawnPacket();
+  if(frame%200===0){statusIdx=(statusIdx+1)%statusTexts.length;document.getElementById('status').textContent=statusTexts[statusIdx];}
+  frame++; requestAnimationFrame(draw);
+}
+initNodes(); draw();
+</div>
 </script>
 </body>
 </html>
