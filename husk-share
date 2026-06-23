@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>HUSK // reminders</title>
+<meta name="description" content="Husk — a tiny reminder app you talk to. Say what you need to remember, get notified before the deadline.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#05090b; --panel:rgba(10,16,20,.55); --panel-solid:#0a1014;
+    --teal:#2ff0d0; --teal-dim:#1aa78f; --teal-glow:rgba(47,240,208,.5);
+    --text:#cdd8d6; --muted:#708079; --line:rgba(47,240,208,.22);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Chakra Petch',system-ui,sans-serif;background:var(--bg);color:var(--text);
+    -webkit-font-smoothing:antialiased;line-height:1.55;overflow-x:hidden;
+  }
+  a{color:inherit}
+
+  .hero{position:relative;min-height:100svh;display:flex;align-items:center;justify-content:center;
+    padding:48px 20px;overflow:hidden}
+  #net{position:absolute;inset:0;width:100%;height:100%;display:block}
+  .hero::after{content:"";position:absolute;inset:0;pointer-events:none;
+    background:radial-gradient(ellipse at center, transparent 40%, rgba(5,9,11,.7) 100%)}
+
+  .panel{position:relative;z-index:2;width:100%;max-width:560px;text-align:center;
+    background:var(--panel);border:1px solid var(--line);border-radius:14px;
+    padding:34px 28px 30px;backdrop-filter:blur(6px);
+    box-shadow:0 0 0 1px rgba(47,240,208,.04), 0 30px 80px rgba(0,0,0,.55), inset 0 0 60px rgba(47,240,208,.03)}
+
+  .eyebrow{font-family:'Share Tech Mono',monospace;font-size:13px;letter-spacing:.32em;
+    color:var(--teal);opacity:.85;margin-bottom:20px}
+  .appicon{width:74px;height:74px;border-radius:18px;display:block;margin:0 auto 18px;
+    border:1px solid var(--line);box-shadow:0 0 26px var(--teal-glow),0 10px 24px rgba(0,0,0,.5)}
+  h1{font-weight:700;font-size:54px;letter-spacing:.14em;color:#eafffb;
+    text-shadow:0 0 18px var(--teal-glow);line-height:1}
+  .sub{font-family:'Share Tech Mono',monospace;font-size:13.5px;letter-spacing:.18em;
+    color:var(--text);opacity:.78;margin-top:14px;text-transform:uppercase}
+
+  .demo{margin:26px auto 24px;max-width:380px;text-align:left}
+  .said{font-family:'Share Tech Mono',monospace;font-size:13.5px;color:var(--text);
+    background:rgba(47,240,208,.05);border:1px solid var(--line);border-radius:10px;padding:11px 13px;
+    display:flex;gap:9px;align-items:flex-start}
+  .said .gt{color:var(--teal)}
+  .arrow{text-align:center;color:var(--teal-dim);font-size:16px;margin:7px 0;font-family:'Share Tech Mono',monospace}
+  .rcard{display:flex;align-items:center;gap:12px;background:var(--panel-solid);
+    border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+  .rcard .bar{width:3px;align-self:stretch;border-radius:2px;background:var(--teal);box-shadow:0 0 8px var(--teal-glow)}
+  .rtitle{font-weight:600;font-size:15px;letter-spacing:.02em}
+  .rmeta{font-family:'Share Tech Mono',monospace;font-size:11.5px;color:var(--muted);margin-top:2px}
+  .rrem{margin-left:auto;font-family:'Share Tech Mono',monospace;font-size:11.5px;color:var(--teal);white-space:nowrap}
+
+  .cta{display:inline-block;font-family:'Share Tech Mono',monospace;font-size:15px;letter-spacing:.18em;
+    text-decoration:none;color:var(--teal);background:rgba(47,240,208,.06);
+    border:1px solid var(--teal);border-radius:10px;padding:14px 30px;margin-top:6px;
+    transition:background .15s,box-shadow .15s,transform .12s;text-transform:uppercase}
+  .cta:hover{background:rgba(47,240,208,.15);box-shadow:0 0 24px var(--teal-glow);transform:translateY(-1px)}
+  .cta:active{transform:translateY(0)}
+  .cta:focus-visible{outline:2px solid var(--teal);outline-offset:3px}
+  .status{font-family:'Share Tech Mono',monospace;font-size:11px;letter-spacing:.22em;color:var(--muted);margin-top:18px}
+
+  main{position:relative;z-index:2;max-width:620px;margin:0 auto;padding:10px 22px 0}
+  .block{border-top:1px solid var(--line);padding:34px 0}
+  h2{font-family:'Share Tech Mono',monospace;font-size:14px;letter-spacing:.2em;color:var(--teal);
+    margin-bottom:22px;text-transform:uppercase}
+  ol.steps{list-style:none;display:grid;gap:18px;counter-reset:s}
+  ol.steps li{counter-increment:s;display:flex;gap:16px;align-items:flex-start}
+  ol.steps li::before{content:"0" counter(s);font-family:'Share Tech Mono',monospace;color:var(--teal);
+    font-size:13px;letter-spacing:.05em;flex:none;width:30px;padding-top:2px;
+    text-shadow:0 0 10px var(--teal-glow)}
+  ol.steps b{font-weight:600}
+  ol.steps p{font-size:15.5px}
+  ol.steps .d{color:var(--muted);font-size:13.5px;margin-top:3px}
+  .note{display:flex;gap:12px;align-items:flex-start;font-size:15px}
+  .note + .note{margin-top:14px}
+  .note .gt{color:var(--teal);font-family:'Share Tech Mono',monospace;flex:none}
+  .note b{font-weight:600}
+
+  footer{position:relative;z-index:2;max-width:620px;margin:0 auto;
+    border-top:1px solid var(--line);padding:22px;text-align:center;
+    font-family:'Share Tech Mono',monospace;font-size:11px;letter-spacing:.2em;color:var(--muted)}
+  footer .sep{opacity:.4;margin:0 8px}
+
+  .legal{position:relative;z-index:2;max-width:620px;margin:0 auto;padding:30px 22px 4px;border-top:1px solid var(--line)}
+  .legal h3{font-family:'Share Tech Mono',monospace;font-size:11.5px;letter-spacing:.18em;color:var(--teal-dim);text-transform:uppercase;margin:20px 0 8px}
+  .legal h3:first-child{margin-top:0}
+  .legal p{font-size:11.5px;line-height:1.65;color:var(--muted)}
+  .legal p + p{margin-top:5px}
+  .legal b{color:var(--text);font-weight:600}
+  .legal a{color:var(--teal-dim)}
+
+  @media (max-width:520px){ h1{font-size:44px} .panel{padding:28px 20px 26px} }
+  @media (prefers-reduced-motion:reduce){.cta{transition:none}}
+</style>
+</head>
+<body>
+
+  <section class="hero">
+    <canvas id="net"></canvas>
+    <div class="panel">
+      <div class="eyebrow">// REMINDERS</div>
+      <img class="appicon" src="https://husk-jdwj.onrender.com/icon-512.png" alt="Husk app icon" width="74" height="74">
+      <h1>HUSK</h1>
+      <div class="sub">[ Say it. We'll remind you. ]</div>
+
+      <div class="demo">
+        <div class="said"><span class="gt">&gt;</span><span>"Call the dentist tomorrow at ten"</span></div>
+        <div class="arrow">&#9660;</div>
+        <div class="rcard">
+          <span class="bar"></span>
+          <div>
+            <div class="rtitle">Call the dentist</div>
+            <div class="rmeta">TOMORROW — 10:00</div>
+          </div>
+          <div class="rrem">ALERT 1H BEFORE</div>
+        </div>
+      </div>
+
+      <a class="cta" href="https://husk-jdwj.onrender.com">[ Open Husk ]</a>
+      <div class="status">STATUS: LIVE — REGION: EU / FRANKFURT</div>
+    </div>
+  </section>
+
+  <main>
+    <div class="block">
+      <h2>// How to get notifications on iPhone</h2>
+      <ol class="steps">
+        <li><div><p><b>Open Husk in Safari</b> — tap the button above.</p></div></li>
+        <li><div><p><b>Add it to your Home Screen</b></p><p class="d">Tap the Share button, then "Add to Home Screen".</p></div></li>
+        <li><div><p><b>Open Husk from the Home Screen</b></p><p class="d">Your new icon — not the Safari tab.</p></div></li>
+        <li><div><p><b>Tap "Turn on notifications" and allow</b></p><p class="d">Now you'll get alerts even when the app is closed.</p></div></li>
+      </ol>
+    </div>
+
+    <div class="block">
+      <h2>// Good to know</h2>
+      <div class="note"><span class="gt">&gt;</span><div><b>Your own private list.</b> Only you can see what you add.</div></div>
+      <div class="note"><span class="gt">&gt;</span><div><b>Using more than one device?</b> Keep your access key — it's at the bottom of the app.</div></div>
+      <div class="note"><span class="gt">&gt;</span><div><b>Works on Android and desktop too.</b> Just open the link; alerts arrive in the browser.</div></div>
+    </div>
+  </main>
+
+  <section class="legal">
+    <h3>// Privacy</h3>
+    <p>Husk is a personal project, not a commercial service. <b>No ads, no tracking, no analytics.</b></p>
+    <p>You don't create an account with a name or email. The app automatically generates a private <b>access key</b> that is stored in your browser on your device.</p>
+    <p>The only things stored are <b>your reminders</b> (text and deadline), your notification choice, and a push subscription so your device can receive alerts. Your list is private — no other user can see it.</p>
+    <p>Data is stored on a server and database in the <b>EU (Frankfurt)</b>. The data controller is Trine Landsem. For questions or to have your data deleted, get in touch via the contact page. You can also delete your reminders yourself in the app at any time.</p>
+
+    <h3>// Security</h3>
+    <p>All traffic is encrypted (HTTPS/TLS), and the content of notifications is encrypted. Every request is tied to your own access key, so you only ever reach your own data.</p>
+    <p><b>Note:</b> this is a free hobby service. Avoid putting sensitive information (health, passwords, etc.) in your reminders, since data "at rest" is not necessarily encrypted on the free tier.</p>
+
+    <h3>// Installation &amp; access key</h3>
+    <p><b>iPhone:</b> open in Safari → Share button → "Add to Home Screen" → open the app from the Home Screen → tap "Turn on notifications".</p>
+    <p><b>Android / desktop:</b> open the link, and add it to your home screen if you like. Alerts arrive right in the browser.</p>
+    <p>Your access key is your <b>only login</b>. To use Husk on another device, copy the key at the bottom of the app and paste it there. If you clear your browser data or lose the key, you lose access to the list — there is no password recovery.</p>
+  </section>
+
+  <footer>HUSK <span class="sep">·</span> PWA <span class="sep">·</span> ENCRYPTION: TLS</footer>
+
+<script>
+(function(){
+  var c=document.getElementById('net'); if(!c) return;
+  var ctx=c.getContext('2d'), DPR=Math.min(window.devicePixelRatio||1,2);
+  var w,h,pts,raf, reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var TEAL='47,240,208';
+  function size(){ var r=c.parentElement.getBoundingClientRect(); w=c.width=Math.max(1,r.width*DPR); h=c.height=Math.max(1,r.height*DPR); }
+  function init(){
+    size();
+    var n=Math.min(80, Math.floor((w/DPR)/16));
+    pts=[];
+    for(var i=0;i<n;i++){
+      pts.push({x:Math.random()*w,y:Math.random()*h,
+        vx:(Math.random()-.5)*0.16*DPR, vy:(Math.random()-.5)*0.16*DPR,
+        glow:Math.random()<0.18});
+    }
+  }
+  function draw(){
+    ctx.clearRect(0,0,w,h);
+    var D=120*DPR;
+    for(var i=0;i<pts.length;i++){
+      var p=pts[i];
+      if(!reduce){ p.x+=p.vx; p.y+=p.vy;
+        if(p.x<0||p.x>w)p.vx*=-1; if(p.y<0||p.y>h)p.vy*=-1; }
+      for(var j=i+1;j<pts.length;j++){
+        var q=pts[j], dx=p.x-q.x, dy=p.y-q.y, d=Math.sqrt(dx*dx+dy*dy);
+        if(d<D){ ctx.strokeStyle='rgba('+TEAL+','+(0.16*(1-d/D))+')';
+          ctx.lineWidth=DPR; ctx.beginPath(); ctx.moveTo(p.x,p.y); ctx.lineTo(q.x,q.y); ctx.stroke(); }
+      }
+    }
+    for(var k=0;k<pts.length;k++){
+      var pt=pts[k];
+      ctx.beginPath();
+      ctx.arc(pt.x,pt.y, (pt.glow?2.2:1.4)*DPR, 0, Math.PI*2);
+      if(pt.glow){ ctx.fillStyle='rgba('+TEAL+',0.95)'; ctx.shadowColor='rgba('+TEAL+',0.9)'; ctx.shadowBlur=10*DPR; }
+      else { ctx.fillStyle='rgba('+TEAL+',0.5)'; ctx.shadowBlur=0; }
+      ctx.fill(); ctx.shadowBlur=0;
+    }
+    if(!reduce) raf=requestAnimationFrame(draw);
+  }
+  init(); draw();
+  var t; window.addEventListener('resize',function(){ clearTimeout(t); t=setTimeout(function(){ cancelAnimationFrame(raf); init(); draw(); },200); });
+})();
+</script>
+</body>
+</html>
