@@ -7,10 +7,10 @@ A cyberpunk-themed personal portfolio featuring an animated network background, 
 
 ## Pages
 - **Home** — Landing page
+- **News** — Latest updates and announcements
 - **About me** — Information and background
 - **CV** — Work experience, education and certifications
 - **Projects** — Portfolio of projects
-- **Photos** — Photography gallery with lightbox and swipe support
 - **Contact** — Contact form via Formspree
 
 ## Tech Stack
@@ -28,7 +28,6 @@ trinelandsem.no/
 ├── about.html
 ├── cv.html
 ├── projects.html
-├── photos.html
 ├── contact.html
 ├── static/
 │   ├── js/
@@ -37,12 +36,6 @@ trinelandsem.no/
 │       ├── favicon.png
 │       ├── profilbilde.png
 │       ├── cv_profilbilde.png
-│       └── gallery/
-│           ├── norway/
-│           ├── svalbard/
-│           ├── nature/
-│           ├── northern_lights/
-│           └── other/
 └── README.md
 ```
 ## Tools
