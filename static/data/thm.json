@@ -7,22 +7,22 @@
   "badges": [
     {
       "name": "raffle-royalty",
-      "image": "https://cdn-images.tryhackme.com/2b27a5d9d19827425c90ee091d373833.png",
+      "image": null,
       "earnedAt": "2025-09-11T14:28:37.124Z"
     },
     {
       "name": "ohsint",
-      "image": "https://cdn-images.tryhackme.com/4d5e6ad1b4cd485cdde02758103c794c.png",
+      "image": "static/images/thm/ohsint.png",
       "earnedAt": "2026-08-27T17:41:19.291Z"
     },
     {
       "name": "terminaled",
-      "image": "https://cdn-images.tryhackme.com/2be1cd825d5c36316105852f879c7373.png",
+      "image": "static/images/thm/terminaled.png",
       "earnedAt": "2026-09-02T20:58:24.894Z"
     },
     {
       "name": "3-day-streak",
-      "image": "https://cdn-images.tryhackme.com/a5cd68bd6bda344e00bc39d35b79db0a.png",
+      "image": null,
       "earnedAt": "2026-09-16T19:05:14.755Z"
     }
   ],
