@@ -1,0 +1,4 @@
+# Filer som ligger i repoet, men ikke skal publiseres på trinelandsem.no
+exclude:
+  - README.md
+  - scripts/

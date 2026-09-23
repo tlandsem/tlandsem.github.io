@@ -8,3 +8,10 @@ static/images/gallery_backup/
 
 # Gamle merkebilder, erstattet av automatisk TryHackMe-data
 static/images/thm-*.png
+
+# Ikke i bruk på nettsiden (ligger fortsatt på PC-en)
+photos.html
+forever.html
+static/images/gallery/
+compress.py
+requirements.txt
