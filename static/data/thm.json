@@ -2,7 +2,7 @@
   "username": "novaninja",
   "level": 6,
   "rank": "Top 20%",
-  "completedRoomsNumber": 26,
+  "completedRoomsNumber": 27,
   "badgesNumber": 4,
   "badges": [
     {
@@ -194,6 +194,17 @@
         "Malware analysis",
         "Red teaming",
         "Incident response"
+      ]
+    },
+    {
+      "title": "Web Application Basics",
+      "code": "webapplicationbasics",
+      "difficulty": "easy",
+      "tags": [
+        "Web",
+        "Burp Suite",
+        "Application security engineering",
+        "Application penetration testing"
       ]
     },
     {
