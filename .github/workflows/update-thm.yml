@@ -1,9 +1,10 @@
 name: Oppdater TryHackMe-data
 
+# Den automatiske nattkjøringen er slått av fordi TryHackMe blokkerer GitHub (HTTP 429).
+# Oppdateringen skjer i stedet fra din egen PC med scripts/oppdater_thm.bat.
+# Du kan fortsatt prøve manuelt fra Actions-fanen.
 on:
-  schedule:
-    - cron: "0 4 * * *"   # hver natt kl. 04:00 UTC
-  workflow_dispatch:       # lar deg kjøre den manuelt fra Actions-fanen
+  workflow_dispatch:
 
 permissions:
   contents: write
