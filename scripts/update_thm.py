@@ -55,18 +55,24 @@ def local_badge(b):
     import os, re
     name = re.sub(r"[^a-z0-9-]", "", b["name"].lower()) or "badge"
     path = f"{IMG_DIR}/{name}.png"
-    if not os.path.exists(path):
+    if os.path.exists(path):
+        return path
+    try:
         os.makedirs(IMG_DIR, exist_ok=True)
-        req = urllib.request.Request(b["image"], headers=HEADERS)
-        with urllib.request.urlopen(req, timeout=30) as r, open(path, "wb") as f:
-            f.write(r.read())
-    return path
+        headers = dict(HEADERS, Accept="image/avif,image/webp,image/png,image/*;q=0.8,*/*;q=0.5")
+        req = urllib.request.Request(b["image"], headers=headers)
+        with urllib.request.urlopen(req, timeout=30) as r:
+            data = r.read()
+        with open(path, "wb") as f:
+            f.write(data)
+        return path
+    except Exception as e:
+        # TryHackMe blokkerer ofte nedlasting av bildene. Lagre bildet selv som
+        # static/images/thm/<navn>.png (høyreklikk → Lagre bilde som), så brukes det neste gang.
+        print(f"Fant ikke bilde for merket «{b['name']}» ({e}). Lagre det som {path} for å vise det.")
+        return None
 
-try:
-    badge_images = {b["name"]: local_badge(b) for b in badges}
-except Exception as e:
-    print(f"::warning::Kunne ikke laste ned merkebilder, beholder gammel fil: {e}")
-    sys.exit(0)
+badge_images = {b["name"]: local_badge(b) for b in badges}
 
 snapshot = {
     "username": p["username"], "level": p.get("level"), "rank": p.get("rank"),

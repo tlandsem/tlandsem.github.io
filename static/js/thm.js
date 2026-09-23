@@ -33,9 +33,10 @@
         const row = el('div', 'thm-badges');
         badges.forEach(b => {
           const card = el('div', 'thm-badge-mini');
-          const img = el('img'); img.src = safeImg(b.image); img.alt = pretty(b.name) + ' badge'; img.loading = 'lazy';
+          const src = safeImg(b.image || '');
           const date = new Date(b.earnedAt).toLocaleDateString('en-GB', { month: 'short', year: 'numeric' });
-          card.append(img, el('div', 'cv-role', pretty(b.name)), el('div', 'thm-meta', 'Earned ' + date));
+          if (src) { const img = el('img'); img.src = src; img.alt = pretty(b.name) + ' badge'; img.loading = 'lazy'; card.append(img); }
+          card.append(el('div', 'cv-role', pretty(b.name)), el('div', 'thm-meta', 'Earned ' + date));
           row.append(card);
         });
         root.append(row);
