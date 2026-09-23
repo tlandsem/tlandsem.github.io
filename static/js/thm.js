@@ -15,7 +15,7 @@
   ];
 
   const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
-  const safeImg = url => /^https:\/\//.test(url) ? url : '';
+  const safeImg = url => /^static\/images\/thm\/[a-z0-9-]+\.png$/.test(url) ? url : '';
 
   fetch('static/data/thm.json', { cache: 'no-cache' })
     .then(r => r.json())

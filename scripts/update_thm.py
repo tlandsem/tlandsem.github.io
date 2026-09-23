@@ -7,6 +7,7 @@ from datetime import datetime, timezone
 USERNAME = "novaninja"
 BASE = "https://tryhackme.com/api/v2"
 OUT = "static/data/thm.json"
+IMG_DIR = "static/images/thm"
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36",
@@ -49,10 +50,28 @@ except Exception as e:
     print(f"::warning::Kunne ikke hente data fra TryHackMe, beholder gammel fil: {e}")
     sys.exit(0)
 
+def local_badge(b):
+    """Laster ned merkebildet til nettsiden din, så besøkende ikke henter noe fra TryHackMe."""
+    import os, re
+    name = re.sub(r"[^a-z0-9-]", "", b["name"].lower()) or "badge"
+    path = f"{IMG_DIR}/{name}.png"
+    if not os.path.exists(path):
+        os.makedirs(IMG_DIR, exist_ok=True)
+        req = urllib.request.Request(b["image"], headers=HEADERS)
+        with urllib.request.urlopen(req, timeout=30) as r, open(path, "wb") as f:
+            f.write(r.read())
+    return path
+
+try:
+    badge_images = {b["name"]: local_badge(b) for b in badges}
+except Exception as e:
+    print(f"::warning::Kunne ikke laste ned merkebilder, beholder gammel fil: {e}")
+    sys.exit(0)
+
 snapshot = {
     "username": p["username"], "level": p.get("level"), "rank": p.get("rank"),
     "completedRoomsNumber": p.get("completedRoomsNumber"), "badgesNumber": p.get("badgesNumber"),
-    "badges": [{"name": b["name"], "image": b["image"], "earnedAt": b["earnedAt"]} for b in badges],
+    "badges": [{"name": b["name"], "image": badge_images[b["name"]], "earnedAt": b["earnedAt"]} for b in badges],
     "rooms": [{"title": r["title"].strip(), "code": r["code"], "difficulty": r.get("difficulty"),
                "tags": r.get("technologyTags") or []} for r in rooms],
 }
