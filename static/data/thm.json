@@ -1,0 +1,315 @@
+{
+  "username": "novaninja",
+  "level": 6,
+  "rank": "Top 20%",
+  "completedRoomsNumber": 26,
+  "badgesNumber": 4,
+  "badges": [
+    {
+      "name": "raffle-royalty",
+      "image": "https://cdn-images.tryhackme.com/2b27a5d9d19827425c90ee091d373833.png",
+      "earnedAt": "2025-09-11T14:28:37.124Z"
+    },
+    {
+      "name": "ohsint",
+      "image": "https://cdn-images.tryhackme.com/4d5e6ad1b4cd485cdde02758103c794c.png",
+      "earnedAt": "2026-08-27T17:41:19.291Z"
+    },
+    {
+      "name": "terminaled",
+      "image": "https://cdn-images.tryhackme.com/2be1cd825d5c36316105852f879c7373.png",
+      "earnedAt": "2026-09-02T20:58:24.894Z"
+    },
+    {
+      "name": "3-day-streak",
+      "image": "https://cdn-images.tryhackme.com/a5cd68bd6bda344e00bc39d35b79db0a.png",
+      "earnedAt": "2026-09-16T19:05:14.755Z"
+    }
+  ],
+  "rooms": [
+    {
+      "title": "OhSINT",
+      "code": "ohsint",
+      "difficulty": "easy",
+      "tags": [
+        "Windows",
+        "Web",
+        "OSINT",
+        "Red teaming",
+        "Information gathering"
+      ]
+    },
+    {
+      "title": "Google Dorking",
+      "code": "googledorking",
+      "difficulty": "easy",
+      "tags": [
+        "Web",
+        "OSINT",
+        "Information gathering"
+      ]
+    },
+    {
+      "title": "Linux Fundamentals Part 2",
+      "code": "linuxfundamentalspart2",
+      "difficulty": "info",
+      "tags": [
+        "Linux",
+        "Penetration testing",
+        "File system navigation"
+      ]
+    },
+    {
+      "title": "Linux Fundamentals Part 3",
+      "code": "linuxfundamentalspart3",
+      "difficulty": "info",
+      "tags": [
+        "Linux",
+        "Penetration testing",
+        "File system navigation",
+        "Logging"
+      ]
+    },
+    {
+      "title": "What is Networking?",
+      "code": "whatisnetworking",
+      "difficulty": "info",
+      "tags": [
+        "Network troubleshooting"
+      ]
+    },
+    {
+      "title": "Passive Reconnaissance",
+      "code": "passiverecon",
+      "difficulty": "easy",
+      "tags": [
+        "Linux",
+        "Information gathering",
+        "Reconnaissance",
+        "OSINT",
+        "Domain enumeration",
+        "Subdomain enumeration"
+      ]
+    },
+    {
+      "title": "Nmap Live Host Discovery",
+      "code": "nmap01",
+      "difficulty": "medium",
+      "tags": [
+        "Linux",
+        "Nmap",
+        "Wireshark",
+        "Penetration testing",
+        "Red teaming",
+        "Vulnerability analysis",
+        "Reconnaissance"
+      ]
+    },
+    {
+      "title": "Nmap Basic Port Scans",
+      "code": "nmap02",
+      "difficulty": "easy",
+      "tags": [
+        "Linux",
+        "Nmap",
+        "Vulnerability analysis",
+        "Red teaming",
+        "Penetration testing",
+        "Port scanning"
+      ]
+    },
+    {
+      "title": "Metasploit: Introduction",
+      "code": "metasploitintro",
+      "difficulty": "easy",
+      "tags": [
+        "Linux",
+        "pattern_create",
+        "pattern_offset",
+        "Red teaming",
+        "Vulnerability analysis",
+        "Exploit development"
+      ]
+    },
+    {
+      "title": "Protocols and Servers",
+      "code": "protocolsandservers",
+      "difficulty": "easy",
+      "tags": [
+        "Linux",
+        "Wireshark",
+        "Network traffic analysis",
+        "Packet analysis",
+        "Network monitoring",
+        "Security analysis"
+      ]
+    },
+    {
+      "title": "SQL Injection",
+      "code": "sqlinjectionlm",
+      "difficulty": "medium",
+      "tags": [
+        "Linux",
+        "Nmap",
+        "Gobuster",
+        "SQLMap",
+        "Penetration testing",
+        "Red teaming",
+        "Application penetration testing"
+      ]
+    },
+    {
+      "title": "Offensive Security Intro",
+      "code": "offensivesecurityintro",
+      "difficulty": "easy",
+      "tags": [
+        "Web",
+        "Gobuster",
+        "Penetration testing",
+        "Red teaming",
+        "Application penetration testing"
+      ]
+    },
+    {
+      "title": "Defensive Security Intro",
+      "code": "defensivesecurityintro",
+      "difficulty": "easy",
+      "tags": [
+        "Windows",
+        "Security operations",
+        "Security analysis",
+        "Incident response"
+      ]
+    },
+    {
+      "title": "Careers in Cyber",
+      "code": "careersincyber",
+      "difficulty": "info",
+      "tags": [
+        "Linux",
+        "Splunk",
+        "Wireshark",
+        "Metasploit Framework",
+        "Security operations",
+        "Malware analysis",
+        "Red teaming",
+        "Incident response"
+      ]
+    },
+    {
+      "title": "Virtualisation Basics",
+      "code": "virtualisationbasics",
+      "difficulty": "easy",
+      "tags": [
+        "Hypervisor"
+      ]
+    },
+    {
+      "title": "Operating Systems: Introduction",
+      "code": "operatingsystemsintroduction",
+      "difficulty": "easy",
+      "tags": [
+        "Windows",
+        "Linux",
+        "File system navigation"
+      ]
+    },
+    {
+      "title": "Cloud Computing Fundamentals",
+      "code": "cloudcomputingfundamentals",
+      "difficulty": "easy",
+      "tags": [
+        "Cloud",
+        "cloud computing",
+        "segment 1"
+      ]
+    },
+    {
+      "title": "Client-Server Basics",
+      "code": "clientserverbasics",
+      "difficulty": "easy",
+      "tags": [
+        "Developer Tool"
+      ]
+    },
+    {
+      "title": "Inside a Computer System",
+      "code": "insideacomputer",
+      "difficulty": "easy",
+      "tags": [
+        "N/A"
+      ]
+    },
+    {
+      "title": "Computer Types",
+      "code": "computertypes",
+      "difficulty": "easy",
+      "tags": [
+        "General Cyber",
+        "basics",
+        "server",
+        "embedded devices",
+        "computer",
+        "embedded systems",
+        "iot devices",
+        "IOT",
+        "segment 1",
+        "segment 2"
+      ]
+    },
+    {
+      "title": "Basic Vulnerability Identification Techniques",
+      "code": "basicvulnerabilityidentificationtechniques",
+      "difficulty": "easy",
+      "tags": [
+        "Web",
+        "Burp Suite",
+        "Vulnerability analysis"
+      ]
+    },
+    {
+      "title": "Search Skills",
+      "code": "searchskillscS",
+      "difficulty": "easy",
+      "tags": []
+    },
+    {
+      "title": "SQL Injection Introduction",
+      "code": "sqlinjectionintroduction",
+      "difficulty": "easy",
+      "tags": [
+        "Web",
+        "SQLMap",
+        "SQL Lite",
+        "SQL injection",
+        "Authentication bypass",
+        "Web application security",
+        "Data exfiltration"
+      ]
+    },
+    {
+      "title": "Vulnerability Scanning Tools",
+      "code": "vulnerabilityscanningtools",
+      "difficulty": "medium",
+      "tags": [
+        "Web",
+        "Web application security"
+      ]
+    },
+    {
+      "title": "Senior Security Analyst Intro",
+      "code": "seniorsecanalystintro",
+      "difficulty": "easy",
+      "tags": [
+        "Security analysis"
+      ]
+    },
+    {
+      "title": "Linux Fundamentals (Pt1)",
+      "code": "linuxfundamentalspt15vm",
+      "difficulty": "easy",
+      "tags": []
+    }
+  ],
+  "updated": "2026-09-23"
+}
