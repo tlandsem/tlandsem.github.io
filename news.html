@@ -47,6 +47,10 @@
     .corner.tr { top: 12px; right: 12px; border-width: 1.5px 1.5px 0 0; }
     .corner.bl { bottom: 12px; left: 12px; border-width: 0 0 1.5px 1.5px; }
     .corner.br { bottom: 12px; right: 12px; border-width: 0 1.5px 1.5px 0; }
+    .credly-badge { display: inline-flex; flex-direction: column; align-items: center; gap: 8px; text-decoration: none; }
+    .credly-badge img { width: 150px; height: 150px; object-fit: contain; }
+    .credly-badge span { color: #00e5b3; font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; }
+    .credly-badge:hover span { text-decoration: underline; }
   </style>
 </head>
 <body>
@@ -88,7 +92,10 @@
         Looking forward to building on this next year!</p>
       <br>
       <br>
-      <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="4ddd79d3-1ae3-402b-9956-7e1f3772fda1" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+      <a class="credly-badge" href="https://www.credly.com/badges/4ddd79d3-1ae3-402b-9956-7e1f3772fda1/public_url" target="_blank" rel="noopener">
+        <img src="https://images.credly.com/size/680x680/images/441578ec-c0f3-46cc-95fc-86b27e90cf4f/image.png" alt="Cisco Junior Cybersecurity Analyst Career Path badge" loading="lazy">
+        <span>Verify on Credly →</span>
+      </a>
     </article>
 
     <article class="feed-item">

@@ -1,0 +1,10 @@
+# Python-miljø og IDE-innstillinger (skal ikke publiseres)
+.venv/
+.idea/
+__pycache__/
+
+# Backup av originalbilder (brukes ikke på nettsiden)
+static/images/gallery_backup/
+
+# Gamle merkebilder, erstattet av automatisk TryHackMe-data
+static/images/thm-*.png
