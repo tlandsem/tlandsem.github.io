@@ -44,6 +44,25 @@
     .tag-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
     .tag { background: rgba(0,200,160,0.08); border: 1px solid rgba(0,200,160,0.2); border-radius: 6px; color: rgba(0,210,170,0.8); font-size: 12px; letter-spacing: 0.06em; padding: 4px 12px; }
     @media (max-width: 600px) { .cv-item { grid-template-columns: 1fr; } .cv-date { margin-bottom: 4px; } }
+    .thm-live { margin-bottom: 24px; }
+    .thm-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 8px; }
+    .thm-stat { background: rgba(0,200,160,0.06); border: 1px solid rgba(0,200,160,0.2); border-radius: 10px; padding: 14px 10px; text-align: center; }
+    .thm-stat-value { color: #00e5b3; font-size: 22px; font-weight: 700; letter-spacing: 0.04em; }
+    .thm-stat-label { color: rgba(0,200,160,0.55); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; margin-top: 2px; }
+    .thm-badges { display: flex; flex-wrap: wrap; gap: 14px; }
+    .thm-badge-mini { width: 140px; text-align: center; background: rgba(0,200,160,0.06); border: 1px solid rgba(0,200,160,0.2); border-radius: 10px; padding: 14px 10px; }
+    .thm-badge-mini img { width: 64px; height: 64px; object-fit: contain; display: block; margin: 0 auto 8px; }
+    .thm-badge-mini .cv-role { font-size: 13px; }
+    .thm-group { color: rgba(0,200,160,0.55); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; margin: 22px 0 8px; }
+    .thm-meta { color: rgba(0,200,160,0.5); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; margin-top: 6px; }
+    .thm-room { text-decoration: none; transition: background 0.2s, border-color 0.2s; }
+    .thm-room:hover { background: rgba(0,200,160,0.16); border-color: rgba(0,200,160,0.45); }
+    .thm-room.thm-medium { border-color: rgba(255,170,60,0.45); }
+    .thm-room.thm-hard { border-color: rgba(255,80,100,0.5); }
+    .thm-updated { margin-top: 18px; }
+    .thm-btn { display: inline-block; background: rgba(0,200,160,0.12); border: 1px solid rgba(0,200,160,0.4); border-radius: 6px; color: #00e5b3; font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; padding: 9px 18px; text-decoration: none; transition: background 0.2s; }
+    .thm-btn:hover { background: rgba(0,200,160,0.22); }
+    @media (max-width: 600px) { .thm-stats { grid-template-columns: repeat(2, 1fr); } }
   </style>
 </head>
 <body>
@@ -163,6 +182,14 @@
     </div>
   </div>
 
+  </div>
+
+  <div class="cv-section">
+    <h2>// Hands-on Labs · TryHackMe</h2>
+    <div id="thm" class="thm-live"><div class="cv-desc">Loading TryHackMe progress…</div></div>
+    <a class="thm-btn" href="https://tryhackme.com/p/novaninja" target="_blank" rel="noopener">View TryHackMe profile →</a>
+  </div>
+
   <div class="cv-section">
     <h2>// Languages</h2>
     <div class="tag-row">
@@ -180,5 +207,6 @@
   <p style="color: rgba(0,200,160,0.25); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; margin: 0;">© 2026 Trine Landsem · All rights reserved</p>
 </footer>
 <script src="static/js/bg.js"></script>
+<script src="static/js/thm.js"></script>
 </body>
 </html>
