@@ -8,6 +8,8 @@ USERNAME = "novaninja"
 BASE = "https://tryhackme.com/api/v2"
 OUT = "static/data/thm.json"
 IMG_DIR = "static/images/thm"
+# Merker for innloggingsrekker, konkurranser o.l. vises ikke på nettsiden (samme liste som i thm.js)
+SKIP_BADGES = ("streak", "raffle", "league", "legend")
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36",
@@ -53,6 +55,8 @@ except Exception as e:
 def local_badge(b):
     """Laster ned merkebildet til nettsiden din, så besøkende ikke henter noe fra TryHackMe."""
     import os, re
+    if any(k in b["name"].lower() for k in SKIP_BADGES):
+        return None
     name = re.sub(r"[^a-z0-9-]", "", b["name"].lower()) or "badge"
     path = f"{IMG_DIR}/{name}.png"
     if os.path.exists(path):
