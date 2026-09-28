@@ -27,7 +27,7 @@
         .forEach(([v, l]) => { const s = el('div', 'thm-stat'); s.append(el('div', 'thm-stat-value', String(v)), el('div', 'thm-stat-label', l)); stats.append(s); });
       root.append(stats);
 
-      const badges = d.badges.filter(b => !/streak|raffle/i.test(b.name)).sort((a, b) => b.earnedAt.localeCompare(a.earnedAt));
+      const badges = d.badges.filter(b => !/streak|raffle|league|legend/i.test(b.name)).sort((a, b) => b.earnedAt.localeCompare(a.earnedAt));
       if (badges.length) {
         root.append(el('div', 'thm-group', 'Badges'));
         const row = el('div', 'thm-badges');
