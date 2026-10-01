@@ -1,9 +1,9 @@
 {
   "username": "novaninja",
-  "level": 6,
-  "rank": "Top 20%",
-  "completedRoomsNumber": 30,
-  "badgesNumber": 5,
+  "level": 8,
+  "rank": "Top 15%",
+  "completedRoomsNumber": 48,
+  "badgesNumber": 6,
   "badges": [
     {
       "name": "raffle-royalty",
@@ -29,9 +29,25 @@
       "name": "7-day-streak",
       "image": null,
       "earnedAt": "2026-09-27T18:35:50.956Z"
+    },
+    {
+      "name": "blue",
+      "image": null,
+      "earnedAt": "2026-10-01T21:04:57.391Z"
     }
   ],
   "rooms": [
+    {
+      "title": "Blue",
+      "code": "blue",
+      "difficulty": "easy",
+      "tags": [
+        "Windows",
+        "Nmap",
+        "Penetration testing",
+        "Red teaming"
+      ]
+    },
     {
       "title": "OhSINT",
       "code": "ohsint",
@@ -52,6 +68,20 @@
         "Web",
         "OSINT",
         "Information gathering"
+      ]
+    },
+    {
+      "title": "SQL Injection Lab",
+      "code": "sqlilab",
+      "difficulty": "easy",
+      "tags": [
+        "Linux",
+        "Web",
+        "SQLMap",
+        "Burp Suite",
+        "Penetration testing",
+        "Red teaming",
+        "Vulnerability analysis"
       ]
     },
     {
@@ -76,11 +106,92 @@
       ]
     },
     {
+      "title": "DNS in Detail",
+      "code": "dnsindetail",
+      "difficulty": "easy",
+      "tags": [
+        "Linux",
+        "Security analysis",
+        "Security operations"
+      ]
+    },
+    {
       "title": "What is Networking?",
       "code": "whatisnetworking",
       "difficulty": "info",
       "tags": [
         "Network troubleshooting"
+      ]
+    },
+    {
+      "title": "Intro to LAN",
+      "code": "introtolan",
+      "difficulty": "info",
+      "tags": [
+        "Security analysis"
+      ]
+    },
+    {
+      "title": "OSI Model",
+      "code": "osimodelzi",
+      "difficulty": "info",
+      "tags": [
+        "Linux",
+        "Windows",
+        "Security analysis",
+        "Security operations",
+        "Network monitoring",
+        "Network security engineering"
+      ]
+    },
+    {
+      "title": "Walking An Application",
+      "code": "walkinganapplication",
+      "difficulty": "easy",
+      "tags": [
+        "Web",
+        "Security analysis",
+        "Penetration testing",
+        "Red teaming",
+        "Vulnerability analysis",
+        "Exploitation"
+      ]
+    },
+    {
+      "title": "Content Discovery",
+      "code": "contentdiscovery",
+      "difficulty": "easy",
+      "tags": [
+        "Linux",
+        "Dirbuster",
+        "Wayback Machine",
+        "Threat hunting",
+        "Security analysis",
+        "Google dorking"
+      ]
+    },
+    {
+      "title": "Phishing Emails in Action",
+      "code": "phishingemails2rytmuv",
+      "difficulty": "easy",
+      "tags": [
+        "Windows",
+        "Phishtool",
+        "URLScan.io",
+        "Security analysis",
+        "Incident response",
+        "Static malware analysis",
+        "Email analysis",
+        "Dynamic malware analysis"
+      ]
+    },
+    {
+      "title": "Junior Security Analyst Intro",
+      "code": "jrsecanalystintrouxo",
+      "difficulty": "easy",
+      "tags": [
+        "Security analysis",
+        "Security operations"
       ]
     },
     {
@@ -164,6 +275,17 @@
       ]
     },
     {
+      "title": "Operating System Security",
+      "code": "operatingsystemsecurity",
+      "difficulty": "easy",
+      "tags": [
+        "Linux",
+        "Windows",
+        "Security analysis",
+        "Vulnerability analysis"
+      ]
+    },
+    {
       "title": "Offensive Security Intro",
       "code": "offensivesecurityintro",
       "difficulty": "easy",
@@ -244,6 +366,77 @@
       ]
     },
     {
+      "title": "Linux CLI Basics",
+      "code": "linuxclibasics",
+      "difficulty": "easy",
+      "tags": [
+        "Linux"
+      ]
+    },
+    {
+      "title": "Data Representation",
+      "code": "datarepresentation",
+      "difficulty": "easy",
+      "tags": [
+        "General Cyber",
+        "base",
+        "encode",
+        "basics",
+        "binary",
+        "data",
+        "hexadecimal",
+        "computer",
+        "conversions",
+        "octal",
+        "segment 1",
+        "segment 2"
+      ]
+    },
+    {
+      "title": "Data Encoding",
+      "code": "dataencoding",
+      "difficulty": "easy",
+      "tags": [
+        "General Cyber",
+        "encode",
+        "basics",
+        "data",
+        "unicode",
+        "computer",
+        "ASCII",
+        "encoding",
+        "utf-8",
+        "segment 1"
+      ]
+    },
+    {
+      "title": "JavaScript: Simple Demo",
+      "code": "javascriptsimpledemo",
+      "difficulty": "medium",
+      "tags": [
+        "Scripting"
+      ]
+    },
+    {
+      "title": "Python: Simple Demo",
+      "code": "pythonsimpledemo",
+      "difficulty": "easy",
+      "tags": [
+        "Python",
+        "Scripting"
+      ]
+    },
+    {
+      "title": "Windows Basics",
+      "code": "windowsbasics",
+      "difficulty": "easy",
+      "tags": [
+        "Windows",
+        "Windows Defender",
+        "File system navigation"
+      ]
+    },
+    {
       "title": "Cloud Computing Fundamentals",
       "code": "cloudcomputingfundamentals",
       "difficulty": "easy",
@@ -251,6 +444,14 @@
         "Cloud",
         "cloud computing",
         "segment 1"
+      ]
+    },
+    {
+      "title": "Windows CLI Basics",
+      "code": "windowsclibasics",
+      "difficulty": "easy",
+      "tags": [
+        "Windows"
       ]
     },
     {
@@ -265,6 +466,14 @@
         "Confidentiality",
         "segment 1",
         "segment 2"
+      ]
+    },
+    {
+      "title": "Database SQL Basics",
+      "code": "databasesqlbasics",
+      "difficulty": "easy",
+      "tags": [
+        "Web"
       ]
     },
     {
@@ -360,5 +569,5 @@
       "tags": []
     }
   ],
-  "updated": "2026-09-28"
+  "updated": "2026-10-01"
 }
