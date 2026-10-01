@@ -32,7 +32,7 @@
     },
     {
       "name": "blue",
-      "image": null,
+      "image": "static/images/thm/blue.png",
       "earnedAt": "2026-10-01T21:04:57.391Z"
     }
   ],
