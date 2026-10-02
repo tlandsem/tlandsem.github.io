@@ -1,9 +1,9 @@
 {
   "username": "novaninja",
   "level": 8,
-  "rank": "Top 15%",
-  "completedRoomsNumber": 50,
-  "badgesNumber": 7,
+  "rank": 274673,
+  "completedRoomsNumber": 51,
+  "badgesNumber": 8,
   "badges": [
     {
       "name": "raffle-royalty",
@@ -39,6 +39,11 @@
       "name": "network-fundamentals",
       "image": null,
       "earnedAt": "2026-10-02T18:35:37.843Z"
+    },
+    {
+      "name": "web-fund",
+      "image": null,
+      "earnedAt": "2026-10-02T18:55:46.176Z"
     }
   ],
   "rooms": [
@@ -593,6 +598,17 @@
       "code": "linuxfundamentalspt15vm",
       "difficulty": "easy",
       "tags": []
+    },
+    {
+      "title": "HTTP in Detail",
+      "code": "httpindetail",
+      "difficulty": "easy",
+      "tags": [
+        "Web",
+        "Burp Suite",
+        "Security analysis",
+        "Security operations"
+      ]
     }
   ],
   "updated": "2026-10-02"
