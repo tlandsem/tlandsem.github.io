@@ -2,8 +2,8 @@
   "username": "novaninja",
   "level": 8,
   "rank": "Top 15%",
-  "completedRoomsNumber": 48,
-  "badgesNumber": 6,
+  "completedRoomsNumber": 50,
+  "badgesNumber": 7,
   "badges": [
     {
       "name": "raffle-royalty",
@@ -34,6 +34,11 @@
       "name": "blue",
       "image": "static/images/thm/blue.png",
       "earnedAt": "2026-10-01T21:04:57.391Z"
+    },
+    {
+      "name": "network-fundamentals",
+      "image": null,
+      "earnedAt": "2026-10-02T18:35:37.843Z"
     }
   ],
   "rooms": [
@@ -141,6 +146,27 @@
         "Security analysis",
         "Security operations",
         "Network monitoring",
+        "Network security engineering"
+      ]
+    },
+    {
+      "title": "Packets & Frames",
+      "code": "packetsframes",
+      "difficulty": "info",
+      "tags": [
+        "Windows",
+        "Linux",
+        "MacOs",
+        "Security analysis",
+        "Network security engineering",
+        "Network monitoring"
+      ]
+    },
+    {
+      "title": "Extending Your Network",
+      "code": "extendingyournetwork",
+      "difficulty": "info",
+      "tags": [
         "Network security engineering"
       ]
     },
@@ -569,5 +595,5 @@
       "tags": []
     }
   ],
-  "updated": "2026-10-01"
+  "updated": "2026-10-02"
 }
