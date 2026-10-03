@@ -1,9 +1,9 @@
 {
   "username": "novaninja",
   "level": 8,
-  "rank": 274673,
-  "completedRoomsNumber": 51,
-  "badgesNumber": 8,
+  "rank": "Top 15%",
+  "completedRoomsNumber": 53,
+  "badgesNumber": 9,
   "badges": [
     {
       "name": "raffle-royalty",
@@ -44,6 +44,11 @@
       "name": "web-fund",
       "image": "static/images/thm/web-fund.png",
       "earnedAt": "2026-10-02T18:55:46.176Z"
+    },
+    {
+      "name": "world-wide-web",
+      "image": null,
+      "earnedAt": "2026-10-03T17:23:51.941Z"
     }
   ],
   "rooms": [
@@ -600,6 +605,24 @@
       "tags": []
     },
     {
+      "title": "How Websites Work",
+      "code": "howwebsiteswork",
+      "difficulty": "easy",
+      "tags": [
+        "Web",
+        "Security analysis"
+      ]
+    },
+    {
+      "title": "Putting it all together",
+      "code": "puttingitalltogether",
+      "difficulty": "easy",
+      "tags": [
+        "Web",
+        "Application security engineering"
+      ]
+    },
+    {
       "title": "HTTP in Detail",
       "code": "httpindetail",
       "difficulty": "easy",
@@ -611,5 +634,5 @@
       ]
     }
   ],
-  "updated": "2026-10-02"
+  "updated": "2026-10-03"
 }
