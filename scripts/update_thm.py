@@ -61,6 +61,16 @@ def local_badge(b):
     path = f"{IMG_DIR}/{name}.png"
     if os.path.exists(path):
         return path
+    # Tåler små avvik i filnavnet du lagret (store bokstaver, manglende bindestrek, .PNG):
+    # finner filen og gir den riktig navn.
+    key = re.sub(r"[^a-z0-9]", "", name)
+    if os.path.isdir(IMG_DIR):
+        for f in os.listdir(IMG_DIR):
+            stem, ext = os.path.splitext(f)
+            if ext.lower() == ".png" and re.sub(r"[^a-z0-9]", "", stem.lower()) == key:
+                os.replace(f"{IMG_DIR}/{f}", path)
+                print(f"Ga bildet {f} riktig navn: {name}.png")
+                return path
     try:
         os.makedirs(IMG_DIR, exist_ok=True)
         headers = dict(HEADERS, Accept="image/avif,image/webp,image/png,image/*;q=0.8,*/*;q=0.5")

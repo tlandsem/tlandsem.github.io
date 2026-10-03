@@ -63,6 +63,11 @@
     .thm-btn { display: inline-block; background: rgba(0,200,160,0.12); border: 1px solid rgba(0,200,160,0.4); border-radius: 6px; color: #00e5b3; font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; padding: 9px 18px; text-decoration: none; transition: background 0.2s; }
     .thm-btn:hover { background: rgba(0,200,160,0.22); }
     @media (max-width: 600px) { .thm-stats { grid-template-columns: repeat(2, 1fr); } }
+    .cert-card { display: flex; align-items: center; gap: 20px; background: rgba(0,200,160,0.06); border: 1px solid rgba(0,200,160,0.25); border-radius: 10px; padding: 18px 22px; margin-bottom: 24px; flex-wrap: wrap; }
+    .cert-card img { width: 150px; height: auto; border-radius: 6px; border: 1px solid rgba(0,200,160,0.25); flex-shrink: 0; display: block; }
+    .cert-card .cert-text { flex: 1; min-width: 180px; }
+    .cert-btn { background: rgba(0,200,160,0.12); border: 1px solid rgba(0,200,160,0.4); border-radius: 6px; color: #00e5b3; font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; padding: 9px 18px; text-decoration: none; transition: background 0.2s; }
+    .cert-btn:hover { background: rgba(0,200,160,0.22); }
   </style>
 </head>
 <body>
@@ -176,6 +181,18 @@
          onmouseout="this.style.background='rgba(0,200,160,0.12)'">Verify →</a>
     </div>
     <!-- ↑↑↑ Slutt badge ↑↑↑ -->
+
+    <!-- TryHackMe: Pre Security Learning Path -->
+    <div class="cert-card">
+      <a href="https://tryhackme.com/certificate/THM-0KPCRJO92V" target="_blank" rel="noopener"><img src="static/images/cert-presecurity.png" alt="TryHackMe Pre Security Learning Path certificate" loading="lazy"></a>
+      <div class="cert-text">
+        <div class="cv-role">Pre Security Learning Path</div>
+        <div class="cv-org">Issued by TryHackMe · Oct 2026</div>
+        <div class="cv-desc">7 modules and 31 hands-on labs covering computer basics, first lines of code, networking, the web, and cyber attacks and defences.</div>
+        <div class="thm-meta">✓ Verified Certificate</div>
+      </div>
+      <a class="cert-btn" href="https://tryhackme.com/certificate/THM-0KPCRJO92V" target="_blank" rel="noopener">Verify →</a>
+    </div>
       
     <div class="tag-row">
       <span class="tag">Basic HSE Course</span><span class="tag">Basic Norwegian Sign Language</span><span class="tag">Psychological First Aid</span><span class="tag">Early Intervention in Kindergarten</span><span class="tag">Medication Management for Assistants</span><span class="tag">Lifesaving Course</span><span class="tag">Wet Card Certificate — Lifesaving</span><span class="tag">Rock Climbing Certificate</span><span class="tag">Post Office in Store</span>
