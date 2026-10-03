@@ -1,8 +1,8 @@
 {
   "username": "novaninja",
   "level": 8,
-  "rank": "Top 15%",
-  "completedRoomsNumber": 53,
+  "rank": 261298,
+  "completedRoomsNumber": 56,
   "badgesNumber": 9,
   "badges": [
     {
@@ -47,7 +47,7 @@
     },
     {
       "name": "world-wide-web",
-      "image": null,
+      "image": "static/images/thm/world-wide-web.png",
       "earnedAt": "2026-10-03T17:23:51.941Z"
     }
   ],
@@ -631,6 +631,36 @@
         "Burp Suite",
         "Security analysis",
         "Security operations"
+      ]
+    },
+    {
+      "title": "Cryptography Concepts",
+      "code": "cryptographyconcepts",
+      "difficulty": "easy",
+      "tags": [
+        "N/A",
+        "Cryptography"
+      ]
+    },
+    {
+      "title": "Become a Hacker",
+      "code": "becomeahacker",
+      "difficulty": "easy",
+      "tags": [
+        "Web",
+        "Hydra",
+        "Gobuster",
+        "Penetration testing",
+        "Web application security"
+      ]
+    },
+    {
+      "title": "Become a Defender",
+      "code": "becomeadefender",
+      "difficulty": "easy",
+      "tags": [
+        "Web",
+        "Web application security"
       ]
     }
   ],
