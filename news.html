@@ -51,6 +51,10 @@
     .credly-badge img { width: 150px; height: 150px; object-fit: contain; }
     .credly-badge span { color: #00e5b3; font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; }
     .credly-badge:hover span { text-decoration: underline; }
+    .cert-link { display: inline-flex; flex-direction: column; align-items: flex-start; gap: 8px; text-decoration: none; margin-top: 20px; }
+    .cert-link img { width: 100%; max-width: 340px; height: auto; border-radius: 8px; border: 1px solid rgba(0,200,160,0.25); display: block; }
+    .cert-link span { color: #00e5b3; font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; }
+    .cert-link:hover span { text-decoration: underline; }
   </style>
 </head>
 <body>
@@ -76,6 +80,22 @@
   <h1 class="page-title">// Latest Updates</h1>
   
   <div class="feed-container">
+
+    <article class="feed-item">
+      <div class="feed-meta">
+        <span class="tag">Certification</span>
+        <span class="date">October 3, 2026</span>
+      </div>
+      <h2>// Pre Security Path Complete</h2>
+      <p>I've completed the Pre Security learning path on TryHackMe - 7 modules and 31 hands-on labs covering computer basics, first lines of code, networking, the web, and cyber attacks and defences.
+        <br>
+        <br>
+        It has been a great way to put theory from my studies into practice. Next up: more hands-on rooms in networking and web security.</p>
+      <a class="cert-link" href="https://tryhackme.com/certificate/THM-0KPCRJO92V" target="_blank" rel="noopener">
+        <img src="static/images/cert-presecurity.png" alt="TryHackMe Pre Security Learning Path certificate" loading="lazy">
+        <span>Verify on TryHackMe →</span>
+      </a>
+    </article>
 
     <article class="feed-item">
       <div class="feed-meta">
