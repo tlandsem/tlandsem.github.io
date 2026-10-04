@@ -1,9 +1,9 @@
 {
   "username": "novaninja",
   "level": 8,
-  "rank": 261298,
-  "completedRoomsNumber": 56,
-  "badgesNumber": 9,
+  "rank": 248154,
+  "completedRoomsNumber": 59,
+  "badgesNumber": 10,
   "badges": [
     {
       "name": "raffle-royalty",
@@ -49,6 +49,11 @@
       "name": "world-wide-web",
       "image": "static/images/thm/world-wide-web.png",
       "earnedAt": "2026-10-03T17:23:51.941Z"
+    },
+    {
+      "name": "metasploitable",
+      "image": null,
+      "earnedAt": "2026-10-04T22:31:43.004Z"
     }
   ],
   "rooms": [
@@ -634,6 +639,44 @@
       ]
     },
     {
+      "title": "Windows Fundamentals 1",
+      "code": "windowsfundamentals1xbx",
+      "difficulty": "info",
+      "tags": [
+        "Windows",
+        "Wireshark",
+        "Exploitation",
+        "File system navigation",
+        "Security analysis"
+      ]
+    },
+    {
+      "title": "Metasploit: Exploitation",
+      "code": "metasploitexploitation",
+      "difficulty": "easy",
+      "tags": [
+        "Nmap",
+        "msfdb",
+        "Penetration testing",
+        "Red teaming",
+        "Vulnerability analysis",
+        "Exploit development"
+      ]
+    },
+    {
+      "title": "Metasploit: Meterpreter",
+      "code": "meterpreter",
+      "difficulty": "easy",
+      "tags": [
+        "Linux",
+        "getpid",
+        "getsystem",
+        "Penetration testing",
+        "Vulnerability analysis",
+        "Exploit development"
+      ]
+    },
+    {
       "title": "Cryptography Concepts",
       "code": "cryptographyconcepts",
       "difficulty": "easy",
@@ -664,5 +707,5 @@
       ]
     }
   ],
-  "updated": "2026-10-03"
+  "updated": "2026-10-04"
 }
