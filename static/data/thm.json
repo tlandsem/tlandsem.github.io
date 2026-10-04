@@ -52,7 +52,7 @@
     },
     {
       "name": "metasploitable",
-      "image": null,
+      "image": "static/images/thm/metasploitable.png",
       "earnedAt": "2026-10-04T22:31:43.004Z"
     }
   ],
