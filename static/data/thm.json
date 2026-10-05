@@ -1,9 +1,9 @@
 {
   "username": "novaninja",
   "level": 8,
-  "rank": 248154,
-  "completedRoomsNumber": 59,
-  "badgesNumber": 10,
+  "rank": 237888,
+  "completedRoomsNumber": 60,
+  "badgesNumber": 11,
   "badges": [
     {
       "name": "raffle-royalty",
@@ -54,6 +54,11 @@
       "name": "metasploitable",
       "image": "static/images/thm/metasploitable.png",
       "earnedAt": "2026-10-04T22:31:43.004Z"
+    },
+    {
+      "name": "gold-league",
+      "image": null,
+      "earnedAt": "2026-10-05T08:20:35.233Z"
     }
   ],
   "rooms": [
@@ -677,6 +682,14 @@
       ]
     },
     {
+      "title": "The Building Blocks of AI",
+      "code": "aimlsecuritythreats",
+      "difficulty": "easy",
+      "tags": [
+        "Artificial intelligence"
+      ]
+    },
+    {
       "title": "Cryptography Concepts",
       "code": "cryptographyconcepts",
       "difficulty": "easy",
@@ -707,5 +720,5 @@
       ]
     }
   ],
-  "updated": "2026-10-04"
+  "updated": "2026-10-05"
 }
