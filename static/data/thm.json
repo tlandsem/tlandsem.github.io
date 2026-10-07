@@ -1,8 +1,8 @@
 {
   "username": "novaninja",
   "level": 8,
-  "rank": 237888,
-  "completedRoomsNumber": 60,
+  "rank": 216405,
+  "completedRoomsNumber": 64,
   "badgesNumber": 11,
   "badges": [
     {
@@ -682,6 +682,29 @@
       ]
     },
     {
+      "title": "XSS",
+      "code": "axss",
+      "difficulty": "easy",
+      "tags": [
+        "Web",
+        "Developer Tool",
+        "Penetration testing",
+        "Exploitation",
+        "Cross-site scripting (XSS)"
+      ]
+    },
+    {
+      "title": "Cyber Kill Chain",
+      "code": "cyberkillchain",
+      "difficulty": "medium",
+      "tags": [
+        "Windows",
+        "Linux",
+        "Active Directory",
+        "Adversary emulation"
+      ]
+    },
+    {
       "title": "The Building Blocks of AI",
       "code": "aimlsecuritythreats",
       "difficulty": "easy",
@@ -718,7 +741,27 @@
         "Web",
         "Web application security"
       ]
+    },
+    {
+      "title": "XSS Introduction",
+      "code": "xssintroduction",
+      "difficulty": "medium",
+      "tags": [
+        "Windows",
+        "Incident response",
+        "Threat hunting",
+        "Incident management",
+        "Application security engineering"
+      ]
+    },
+    {
+      "title": "AI Security Threats",
+      "code": "aisecuritythreats",
+      "difficulty": "easy",
+      "tags": [
+        "Artificial intelligence"
+      ]
     }
   ],
-  "updated": "2026-10-05"
+  "updated": "2026-10-07"
 }
