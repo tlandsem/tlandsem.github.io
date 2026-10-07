@@ -3,7 +3,7 @@
 <head>
   <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
   <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Trine Landsem - CV</title>
+  <title>Trine Landsem - Hands-on Labs</title>
     <!-- Open Graph -->
     <meta property="og:title" content="Trine Landsem">
     <meta property="og:description" content="Where compassion meets cybersecurity.">
@@ -68,7 +68,13 @@
     .cert-card .cert-text { flex: 1; min-width: 180px; }
     .cert-btn { background: rgba(0,200,160,0.12); border: 1px solid rgba(0,200,160,0.4); border-radius: 6px; color: #00e5b3; font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; padding: 9px 18px; text-decoration: none; transition: background 0.2s; }
     .cert-btn:hover { background: rgba(0,200,160,0.22); }
-    .hover-btn:hover { background: rgba(0,200,160,0.22) !important; }
+    .cert-card:last-child { margin-bottom: 0; }
+    .thm-rooms-title { margin-top: 30px; }
+    .thm-legend { display: flex; flex-wrap: wrap; gap: 16px; color: rgba(160,220,210,0.6); font-size: 12px; letter-spacing: 0.06em; margin-bottom: 4px; }
+    .thm-legend-item { display: inline-flex; align-items: center; gap: 6px; }
+    .thm-swatch { width: 14px; height: 14px; border-radius: 4px; background: rgba(0,200,160,0.08); border: 1px solid rgba(0,200,160,0.2); }
+    .thm-swatch.thm-medium { border-color: rgba(255,170,60,0.45); }
+    .thm-swatch.thm-hard { border-color: rgba(255,80,100,0.5); }
     .hover-link:hover { color: #00e5b3 !important; }
   </style>
 </head>
@@ -83,8 +89,8 @@
     <li><a href="index.html">Home</a></li>
     <li><a href="news.html">News</a></li>
     <li><a href="about.html">About me</a></li>
-    <li><a href="cv.html" class="active">CV</a></li>
-    <li><a href="labs.html">Labs</a></li>
+    <li><a href="cv.html">CV</a></li>
+    <li><a href="labs.html" class="active">Labs</a></li>
     <li><a href="projects.html">Projects</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
@@ -92,98 +98,12 @@
 <div class="page-content">
 <div class="cv-wrap">
   <div class="cv-header">
-    <img src="static/images/cv_profilbilde.png" alt="Trine Landsem" style="width: 110px; height: 110px; border-radius: 50%; object-fit: cover; border: 2px solid rgba(0,200,160,0.35); display: block; margin: 0 auto 20px;">
-    <h1>Trine Landsem</h1>
-    <p>Pedagogical Leader &amp; HSE Coordinator · Cybersecurity Student</p>
+    <h1>Hands-on Labs</h1>
+    <p>Practical cybersecurity training on TryHackMe</p>
   </div>
 
   <div class="cv-section">
-    <h2>// Work Experience</h2>
-    <div class="cv-item">
-      <div class="cv-date">Dec 2020 — Present<br>Malvik, Norway</div>
-      <div><div class="cv-role">Pedagogical Leader &amp; HSE Coordinator</div><div class="cv-org">Sveberg Barnehage SA</div><div class="cv-desc">Middle manager, Educational Lead for the department. Responsible for HSE, including information security standards across the entire organisation.</div></div>
-    </div>
-    <div class="cv-item">
-      <div class="cv-date">Feb 2020 — Aug 2020<br>Steinkjer, Norway</div>
-      <div><div class="cv-role">First Consultant</div><div class="cv-org">NAV · Internship</div><div class="cv-desc">NAV Family and Pension Benefits.</div></div>
-    </div>
-    <div class="cv-item">
-      <div class="cv-date">Feb 2019 — Dec 2019<br>Malm, Norway</div>
-      <div><div class="cv-role">Executive Assistant</div><div class="cv-org">Verran Kommune · Internship</div><div class="cv-desc">Malmen Barnehage.</div></div>
-    </div>
-    <div class="cv-item">
-      <div class="cv-date">Sep 2014 — Feb 2019<br>Malvik, Norway</div>
-      <div><div class="cv-role">Pedagogical Leader</div><div class="cv-org">Sveberg Barnehage SA · Full-time</div><div class="cv-desc">Middle manager, Educational Lead for the department.</div></div>
-    </div>
-    <div class="cv-item">
-      <div class="cv-date">Jul 2012 — Sep 2014<br>Malvik, Norway</div>
-      <div><div class="cv-role">Early Childhood Teacher / Pedagogical Leader</div><div class="cv-org">Malvik Kommune · Full-time</div><div class="cv-desc">Middle manager, Educational Lead for the department.</div></div>
-    </div>
-    <div class="cv-item">
-      <div class="cv-date">Nov 2009 — Jan 2013<br>Trondheim, Norway</div>
-      <div><div class="cv-role">Assistant</div><div class="cv-org">Trondheim Kommune — Respite Services for Children and Youth</div><div class="cv-desc">Residential Support Worker.</div></div>
-    </div>
-    <div class="cv-item">
-      <div class="cv-date">Jun 2007 — Jan 2010<br>Malm, Norway</div>
-      <div><div class="cv-role">Retail Assistant</div><div class="cv-org">COOP PRIX SA</div><div class="cv-desc">In-Store Customer Service and Mail Services</div></div>
-    </div>
-    <div class="cv-item">
-      <div class="cv-date">Jun 2006 — Dec 2008</div>
-      <div><div class="cv-role">Service Assistant</div><div class="cv-org">ISS A/S · Facility Services</div><div class="cv-desc">Cleaner</div></div>
-    </div>
-    <div class="cv-item">
-      <div class="cv-date">Aug 2006 — Oct 2008</div>
-      <div><div class="cv-role">Telephone Interviewer</div><div class="cv-org">Receptor AS</div><div class="cv-desc">Market Analysis</div></div>
-    </div>
-  </div>
-
-  <div class="cv-section">
-    <h2>// Education</h2>
-    <div class="cv-item">
-      <div class="cv-date">Aug 2025 — to date</div>
-      <div><div class="cv-role">Cybersecurity</div><div class="cv-org">Gokstad Akademiet</div><div class="cv-desc">Advanced Vocational Diploma. Expected completion: Spring 2027</div></div>
-    </div>
-    <div class="cv-item">
-      <div class="cv-date">Aug 2009 — Jun 2012</div>
-      <div><div class="cv-role">Early Childhood Education and Teaching</div><div class="cv-org">DMMH — Queen Maud University College of Early Childhood Education</div><div class="cv-desc">Bachelor's Degree, with 3-year specialisation in Nature and Outdoor Education.</div></div>
-    </div>
-    <div class="cv-item">
-      <div class="cv-date">Aug 2006 — Jun 2009</div>
-      <div><div class="cv-role">General Academic Programme</div><div class="cv-org">Steinkjer VGS</div><div class="cv-desc">Upper Secondary School. Specialisation in STEM subjects.</div></div>
-    </div>
-  </div>
-
-  <div class="cv-section">
-    <h2>// Volunteer Work</h2>
-    <div class="cv-item">
-      <div class="cv-date">Jan 2015 — Apr 2016</div>
-      <div><div class="cv-role">Volunteer</div><div class="cv-org">Malvik Røde Kors Hjelpekorps</div><div class="cv-desc">Norwegian Red Cross Rescue Corps</div></div>
-    </div>
-    <div class="cv-item">
-      <div class="cv-date">Jan 2000 — Dec 2004</div>
-      <div><div class="cv-role">Volunteer</div><div class="cv-org">Malm Røde Kors — Ungdommens Røde Kors</div><div class="cv-desc">Norwegian Red Cross Youth</div></div>
-    </div>
-  </div>
-
-  <div class="cv-section">
-    <h2>// Courses &amp; Certifications</h2>
-    <div class="cv-section">
-
-    <!-- ↓↓↓ Fremhevet verifisert badge ↓↓↓ -->
-    <div style="display: flex; align-items: center; gap: 20px; background: rgba(0,200,160,0.06); border: 1px solid rgba(0,200,160,0.25); border-radius: 10px; padding: 18px 22px; margin-bottom: 24px; flex-wrap: wrap;">
-      <img src="https://images.credly.com/size/680x680/images/441578ec-c0f3-46cc-95fc-86b27e90cf4f/image.png" alt="Verified badge"
-           style="width: 84px; height: 84px; object-fit: contain; flex-shrink: 0;">
-      <div style="flex: 1; min-width: 180px;">
-        <div style="color: rgba(220,245,238,0.9); font-size: 15px; font-weight: 600; letter-spacing: 0.04em;">Junior Cybersecurity Analyst Career Path</div>
-        <div style="color: rgba(0,200,160,0.7); font-size: 13px; margin-top: 2px; letter-spacing: 0.04em;">Issued by Cisco</div>
-        <div style="color: rgba(0,200,160,0.5); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; margin-top: 6px;">✓ Verified Credential</div>
-      </div>
-      <a class="hover-btn" href="https://www.credly.com/badges/4ddd79d3-1ae3-402b-9956-7e1f3772fda1/public_url" target="_blank" rel="noopener"
-         style="background: rgba(0,200,160,0.12); border: 1px solid rgba(0,200,160,0.4); border-radius: 6px; color: #00e5b3; font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; padding: 9px 18px; text-decoration: none; transition: background 0.2s;">Verify →</a>
-    </div>
-    <!-- ↑↑↑ Slutt badge ↑↑↑ -->
-
-    <!-- TryHackMe: Pre Security Learning Path -->
+    <h2>// Certificates</h2>
     <div class="cert-card">
       <a href="https://tryhackme.com/certificate/THM-0KPCRJO92V" target="_blank" rel="noopener"><img src="static/images/cert-presecurity.png" alt="TryHackMe Pre Security Learning Path certificate" loading="lazy"></a>
       <div class="cert-text">
@@ -194,25 +114,12 @@
       </div>
       <a class="cert-btn" href="https://tryhackme.com/certificate/THM-0KPCRJO92V" target="_blank" rel="noopener">Verify →</a>
     </div>
-      
-    <div class="tag-row">
-      <span class="tag">Basic HSE Course</span><span class="tag">Basic Norwegian Sign Language</span><span class="tag">Psychological First Aid</span><span class="tag">Early Intervention in Kindergarten</span><span class="tag">Medication Management for Assistants</span><span class="tag">Lifesaving Course</span><span class="tag">Wet Card Certificate — Lifesaving</span><span class="tag">Rock Climbing Certificate</span><span class="tag">Post Office in Store</span>
-    </div>
-  </div>
-
   </div>
 
   <div class="cv-section">
-    <h2>// Hands-on Labs · TryHackMe</h2>
-    <div id="thm" class="thm-live" data-view="summary"><div class="cv-desc">Loading TryHackMe progress…</div></div>
-    <a class="thm-btn" href="labs.html">See full TryHackMe progress →</a>
-  </div>
-
-  <div class="cv-section">
-    <h2>// Languages</h2>
-    <div class="tag-row">
-      <span class="tag">Norwegian</span><span class="tag">English</span><span class="tag">Norwegian Sign Language</span>
-    </div>
+    <h2>// TryHackMe Progress</h2>
+    <div id="thm" class="thm-live"><div class="cv-desc">Loading TryHackMe progress…</div></div>
+    <a class="thm-btn" href="https://tryhackme.com/p/novaninja" target="_blank" rel="noopener">View TryHackMe profile →</a>
   </div>
 </div>
 </div>
