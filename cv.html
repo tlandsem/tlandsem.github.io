@@ -68,6 +68,8 @@
     .cert-card .cert-text { flex: 1; min-width: 180px; }
     .cert-btn { background: rgba(0,200,160,0.12); border: 1px solid rgba(0,200,160,0.4); border-radius: 6px; color: #00e5b3; font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; padding: 9px 18px; text-decoration: none; transition: background 0.2s; }
     .cert-btn:hover { background: rgba(0,200,160,0.22); }
+    .hover-btn:hover { background: rgba(0,200,160,0.22) !important; }
+    .hover-link:hover { color: #00e5b3 !important; }
   </style>
 </head>
 <body>
@@ -75,13 +77,14 @@
 <div class="corner tl"></div><div class="corner tr"></div><div class="corner bl"></div><div class="corner br"></div>
 <div class="status" id="status">ONLINE</div>
 <nav>
-  <button class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+  <button class="hamburger"><span></span><span></span><span></span></button>
   <a class="logo" href="index.html">[ Trine Landsem ]</a>
   <ul id="nav-menu">
     <li><a href="index.html">Home</a></li>
     <li><a href="news.html">News</a></li>
     <li><a href="about.html">About me</a></li>
     <li><a href="cv.html" class="active">CV</a></li>
+    <li><a href="labs.html">Labs</a></li>
     <li><a href="projects.html">Projects</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
@@ -175,10 +178,8 @@
         <div style="color: rgba(0,200,160,0.7); font-size: 13px; margin-top: 2px; letter-spacing: 0.04em;">Issued by Cisco</div>
         <div style="color: rgba(0,200,160,0.5); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; margin-top: 6px;">✓ Verified Credential</div>
       </div>
-      <a href="https://www.credly.com/badges/4ddd79d3-1ae3-402b-9956-7e1f3772fda1/public_url" target="_blank" rel="noopener"
-         style="background: rgba(0,200,160,0.12); border: 1px solid rgba(0,200,160,0.4); border-radius: 6px; color: #00e5b3; font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; padding: 9px 18px; text-decoration: none; transition: background 0.2s;"
-         onmouseover="this.style.background='rgba(0,200,160,0.22)'"
-         onmouseout="this.style.background='rgba(0,200,160,0.12)'">Verify →</a>
+      <a class="hover-btn" href="https://www.credly.com/badges/4ddd79d3-1ae3-402b-9956-7e1f3772fda1/public_url" target="_blank" rel="noopener"
+         style="background: rgba(0,200,160,0.12); border: 1px solid rgba(0,200,160,0.4); border-radius: 6px; color: #00e5b3; font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; padding: 9px 18px; text-decoration: none; transition: background 0.2s;">Verify →</a>
     </div>
     <!-- ↑↑↑ Slutt badge ↑↑↑ -->
 
@@ -203,8 +204,8 @@
 
   <div class="cv-section">
     <h2>// Hands-on Labs · TryHackMe</h2>
-    <div id="thm" class="thm-live"><div class="cv-desc">Loading TryHackMe progress…</div></div>
-    <a class="thm-btn" href="https://tryhackme.com/p/novaninja" target="_blank" rel="noopener">View TryHackMe profile →</a>
+    <div id="thm" class="thm-live" data-view="summary"><div class="cv-desc">Loading TryHackMe progress…</div></div>
+    <a class="thm-btn" href="labs.html">See full TryHackMe progress →</a>
   </div>
 
   <div class="cv-section">
@@ -217,9 +218,9 @@
 </div>
 <footer style="position: relative; z-index: 10; text-align: center; padding: 24px; border-top: 1px solid rgba(0,200,160,0.1); margin-top: 40px;">
   <div style="margin-bottom: 12px; display: flex; justify-content: center; gap: 28px;">
-    <a href="https://www.linkedin.com/in/trinelandsem" target="_blank" rel="noopener" style="color: rgba(0,200,160,0.55); font-size: 13px; letter-spacing: 0.1em; text-decoration: none; text-transform: uppercase;" onmouseover="this.style.color='#00e5b3'" onmouseout="this.style.color='rgba(0,200,160,0.55)'">LinkedIn</a>
-    <a href="https://www.facebook.com/trine.landsem" target="_blank" rel="noopener" style="color: rgba(0,200,160,0.55); font-size: 13px; letter-spacing: 0.1em; text-decoration: none; text-transform: uppercase;" onmouseover="this.style.color='#00e5b3'" onmouseout="this.style.color='rgba(0,200,160,0.55)'">Facebook</a>
-    <a href="https://www.instagram.com/landsemtrine/" target="_blank" rel="noopener" style="color: rgba(0,200,160,0.55); font-size: 13px; letter-spacing: 0.1em; text-decoration: none; text-transform: uppercase;" onmouseover="this.style.color='#00e5b3'" onmouseout="this.style.color='rgba(0,200,160,0.55)'">Instagram</a>
+    <a class="hover-link" href="https://www.linkedin.com/in/trinelandsem" target="_blank" rel="noopener" style="color: rgba(0,200,160,0.55); font-size: 13px; letter-spacing: 0.1em; text-decoration: none; text-transform: uppercase;">LinkedIn</a>
+    <a class="hover-link" href="https://www.facebook.com/trine.landsem" target="_blank" rel="noopener" style="color: rgba(0,200,160,0.55); font-size: 13px; letter-spacing: 0.1em; text-decoration: none; text-transform: uppercase;">Facebook</a>
+    <a class="hover-link" href="https://www.instagram.com/landsemtrine/" target="_blank" rel="noopener" style="color: rgba(0,200,160,0.55); font-size: 13px; letter-spacing: 0.1em; text-decoration: none; text-transform: uppercase;">Instagram</a>
   </div>
   <p style="color: rgba(0,200,160,0.25); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; margin: 0;">© 2026 Trine Landsem · All rights reserved</p>
 </footer>

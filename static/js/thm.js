@@ -1,8 +1,10 @@
-// Viser TryHackMe-data fra static/data/thm.json (oppdateres automatisk hver natt av GitHub Actions).
+// Viser TryHackMe-data fra static/data/thm.json (oppdateres med scripts/oppdater_thm.bat).
+// <div id="thm" data-view="summary"> viser bare tallene (CV-siden). Uten data-view vises alt (Labs-siden).
 // Bygger alt med createElement/textContent – aldri innerHTML – så data utenfra ikke kan injisere kode.
 (function () {
   const root = document.getElementById('thm');
   if (!root) return;
+  const summary = root.dataset.view === 'summary';
 
   const BADGE_TITLES = { 'terminaled': 'cat linux.txt', 'ohsint': 'OhSINT' };
   const pretty = n => BADGE_TITLES[n] || n.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
@@ -23,9 +25,10 @@
       root.replaceChildren();
 
       const stats = el('div', 'thm-stats');
-      [[d.completedRoomsNumber, 'Rooms completed'], [d.badgesNumber, 'Badges'], [d.rank, 'Global rank'], [d.level, 'Level']]
+      [[d.completedRoomsNumber, 'Rooms completed'], [d.badgesNumber, 'Badges'], [/^\d+$/.test(String(d.rank)) ? '#' + Number(d.rank).toLocaleString('en-GB') : d.rank, 'Global rank'], [d.level, 'Level']]
         .forEach(([v, l]) => { const s = el('div', 'thm-stat'); s.append(el('div', 'thm-stat-value', String(v)), el('div', 'thm-stat-label', l)); stats.append(s); });
       root.append(stats);
+      if (summary) return;
 
       const badges = d.badges.filter(b => !/streak|raffle|league|legend/i.test(b.name)).sort((a, b) => b.earnedAt.localeCompare(a.earnedAt));
       if (badges.length) {
@@ -41,6 +44,13 @@
         });
         root.append(row);
       }
+
+      root.append(el('div', 'thm-group thm-rooms-title', 'Completed rooms'));
+      const legend = el('div', 'thm-legend');
+      [['', 'Easy / Info'], ['thm-medium', 'Medium'], ['thm-hard', 'Hard']].forEach(([cls, label]) => {
+        const item = el('span', 'thm-legend-item'); item.append(el('span', 'thm-swatch ' + cls), document.createTextNode(label)); legend.append(item);
+      });
+      root.append(legend);
 
       const groups = new Map(CATEGORIES.map(([n]) => [n, []]));
       d.rooms.forEach(r => { const [name] = CATEGORIES.find(([, test]) => test(r)); groups.get(name).push(r); });

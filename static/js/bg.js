@@ -1,4 +1,5 @@
 function toggleMenu() { document.getElementById('nav-menu').classList.toggle('open'); }
+document.querySelectorAll('.hamburger').forEach(btn => btn.addEventListener('click', toggleMenu));
 document.querySelectorAll('#nav-menu a').forEach(link => { link.addEventListener('click', () => { document.getElementById('nav-menu').classList.remove('open'); }); });
 const canvas = document.getElementById('c'); const ctx = canvas.getContext('2d');
 function resize() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
