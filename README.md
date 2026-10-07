@@ -45,7 +45,9 @@ scripts\oppdater_thm.bat
 
 The script pulls the latest changes, fetches public profile data with `scripts/update_thm.py`, and commits/pushes
 `static/data/thm.json` and any new badge images in `static/images/thm/`.
-If a badge image cannot be downloaded, save it manually as `static/images/thm/<badge-name>.png` and run the script again.
+TryHackMe blocks automated downloads of badge images, so a new badge needs one manual step: the script prints the
+file name it expects, you save the badge image as `static/images/thm/<badge-name>.png`, and run the script again.
+Streak, raffle and league badges are skipped and need no image.
 
 > TryHackMe rate-limits GitHub Actions runners (HTTP 429), so the sync runs locally.
 > The workflow in `.github/workflows/update-thm.yml` can still be triggered manually.
@@ -53,6 +55,10 @@ If a badge image cannot be downloaded, save it manually as `static/images/thm/<b
 ## Structure
 ```
 trinelandsem.no/
+├── .github/workflows/
+│   └── update-thm.yml     # manual trigger only
+├── .gitignore
+├── CNAME                  # custom domain for GitHub Pages
 ├── index.html
 ├── about.html
 ├── cv.html
@@ -60,7 +66,6 @@ trinelandsem.no/
 ├── news.html
 ├── projects.html
 ├── contact.html
-├── nav.html / nav.js
 ├── _config.yml            # excludes README and scripts from the published site
 ├── scripts/
 │   ├── oppdater_thm.bat   # run after completing new rooms
@@ -73,6 +78,7 @@ trinelandsem.no/
 │   │   └── thm.js
 │   └── images/
 │       ├── thm/           # TryHackMe badge images
+│       ├── cert-presecurity.png
 │       ├── favicon.png
 │       ├── logo_512.png
 │       ├── profilbilde.png
