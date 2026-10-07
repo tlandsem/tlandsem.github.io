@@ -76,6 +76,16 @@
     .thm-swatch.thm-medium { border-color: rgba(255,170,60,0.45); }
     .thm-swatch.thm-hard { border-color: rgba(255,80,100,0.5); }
     .hover-link:hover { color: #00e5b3 !important; }
+    @media (max-width: 600px) {
+      .cv-wrap { padding-left: 14px; padding-right: 14px; }
+      .cv-header { padding: 28px 20px; }
+      .cv-section { padding: 24px 18px; }
+      .cv-section .cv-section { padding: 0; border: none; background: none; backdrop-filter: none; margin-bottom: 0; }
+      .cert-card { flex-direction: column; align-items: flex-start; padding: 16px; gap: 14px; }
+      .cert-card .cert-text { min-width: 0; width: 100%; }
+      .cert-card img { width: 100%; max-width: 280px; }
+      .cv-section div[style*="min-width"] { min-width: 0 !important; }
+    }
   </style>
 </head>
 <body>
