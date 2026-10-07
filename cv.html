@@ -70,6 +70,17 @@
     .cert-btn:hover { background: rgba(0,200,160,0.22); }
     .hover-btn:hover { background: rgba(0,200,160,0.22) !important; }
     .hover-link:hover { color: #00e5b3 !important; }
+    @media (max-width: 600px) {
+      .cv-wrap { padding-left: 14px; padding-right: 14px; }
+      .cv-header { padding: 28px 20px; }
+      .cv-section { padding: 24px 18px; }
+      .cv-section .cv-section { padding: 0; border: none; background: none; backdrop-filter: none; margin-bottom: 0; }
+      .cert-card { flex-direction: column; align-items: flex-start; padding: 16px; gap: 14px; }
+      .cert-card .cert-text { min-width: 0; width: 100%; }
+      .cert-card img { width: 100%; max-width: 280px; }
+      .cv-section div[style*="min-width"] { min-width: 0 !important; }
+      .cisco-card { flex-direction: column !important; align-items: flex-start !important; gap: 14px !important; padding: 16px !important; }
+    }
   </style>
 </head>
 <body>
@@ -170,7 +181,7 @@
     <div class="cv-section">
 
     <!-- ↓↓↓ Fremhevet verifisert badge ↓↓↓ -->
-    <div style="display: flex; align-items: center; gap: 20px; background: rgba(0,200,160,0.06); border: 1px solid rgba(0,200,160,0.25); border-radius: 10px; padding: 18px 22px; margin-bottom: 24px; flex-wrap: wrap;">
+    <div class="cisco-card" style="display: flex; align-items: center; gap: 20px; background: rgba(0,200,160,0.06); border: 1px solid rgba(0,200,160,0.25); border-radius: 10px; padding: 18px 22px; margin-bottom: 24px; flex-wrap: wrap;">
       <img src="https://images.credly.com/size/680x680/images/441578ec-c0f3-46cc-95fc-86b27e90cf4f/image.png" alt="Verified badge"
            style="width: 84px; height: 84px; object-fit: contain; flex-shrink: 0;">
       <div style="flex: 1; min-width: 180px;">
