@@ -1,8 +1,8 @@
 {
   "username": "novaninja",
   "level": 8,
-  "rank": 216405,
-  "completedRoomsNumber": 64,
+  "rank": 213416,
+  "completedRoomsNumber": 66,
   "badgesNumber": 11,
   "badges": [
     {
@@ -615,6 +615,12 @@
       "tags": []
     },
     {
+      "title": "OWASP Juice Shop",
+      "code": "owaspjuiceshop",
+      "difficulty": "easy",
+      "tags": []
+    },
+    {
       "title": "How Websites Work",
       "code": "howwebsiteswork",
       "difficulty": "easy",
@@ -666,6 +672,17 @@
         "Red teaming",
         "Vulnerability analysis",
         "Exploit development"
+      ]
+    },
+    {
+      "title": "IDOR",
+      "code": "idor",
+      "difficulty": "easy",
+      "tags": [
+        "Web",
+        "Penetration testing",
+        "Red teaming",
+        "Application penetration testing"
       ]
     },
     {
@@ -763,5 +780,5 @@
       ]
     }
   ],
-  "updated": "2026-10-07"
+  "updated": "2026-10-12"
 }
