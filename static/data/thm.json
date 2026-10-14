@@ -1,8 +1,8 @@
 {
   "username": "novaninja",
   "level": 8,
-  "rank": 213416,
-  "completedRoomsNumber": 66,
+  "rank": 202534,
+  "completedRoomsNumber": 70,
   "badgesNumber": 11,
   "badges": [
     {
@@ -332,18 +332,6 @@
       ]
     },
     {
-      "title": "Offensive Security Intro",
-      "code": "offensivesecurityintro",
-      "difficulty": "easy",
-      "tags": [
-        "Web",
-        "Gobuster",
-        "Penetration testing",
-        "Red teaming",
-        "Application penetration testing"
-      ]
-    },
-    {
       "title": "Defensive Security Intro",
       "code": "defensivesecurityintro",
       "difficulty": "easy",
@@ -531,6 +519,19 @@
       ]
     },
     {
+      "title": "Offensive Security Intro",
+      "code": "offensivesecurityintrokKx12",
+      "difficulty": "easy",
+      "tags": [
+        "Web",
+        "dirb",
+        "Dirbuster",
+        "Application penetration testing",
+        "Red teaming",
+        "Penetration testing"
+      ]
+    },
+    {
       "title": "Inside a Computer System",
       "code": "insideacomputer",
       "difficulty": "easy",
@@ -615,6 +616,18 @@
       "tags": []
     },
     {
+      "title": "Hydra",
+      "code": "hydra",
+      "difficulty": "easy",
+      "tags": [
+        "Linux",
+        "Hydra",
+        "Network penetration testing",
+        "Red teaming",
+        "Penetration testing"
+      ]
+    },
+    {
       "title": "OWASP Juice Shop",
       "code": "owaspjuiceshop",
       "difficulty": "easy",
@@ -675,6 +688,20 @@
       ]
     },
     {
+      "title": "Authentication Bypass",
+      "code": "authenticationbypass",
+      "difficulty": "easy",
+      "tags": [
+        "ffuf",
+        "curl",
+        "Gobuster",
+        "Security analysis",
+        "Red teaming",
+        "Vulnerability analysis",
+        "Penetration testing"
+      ]
+    },
+    {
       "title": "IDOR",
       "code": "idor",
       "difficulty": "easy",
@@ -708,6 +735,19 @@
         "Penetration testing",
         "Exploitation",
         "Cross-site scripting (XSS)"
+      ]
+    },
+    {
+      "title": "Hashing Basics",
+      "code": "hashingbasics",
+      "difficulty": "easy",
+      "tags": [
+        "Linux",
+        "John the Ripper",
+        "Hashcat",
+        "Password cracking",
+        "Hash cracking",
+        "Cryptography"
       ]
     },
     {
@@ -772,6 +812,18 @@
       ]
     },
     {
+      "title": "Password Cracking",
+      "code": "passwordcracking",
+      "difficulty": "easy",
+      "tags": [
+        "Linux",
+        "John the Ripper",
+        "Hashcat",
+        "Hash-identifier",
+        "Password cracking"
+      ]
+    },
+    {
       "title": "AI Security Threats",
       "code": "aisecuritythreats",
       "difficulty": "easy",
@@ -780,5 +832,5 @@
       ]
     }
   ],
-  "updated": "2026-10-12"
+  "updated": "2026-10-14"
 }
