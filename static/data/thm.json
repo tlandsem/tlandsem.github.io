@@ -1,9 +1,9 @@
 {
   "username": "novaninja",
   "level": 8,
-  "rank": 202534,
-  "completedRoomsNumber": 70,
-  "badgesNumber": 11,
+  "rank": 188380,
+  "completedRoomsNumber": 72,
+  "badgesNumber": 12,
   "badges": [
     {
       "name": "raffle-royalty",
@@ -59,6 +59,11 @@
       "name": "gold-league",
       "image": null,
       "earnedAt": "2026-10-05T08:20:35.233Z"
+    },
+    {
+      "name": "hash-cracker",
+      "image": "static/images/thm/hash-cracker.png",
+      "earnedAt": "2026-10-15T14:13:04.574Z"
     }
   ],
   "rooms": [
@@ -616,6 +621,16 @@
       "tags": []
     },
     {
+      "title": "Crack the hash",
+      "code": "crackthehash",
+      "difficulty": "easy",
+      "tags": [
+        "Linux",
+        "Hashcat",
+        "Digital forensics"
+      ]
+    },
+    {
       "title": "Hydra",
       "code": "hydra",
       "difficulty": "easy",
@@ -632,6 +647,17 @@
       "code": "owaspjuiceshop",
       "difficulty": "easy",
       "tags": []
+    },
+    {
+      "title": "John the Ripper: The Basics",
+      "code": "johntheripperbasics",
+      "difficulty": "easy",
+      "tags": [
+        "John the Ripper",
+        "Haiti",
+        "Penetration testing",
+        "Red teaming"
+      ]
     },
     {
       "title": "How Websites Work",
@@ -832,5 +858,5 @@
       ]
     }
   ],
-  "updated": "2026-10-14"
+  "updated": "2026-10-15"
 }
