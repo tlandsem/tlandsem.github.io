@@ -43,6 +43,16 @@
     .project-link { display: inline-flex; align-items: center; gap: 8px; background: rgba(0,200,160,0.07); border: 1px solid rgba(0,200,160,0.25); border-radius: 8px; padding: 10px 20px; color: #00e5b3; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; transition: background 0.2s, border-color 0.2s; }
     .project-link:hover { background: rgba(0,200,160,0.14); border-color: rgba(0,200,160,0.5); }
     .hover-link:hover { color: #00e5b3 !important; }
+    .project-body { display: flex; gap: 28px; align-items: flex-start; }
+    .project-body .project-text { flex: 1; min-width: 0; }
+    .project-cover { flex-shrink: 0; display: block; }
+    .project-cover img { width: 170px; height: auto; display: block; border-radius: 6px; border: 1px solid rgba(0,200,160,0.25); transition: border-color 0.2s; }
+    .project-cover:hover img { border-color: rgba(0,200,160,0.6); }
+    @media (max-width: 600px) {
+      .project-card { padding: 24px 20px; }
+      .project-body { flex-direction: column; gap: 18px; }
+      .project-cover img { width: 160px; }
+    }
   </style>
 </head>
 <body>
@@ -67,6 +77,32 @@
   <div class="cv-header">
     <h1>Projects</h1>
     <p>A collection of things I have built and worked on</p>
+  </div>
+
+  <!-- PROSJEKT: KI-VEILEDER FOR BARNEHAGEN -->
+  <div class="project-card">
+    <h2>AI in Kindergarten — A Practical Guide</h2>
+    <div class="project-sub">// 2026 · Guide · Written in Norwegian</div>
+    <div class="project-body">
+      <a class="project-cover" href="static/docs/ki-i-barnehagen-veileder-2026.pdf" target="_blank" rel="noopener" type="application/pdf"><img src="static/images/veileder-ki-cover.png" alt="Cover of the guide Kunstig intelligens i barnehagen" width="170" height="240" loading="lazy"></a>
+      <div class="project-text">
+        <p>
+          Working in the kindergarten sector, I have experienced a clear need for guidance on how artificial intelligence should be used in early childhood education. AI tools are already part of everyday work, but there have been few concrete guidelines on what is safe, lawful and appropriate when children's information is involved.
+          <br><br>
+          On my own initiative, I wrote a 24-page guide for kindergarten staff on safe, responsible and purposeful use of AI. It covers privacy and confidentiality, information security and AI-enabled scams, recommendations for use, practical examples and a checklist, with references to Norwegian law and guidance from Datatilsynet, Udir and NSM. The guide ends with a declaration of how AI was used in making it.
+        </p>
+      </div>
+    </div>
+    <div class="tag-row">
+      <span class="tag">AI Governance</span>
+      <span class="tag">Privacy / GDPR</span>
+      <span class="tag">Information Security</span>
+      <span class="tag">Early Childhood Education</span>
+      <span class="tag">Guidance Writing</span>
+    </div>
+    <div class="project-links">
+      <a class="project-link" href="static/docs/ki-i-barnehagen-veileder-2026.pdf" target="_blank" rel="noopener" type="application/pdf">Read the guide (PDF, Norwegian) <span style="opacity:0.6">›</span></a>
+    </div>
   </div>
 
   <!-- PROSJEKT 1: PORTFOLIO -->
