@@ -1,9 +1,9 @@
 {
   "username": "novaninja",
   "level": 8,
-  "rank": 188380,
-  "completedRoomsNumber": 72,
-  "badgesNumber": 12,
+  "rank": 176068,
+  "completedRoomsNumber": 75,
+  "badgesNumber": 13,
   "badges": [
     {
       "name": "raffle-royalty",
@@ -64,6 +64,11 @@
       "name": "hash-cracker",
       "image": "static/images/thm/hash-cracker.png",
       "earnedAt": "2026-10-15T14:13:04.574Z"
+    },
+    {
+      "name": "linux-privesc",
+      "image": "static/images/thm/linux-privesc.png",
+      "earnedAt": "2026-10-20T23:12:44.143Z"
     }
   ],
   "rooms": [
@@ -649,6 +654,28 @@
       "tags": []
     },
     {
+      "title": "Linux PrivEsc Arena",
+      "code": "linuxprivescarena",
+      "difficulty": "medium",
+      "tags": [
+        "John the Ripper",
+        "Hashcat",
+        "Penetration testing",
+        "Red teaming",
+        "Vulnerability analysis"
+      ]
+    },
+    {
+      "title": "Brute It",
+      "code": "bruteit",
+      "difficulty": "easy",
+      "tags": [
+        "Linux",
+        "Penetration testing",
+        "Network penetration testing"
+      ]
+    },
+    {
       "title": "John the Ripper: The Basics",
       "code": "johntheripperbasics",
       "difficulty": "easy",
@@ -695,6 +722,21 @@
       "tags": [
         "Windows",
         "Wireshark",
+        "Exploitation",
+        "File system navigation",
+        "Security analysis"
+      ]
+    },
+    {
+      "title": "Windows Fundamentals 2",
+      "code": "windowsfundamentals2x0x",
+      "difficulty": "info",
+      "tags": [
+        "Windows",
+        "compmgmt",
+        "Device Manager",
+        "msinfo32",
+        "Resmon (Resource Manager)",
         "Exploitation",
         "File system navigation",
         "Security analysis"
@@ -858,5 +900,5 @@
       ]
     }
   ],
-  "updated": "2026-10-15"
+  "updated": "2026-10-20"
 }
