@@ -1,8 +1,8 @@
 {
   "username": "novaninja",
   "level": 8,
-  "rank": 176068,
-  "completedRoomsNumber": 75,
+  "rank": 168540,
+  "completedRoomsNumber": 78,
   "badgesNumber": 13,
   "badges": [
     {
@@ -636,6 +636,19 @@
       ]
     },
     {
+      "title": "Alfred",
+      "code": "alfred",
+      "difficulty": "easy",
+      "tags": [
+        "Windows",
+        "nishang",
+        "Red teaming",
+        "DevSecOps",
+        "Penetration testing",
+        "Security analysis"
+      ]
+    },
+    {
       "title": "Hydra",
       "code": "hydra",
       "difficulty": "easy",
@@ -645,6 +658,18 @@
         "Network penetration testing",
         "Red teaming",
         "Penetration testing"
+      ]
+    },
+    {
+      "title": "Common Linux Privesc",
+      "code": "commonlinuxprivesc",
+      "difficulty": "easy",
+      "tags": [
+        "Linux",
+        "nc",
+        "Penetration testing",
+        "Red teaming",
+        "Security analysis"
       ]
     },
     {
@@ -794,6 +819,15 @@
       ]
     },
     {
+      "title": "Unified Kill Chain",
+      "code": "unifiedkillchain",
+      "difficulty": "easy",
+      "tags": [
+        "Threat modelling",
+        "Security analysis"
+      ]
+    },
+    {
       "title": "XSS",
       "code": "axss",
       "difficulty": "easy",
@@ -900,5 +934,5 @@
       ]
     }
   ],
-  "updated": "2026-10-20"
+  "updated": "2026-10-21"
 }
