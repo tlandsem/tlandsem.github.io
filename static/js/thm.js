@@ -47,7 +47,7 @@
 
       root.append(el('div', 'thm-group thm-rooms-title', 'Completed rooms'));
       const legend = el('div', 'thm-legend');
-      [['', 'Easy / Info'], ['thm-medium', 'Medium'], ['thm-hard', 'Hard']].forEach(([cls, label]) => {
+      [['thm-info', 'Info'], ['', 'Easy'], ['thm-medium', 'Medium'], ['thm-hard', 'Hard']].forEach(([cls, label]) => {
         const item = el('span', 'thm-legend-item'); item.append(el('span', 'thm-swatch ' + cls), document.createTextNode(label)); legend.append(item);
       });
       root.append(legend);
@@ -62,7 +62,7 @@
           const a = el('a', 'tag thm-room', r.title);
           a.href = 'https://tryhackme.com/room/' + encodeURIComponent(r.code);
           a.target = '_blank'; a.rel = 'noopener';
-          if (r.difficulty === 'medium' || r.difficulty === 'hard') a.classList.add('thm-' + r.difficulty);
+          if (['info', 'medium', 'hard'].includes(r.difficulty)) a.classList.add('thm-' + r.difficulty);
           row.append(a);
         });
         root.append(row);
