@@ -4,14 +4,13 @@ Personal portfolio website for Trine Landsem — cybersecurity student — built
 
 ## About
 A cyberpunk-themed personal portfolio featuring an animated network background, falling glyphs and moving data packets.
-The Labs page shows TryHackMe progress generated from synced profile data, with a summary on the CV page.
+The Labs page shows certificates and TryHackMe progress generated from synced profile data.
 
 ## Pages
 - **Home** — Landing page
 - **News** — Latest updates and announcements
-- **About me** — Information and background
-- **CV** — Work experience, education and certifications
-- **Labs** — TryHackMe certificates, badges and completed rooms
+- **About me** — Background, experience, education and courses
+- **Labs** — Certificates, TryHackMe badges and completed rooms
 - **Projects** — Portfolio of projects
 - **Contact** — Contact form via Formspree
 
@@ -35,7 +34,7 @@ Headers are set with Cloudflare Response Header Transform Rules, since GitHub Pa
 Data from TryHackMe is rendered with `textContent` (never `innerHTML`), and badge images are hosted locally.
 
 ## TryHackMe sync
-The Labs page (full view) and the CV page (summary) read `static/data/thm.json`, rendered by `static/js/thm.js`.
+The Labs page reads `static/data/thm.json`, rendered by `static/js/thm.js`.
 
 To update after completing new rooms, run from the project folder on Windows:
 
@@ -61,7 +60,7 @@ trinelandsem.no/
 ├── CNAME                  # custom domain for GitHub Pages
 ├── index.html
 ├── about.html
-├── cv.html
+├── cv.html             # redirects to about.html (old links)
 ├── labs.html
 ├── news.html
 ├── projects.html
@@ -81,8 +80,7 @@ trinelandsem.no/
 │       ├── cert-presecurity.png
 │       ├── favicon.png
 │       ├── logo_512.png
-│       ├── profilbilde.png
-│       └── cv_profilbilde.png
+│       └── profilbilde.png
 └── README.md
 ```
 
