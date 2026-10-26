@@ -12,6 +12,7 @@ The Labs page shows certificates and TryHackMe progress generated from synced pr
 - **About me** — Background, experience, education and courses
 - **Labs** — Certificates, TryHackMe badges and completed rooms
 - **Projects** — Portfolio of projects
+- **Games** — Small retro games (Snake)
 - **Contact** — Contact form via Formspree
 
 ## Tech Stack
@@ -64,6 +65,7 @@ trinelandsem.no/
 ├── labs.html
 ├── news.html
 ├── projects.html
+├── games.html
 ├── contact.html
 ├── _config.yml            # excludes README and scripts from the published site
 ├── scripts/
@@ -74,6 +76,7 @@ trinelandsem.no/
 │   │   └── thm.json
 │   ├── js/
 │   │   ├── bg.js
+│   │   ├── snake.js
 │   │   └── thm.js
 │   └── images/
 │       ├── thm/           # TryHackMe badge images
