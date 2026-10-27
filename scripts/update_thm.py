@@ -9,7 +9,7 @@ BASE = "https://tryhackme.com/api/v2"
 OUT = "static/data/thm.json"
 IMG_DIR = "static/images/thm"
 # Merker for innloggingsrekker, konkurranser o.l. vises ikke på nettsiden (samme liste som i thm.js)
-SKIP_BADGES = ("streak", "raffle", "league", "legend")
+SKIP_BADGES = ("streak", "raffle", "league", "legend", "first-mobile-quiz")
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36",

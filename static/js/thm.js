@@ -30,7 +30,7 @@
       root.append(stats);
       if (summary) return;
 
-      const badges = d.badges.filter(b => !/streak|raffle|league|legend/i.test(b.name)).sort((a, b) => b.earnedAt.localeCompare(a.earnedAt));
+      const badges = d.badges.filter(b => !/streak|raffle|league|legend|first-mobile-quiz/i.test(b.name)).sort((a, b) => b.earnedAt.localeCompare(a.earnedAt));
       if (badges.length) {
         root.append(el('div', 'thm-group', 'Badges'));
         const row = el('div', 'thm-badges');
