@@ -1,9 +1,9 @@
 {
   "username": "novaninja",
   "level": 8,
-  "rank": 168540,
-  "completedRoomsNumber": 78,
-  "badgesNumber": 13,
+  "rank": 164186,
+  "completedRoomsNumber": 80,
+  "badgesNumber": 14,
   "badges": [
     {
       "name": "raffle-royalty",
@@ -69,6 +69,11 @@
       "name": "linux-privesc",
       "image": "static/images/thm/linux-privesc.png",
       "earnedAt": "2026-10-20T23:12:44.143Z"
+    },
+    {
+      "name": "first-mobile-quiz",
+      "image": null,
+      "earnedAt": "2026-10-24T16:37:01.580Z"
     }
   ],
   "rooms": [
@@ -636,6 +641,19 @@
       ]
     },
     {
+      "title": "Steel Mountain",
+      "code": "steelmountain",
+      "difficulty": "easy",
+      "tags": [
+        "Linux",
+        "Nmap",
+        "Metasploit Framework",
+        "Privilege escalation",
+        "Exploitation",
+        "Scripting"
+      ]
+    },
+    {
       "title": "Alfred",
       "code": "alfred",
       "difficulty": "easy",
@@ -926,6 +944,19 @@
       ]
     },
     {
+      "title": "Exploring Wazuh",
+      "code": "exploringwazuh",
+      "difficulty": "medium",
+      "tags": [
+        "Windows",
+        "Linux",
+        "Wazuh",
+        "Security analysis",
+        "SIEM engineering",
+        "Log analysis"
+      ]
+    },
+    {
       "title": "AI Security Threats",
       "code": "aisecuritythreats",
       "difficulty": "easy",
@@ -934,5 +965,5 @@
       ]
     }
   ],
-  "updated": "2026-10-21"
+  "updated": "2026-10-27"
 }
