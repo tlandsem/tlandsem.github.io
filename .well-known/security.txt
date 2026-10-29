@@ -1,0 +1,9 @@
+# Security contact for trinelandsem.no
+# If you have found a security issue on this website, please report it privately.
+
+Contact: https://trinelandsem.no/contact.html
+Contact: https://github.com/tlandsem/tlandsem.github.io/security/advisories/new
+Expires: 2027-10-29T22:59:59.000Z
+Preferred-Languages: no, en
+Policy: https://github.com/tlandsem/tlandsem.github.io/security/policy
+Canonical: https://trinelandsem.no/.well-known/security.txt

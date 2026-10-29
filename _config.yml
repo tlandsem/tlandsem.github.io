@@ -2,3 +2,7 @@
 exclude:
   - README.md
   - scripts/
+
+# Mapper som starter med punktum publiseres ikke som standard. Denne trengs for security.txt
+include:
+  - .well-known
