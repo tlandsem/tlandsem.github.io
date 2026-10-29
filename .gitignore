@@ -16,3 +16,6 @@ static/images/gallery/
 compress.py
 requirements.txt
 husk-share.html
+
+# Arbeidsfiler fra Claude (skal ikke publiseres)
+Claude outputs/
