@@ -29,7 +29,7 @@ neste:
 <div class="regler" markdown="1">
 
 1. **Bruk bare godkjente verktøy, med jobbkonto.** Eier skal ha databehandleravtale med leverandøren. Private kontoer og enheter brukes ikke til jobb. [Les mer ›](/ki-veileder/om-veilederen/#godkjente-verktoy)
-2. **Ingen personopplysninger.** Taushetsplikten gjelder også overfor KI. Å fjerne navnet er ofte ikke nok: Kunne noen skjønt hvem det handler om, er teksten ikke anonym. [Les mer ›](/ki-veileder/sikkerhet/#anonymisering)
+2. **Ingen personopplysninger.** Taushetsplikten gjelder også overfor KI. Å fjerne navnet er ofte ikke nok: Kunne noen skjønt hvem det handler om, er ikke teksten anonym nok. [Les mer ›](/ki-veileder/sikkerhet/#anonymisering)
 3. **KI vurderer aldri enkeltbarn.** Kartlegginger, observasjoner, rapporter, henvisninger og bekymringsmeldinger skrives av fagpersoner. [Les mer ›](/ki-veileder/anbefalinger/#vurderinger)
 4. **Alt KI lager er et utkast.** Sjekk fakta, se etter skjevheter og forankre i rammeplanen. Det er du som står ansvarlig. [Les mer ›](/ki-veileder/anbefalinger/#seks-prinsipper)
 5. **Vær åpen.** Si fra til kollegaer når KI er brukt, merk KI-genererte bilder og informer foresatte om hvordan barnehagen bruker KI. [Les mer ›](/ki-veileder/sikkerhet/#apenhet)
