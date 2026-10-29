@@ -73,7 +73,7 @@ neste:
 
 Har du limt inn feil tekst, lastet opp feil fil eller oppdaget at et møte ble tatt opp: **si fra til styrer med en gang.** Det er ikke farlig å melde, men det kan bli alvorlig å la være. Eier vurderer om bruddet skal meldes til Datatilsynet, innen 72 timer.
 
-**Vær på vakt mot KI-svindel:** Det haster, du blir bedt om å holde noe hemmelig, henvendelsen kommer i en uvanlig kanal, eller du blir bedt om å gå utenom vanlige rutiner.
+**Vær på vakt mot svindel:** Det haster, du blir bedt om å holde noe hemmelig, henvendelsen kommer i en uvanlig kanal, eller du blir bedt om å gå utenom vanlige rutiner.
 
 ## Før du sender {#for-du-sender}
 
