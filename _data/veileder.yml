@@ -1,0 +1,85 @@
+# Kapitlene i KI-veilederen. Sett klar: true når et kapittel er publisert.
+pdf: /static/docs/ki-i-barnehagen-veileder-2026.pdf
+kapitler:
+  - nr: "1"
+    tittel: Om veilederen
+    url: /ki-veileder/om-veilederen/
+    ingress: Hva KI er, hvilke verktøy som kan brukes, og hvem som har ansvaret.
+    klar: true
+  - nr: "2"
+    tittel: Sikkerhet og personvern
+    url: /ki-veileder/sikkerhet/
+    ingress: Taushetsplikt, anonymisering, bilder, KI-svindel og hva du gjør hvis noe går galt.
+    klar: true
+  - nr: "3"
+    tittel: Anbefalinger for bruk
+    url: /ki-veileder/anbefalinger/
+    ingress: Seks prinsipper, faglige vurderinger, barn og KI, opphavsrett og merking.
+    klar: true
+  - nr: "4"
+    tittel: Forslag til bruk i praksis
+    url: /ki-veileder/i-praksis/
+    ingress: Slik skriver du en god prompt, og et eksempel fra idé til ferdig opplegg.
+    klar: true
+  - nr: "5"
+    tittel: Eksempler på god bruk
+    url: /ki-veileder/eksempler/
+    ingress: Konkrete eksempler på hva KI kan brukes til i barnehagen.
+    klar: true
+  - nr: "6"
+    tittel: Sjekkliste
+    url: /ki-veileder/sjekkliste/
+    ingress: En kort liste å gå gjennom før du bruker KI.
+    klar: true
+  - nr: "7"
+    tittel: Kontakt, opplæring og revisjon
+    url: /ki-veileder/kontakt/
+    ingress: Opplæring av ansatte og hvordan veilederen holdes oppdatert.
+    klar: true
+  - nr: ""
+    tittel: KI-erklæring og kilder
+    url: /ki-veileder/kilder/
+    ingress: Hvordan KI er brukt i arbeidet med veilederen, og full referanseliste.
+    klar: true
+
+# Referanseliste. Kapitlene viser til disse med id under «kilder:».
+referanser:
+  - id: barnehageloven
+    tekst: "Barnehageloven, LOV-2005-06-17-64, Lov om barnehager (2005)."
+    url: "https://lovdata.no/lov/2005-06-17-64"
+  - id: datatilsynet-2018a
+    tekst: "Datatilsynet. (2018a). I beste mening: Om bilder av barn på nett. Datatilsynet."
+    url: "https://www.datatilsynet.no/link/139245931b39473297b94994462b5c3a.aspx/download"
+  - id: datatilsynet-2018b
+    tekst: "Datatilsynet. (2018b). Kunstig intelligens og personvern."
+    url: "https://www.datatilsynet.no/globalassets/global/dokumenter-pdfer-skjema-ol/rettigheter-og-plikter/rapporter/rapport-om-ki-og-personvern.pdf"
+  - id: datatilsynet-2024
+    tekst: "Datatilsynet. (2024, november 4). Digitale tjenester og forbrukeres personopplysninger. Datatilsynet."
+    url: "https://www.datatilsynet.no/personvern-pa-ulike-omrader/kundehandtering-handel-og-medlemskap/digitale-tjenester-og-forbrukeres-personopplysninger/"
+  - id: dfd-2025
+    tekst: "Digitaliserings- og forvaltningsdepartementet. (2025, juni 30). Høring – utkast til ny lov om kunstig intelligens – gjennomføring av EUs forordning om kunstig intelligens i norsk rett [Høring]. Regjeringen.no."
+    url: "https://www.regjeringen.no/no/dokumenter/3112327/id3112327/"
+  - id: forvaltningsloven
+    tekst: "Forvaltningsloven, LOV-1967-02-10 Lov om behandlingsmåten i forvaltningssaker (1970)."
+    url: "https://lovdata.no/dokument/NL/lov/1967-02-10/"
+  - id: ki-forordningen
+    tekst: "KI-forordningen, Forordning om kunstig intelligens (2021)."
+    url: "https://www.regjeringen.no/no/sub/eos-notatbasen/notatene/2021/juni/forslag-til-forordning-om-kunstig-intelligens-ki-forordningen/id2884935/"
+  - id: rammeplanen
+    tekst: "Kunnskapsdepartementet. (2017). Rammeplan for barnehagen: Forskrift om rammeplan for barnehagens innhold og oppgaver. Udir."
+    url: "https://www.udir.no/contentassets/7c4387bb50314f33b828789ed767329e/rammeplan-for-barnehagen---bokmal-pdf.pdf"
+  - id: nsm-2023
+    tekst: "NSM. (2023). Sikkerhetsfaglig råd – Et motstandsdyktig Norge. Nasjonal sikkerhetsmyndighet."
+    url: "https://nsm.no/getfile.php/1312994-1683615611/NSM/Filer/Dokumenter/Rapporter/Sikkerhetsfaglig%20r%C3%A5d%20-%20Et%20motstandsdyktig%20Norge.pdf"
+  - id: personopplysningsloven
+    tekst: "Personopplysningsloven, LOV-2018-06-15-38 Lov om behandling av personopplysninger (2018)."
+    url: "https://lovdata.no/dokument/NL/lov/2018-06-15-38"
+  - id: personvernforordningen
+    tekst: "Personvernforordningen, Lovdata (2016)."
+    url: "https://lovdata.no/dokument/NL/lov/2018-06-15-38/KAPITTEL_1"
+  - id: udir-2021
+    tekst: "Utdanningsdirektoratet. (2021, desember 9). Personvern i barnehage og skole. Utdanningsdirektoratet."
+    url: "https://www.udir.no/regelverk-og-tilsyn/personvern-for-barnehage-og-skole/personvern-i-barnehage-og-skole/#a165147"
+  - id: andsverkloven
+    tekst: "Åndsverkloven, LOV-2018-06-15-40, Lov om opphavsrett til åndsverk mv. (2018)."
+    url: "https://lovdata.no/dokument/NL/lov/2018-06-15-40"

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }} – KI i barnehagen</title>
+  <meta name="description" content="{{ page.description }}">
+  <link rel="canonical" href="https://trinelandsem.no{{ page.url }}">
+  <meta property="og:title" content="{{ page.title }} – KI i barnehagen">
+  <meta property="og:description" content="{{ page.description }}">
+  <meta property="og:image" content="https://trinelandsem.no/static/images/veileder-ki-cover.png">
+  <meta property="og:url" content="https://trinelandsem.no{{ page.url }}">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="nb_NO">
+  <link rel="icon" type="image/png" href="/static/images/favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/css/veileder.css">
+</head>
+<body{% if page.kortversjon %} class="kort-side"{% endif %}>
+<a class="skip" href="#innhold">Hopp til innholdet</a>
+
+<header class="topbar">
+  <button class="menu-btn" id="menu-btn" aria-controls="sidemeny" aria-expanded="false"><span></span><span></span><span></span><b>Kapitler</b></button>
+  <a class="brand" href="/ki-veileder/"><span class="brand-mark">//</span> KI i barnehagen</a>
+  <nav class="toplinks" aria-label="Snarveier">
+    <a href="{{ site.data.veileder.pdf }}" target="_blank" rel="noopener" type="application/pdf">Last ned PDF</a>
+    <a href="/projects.html">[ Trine Landsem ]</a>
+  </nav>
+</header>
+
+<div class="shell">
+  <aside class="sidebar" id="sidemeny" aria-label="Kapitler i veilederen">
+    <a class="side-home{% if page.url == '/ki-veileder/' %} aktiv{% endif %}" href="/ki-veileder/">Forside</a>
+    <a class="side-home side-kort{% if page.url == '/ki-veileder/kortversjon/' %} aktiv{% endif %}" href="/ki-veileder/kortversjon/">Kortversjon</a>
+    <ol class="kapitler">
+      {% for k in site.data.veileder.kapitler %}
+      <li class="{% if page.url == k.url %}aktiv{% endif %}{% if k.klar != true %} snart{% endif %}">
+        {% if k.klar == true %}<a href="{{ k.url }}"{% if page.url == k.url %} aria-current="page"{% endif %}>{% else %}<span>{% endif %}
+          <i>{% if k.nr != "" %}{{ k.nr }}{% else %}·{% endif %}</i> {{ k.tittel }}
+        {% if k.klar == true %}</a>{% else %}<em>kommer</em></span>{% endif %}
+        {% if page.url == k.url and page.seksjoner %}
+        <ul class="seksjoner">
+          {% for s in page.seksjoner %}<li><a href="#{{ s.id }}">{{ s.tittel }}</a></li>{% endfor %}
+        </ul>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ol>
+    <a class="side-pdf" href="{{ site.data.veileder.pdf }}" target="_blank" rel="noopener" type="application/pdf">Hele veilederen som PDF ›</a>
+  </aside>
+
+  <main id="innhold" class="artikkel">
+    <div class="art-head">
+      {% if page.kapittel %}<p class="kicker">// Kapittel {{ page.kapittel }}</p>{% else %}<p class="kicker">// Veileder · 2026</p>{% endif %}
+      <h1>{{ page.title }}</h1>
+      {% if page.ingress %}<p class="ingress">{{ page.ingress }}</p>{% endif %}
+    </div>
+
+    <div class="tekst">
+{{ content }}
+    </div>
+
+    {% if page.forside %}
+    <a class="kort-fremhevet" href="/ki-veileder/kortversjon/">
+      <span class="kort-nr">⚡</span>
+      <span><strong>Kortversjon</strong><span class="kort-txt">Det viktigste fra veilederen på én side: fem regler, hva som er greit og ikke, og hva du gjør hvis noe går galt.</span></span>
+    </a>
+    <ol class="kort-grid">
+      {% for k in site.data.veileder.kapitler %}
+      <li class="kort{% if k.klar != true %} snart{% endif %}">
+        {% if k.klar == true %}<a href="{{ k.url }}">{% else %}<div>{% endif %}
+          <span class="kort-nr">{% if k.nr != "" %}{{ k.nr }}{% else %}+{% endif %}</span>
+          <strong>{{ k.tittel }}</strong>
+          <span class="kort-txt">{{ k.ingress }}</span>
+          {% if k.klar != true %}<em>kommer</em>{% endif %}
+        {% if k.klar == true %}</a>{% else %}</div>{% endif %}
+      </li>
+      {% endfor %}
+    </ol>
+    {% endif %}
+
+    {% if page.kilder %}
+    <section class="kilder" aria-labelledby="kilder-tittel">
+      <h2 id="kilder-tittel">Kilder i dette kapitlet</h2>
+      <ul>
+        {% for nokkel in page.kilder %}{% for r in site.data.veileder.referanser %}{% if r.id == nokkel %}
+        <li>{{ r.tekst }} <a href="{{ r.url }}" target="_blank" rel="noopener">{{ r.url }}</a></li>{% endif %}{% endfor %}{% endfor %}
+      </ul>
+    </section>
+    {% endif %}
+
+    {% if page.referanseliste %}
+    <section class="tekst" aria-labelledby="referanseliste">
+      <h2 id="referanseliste">Referanseliste</h2>
+      <ul class="refliste">
+        {% for r in site.data.veileder.referanser %}<li>{{ r.tekst }} <a href="{{ r.url }}" target="_blank" rel="noopener">{{ r.url }}</a></li>
+        {% endfor %}
+      </ul>
+    </section>
+    {% endif %}
+
+    {% if page.forrige or page.neste %}
+    <nav class="bla" aria-label="Bla i veilederen">
+      {% if page.forrige %}<a class="bla-forrige" href="{{ page.forrige.url }}"><small>‹ Forrige</small>{{ page.forrige.tittel }}</a>{% else %}<span></span>{% endif %}
+      {% if page.neste %}<a class="bla-neste" href="{{ page.neste.url }}"><small>Neste ›</small>{{ page.neste.tittel }}</a>{% endif %}
+    </nav>
+    {% endif %}
+
+    {% if page.kortversjon %}<p class="utskrift-fot">KI i barnehagen · Kortversjon · Hele veilederen: trinelandsem.no/ki-veileder · Trine Landsem, {{ page.oppdatert }}</p>{% endif %}
+    <p class="oppdatert">Sist oppdatert {{ page.oppdatert }} · Innholdet er veiledende og erstatter ikke lover, forskrifter eller retningslinjer fra barnehagens eier.</p>
+  </main>
+</div>
+
+<footer class="bunn">
+  <p>© 2026 Trine Landsem · <a href="/">trinelandsem.no</a> · <a href="/contact.html">Kontakt</a></p>
+</footer>
+<script src="/static/js/veileder.js"></script>
+</body>
+</html>
