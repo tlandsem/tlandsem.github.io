@@ -13,7 +13,6 @@
   <meta property="og:type" content="article">
   <meta property="og:locale" content="nb_NO">
   <link rel="icon" type="image/png" href="/static/images/favicon.png">
-  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/static/css/veileder.css">
 </head>
 <body{% if page.kortversjon %} class="kort-side"{% endif %}>
@@ -21,10 +20,10 @@
 
 <header class="topbar">
   <button class="menu-btn" id="menu-btn" aria-controls="sidemeny" aria-expanded="false"><span></span><span></span><span></span><b>Kapitler</b></button>
-  <a class="brand" href="/ki-veileder/"><span class="brand-mark">//</span> KI i barnehagen</a>
+  <a class="brand" href="/ki-veileder/">KI i barnehagen <span class="brand-mark">Veileder</span></a>
   <nav class="toplinks" aria-label="Snarveier">
     <a href="{{ site.data.veileder.pdf }}" target="_blank" rel="noopener" type="application/pdf">Last ned PDF</a>
-    <a href="/projects.html">[ Trine Landsem ]</a>
+    <a href="/projects.html">Trine Landsem</a>
   </nav>
 </header>
 
@@ -50,8 +49,9 @@
   </aside>
 
   <main id="innhold" class="artikkel">
+    {% if page.forside %}<div class="geo geo-stor" aria-hidden="true"><i class="g1 hl"></i><i class="g2 sq"></i><i class="g3 ci"></i><i class="g5 sq"></i><i class="g4 hr"></i><i class="g2 ci"></i><i class="g1 sq"></i><i class="g4 qa"></i><i class="g3 sq"></i><i class="g5 ci"></i><i class="g1 qb"></i><i class="g2 hl"></i></div>{% else %}<div class="geo" aria-hidden="true"><i class="g1 hl"></i><i class="g2 sq"></i><i class="g3 ci"></i><i class="g4 hr"></i><i class="g5 sq"></i><i class="g1 ci"></i><i class="g2 qa"></i><i class="g4 sq"></i><i class="g3 hl"></i><i class="g5 ci"></i><i class="g1 sq"></i><i class="g2 hr"></i></div>{% endif %}
     <div class="art-head">
-      {% if page.kapittel %}<p class="kicker">// Kapittel {{ page.kapittel }}</p>{% else %}<p class="kicker">// Veileder · 2026</p>{% endif %}
+      {% if page.kapittel %}<p class="kicker">Kapittel {{ page.kapittel }}</p>{% else %}<p class="kicker">Veileder · 2026</p>{% endif %}
       <h1>{{ page.title }}</h1>
       {% if page.ingress %}<p class="ingress">{{ page.ingress }}</p>{% endif %}
     </div>
@@ -62,7 +62,7 @@
 
     {% if page.forside %}
     <a class="kort-fremhevet" href="/ki-veileder/kortversjon/">
-      <span class="kort-nr">⚡</span>
+      <span class="kort-nr">★</span>
       <span><strong>Kortversjon</strong><span class="kort-txt">Det viktigste fra veilederen på én side: fem regler, hva som er greit og ikke, og hva du gjør hvis noe går galt.</span></span>
     </a>
     <ol class="kort-grid">
