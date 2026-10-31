@@ -1,8 +1,8 @@
 {
   "username": "novaninja",
   "level": 8,
-  "rank": 164551,
-  "completedRoomsNumber": 80,
+  "rank": 163426,
+  "completedRoomsNumber": 81,
   "badgesNumber": 14,
   "badges": [
     {
@@ -786,6 +786,18 @@
       ]
     },
     {
+      "title": "Windows Fundamentals 3",
+      "code": "windowsfundamentals3xzx",
+      "difficulty": "info",
+      "tags": [
+        "Windows",
+        "Windows Defender",
+        "Exploitation",
+        "File system navigation",
+        "Security analysis"
+      ]
+    },
+    {
       "title": "Metasploit: Exploitation",
       "code": "metasploitexploitation",
       "difficulty": "easy",
@@ -965,5 +977,5 @@
       ]
     }
   ],
-  "updated": "2026-10-29"
+  "updated": "2026-10-31"
 }
