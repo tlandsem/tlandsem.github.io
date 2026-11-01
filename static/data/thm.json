@@ -1,8 +1,8 @@
 {
   "username": "novaninja",
   "level": 8,
-  "rank": 163426,
-  "completedRoomsNumber": 81,
+  "rank": 160502,
+  "completedRoomsNumber": 82,
   "badgesNumber": 14,
   "badges": [
     {
@@ -858,6 +858,20 @@
       ]
     },
     {
+      "title": "Active Directory Basics",
+      "code": "winadbasics",
+      "difficulty": "easy",
+      "tags": [
+        "Windows",
+        "Active Directory",
+        "GPO (Group Policy Objects)",
+        "Penetration testing",
+        "Exploitation",
+        "System administration",
+        "Identity and access management (IAC)"
+      ]
+    },
+    {
       "title": "XSS",
       "code": "axss",
       "difficulty": "easy",
@@ -977,5 +991,5 @@
       ]
     }
   ],
-  "updated": "2026-10-31"
+  "updated": "2026-11-01"
 }
