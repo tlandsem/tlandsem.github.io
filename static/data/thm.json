@@ -1,9 +1,9 @@
 {
   "username": "novaninja",
   "level": 8,
-  "rank": 160502,
-  "completedRoomsNumber": 82,
-  "badgesNumber": 14,
+  "rank": 158847,
+  "completedRoomsNumber": 83,
+  "badgesNumber": 15,
   "badges": [
     {
       "name": "raffle-royalty",
@@ -74,6 +74,11 @@
       "name": "first-mobile-quiz",
       "image": null,
       "earnedAt": "2026-10-24T16:37:01.580Z"
+    },
+    {
+      "name": "30-day-streak",
+      "image": null,
+      "earnedAt": "2026-11-04T20:21:00.639Z"
     }
   ],
   "rooms": [
@@ -858,6 +863,23 @@
       ]
     },
     {
+      "title": "Introduction to SIEM",
+      "code": "introtosiem",
+      "difficulty": "easy",
+      "tags": [
+        "Windows",
+        "Splunk",
+        "Event Viewer NEW",
+        "Qrader",
+        "Security operations",
+        "Incident response",
+        "Incident handling",
+        "Detection engineering",
+        "SIEM engineering",
+        "Endpoint security monitoring"
+      ]
+    },
+    {
       "title": "Active Directory Basics",
       "code": "winadbasics",
       "difficulty": "easy",
@@ -991,5 +1013,5 @@
       ]
     }
   ],
-  "updated": "2026-11-01"
+  "updated": "2026-11-04"
 }
