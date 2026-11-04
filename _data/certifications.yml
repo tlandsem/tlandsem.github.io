@@ -1,0 +1,32 @@
+# Sertifiseringer som vises på About me og Labs.
+# Legg nye sertifiseringer ØVERST i listen (nyeste først).
+#
+# Felter:
+#   name:        Navn på sertifiseringen (påkrevd)
+#   issuer:      Hvem som har utstedt den (påkrevd)
+#   date:        Når du fikk den, f.eks. "Nov 2026" (valgfritt)
+#   description: Kort beskrivelse, én eller to setninger (valgfritt)
+#   image:       Bilde av sertifikatet/merket. Lokal fil i static/images/ eller en https-adresse (valgfritt)
+#   image_alt:   Beskrivelse av bildet for skjermlesere (påkrevd hvis image er satt)
+#   url:         Lenke der sertifikatet kan verifiseres (valgfritt)
+#   verified:    Teksten under, f.eks. "Verified Credential" (valgfritt)
+#
+# Tips: Bruker du et bilde fra en annen nettside enn images.credly.com, må den
+# adressen også legges til i img-src i CSP-regelen i Cloudflare. Lokale bilder virker alltid.
+
+- name: Pre Security Learning Path
+  issuer: TryHackMe
+  date: Oct 2026
+  description: 7 modules and 31 hands-on labs covering computer basics, first lines of code, networking, the web, and cyber attacks and defences.
+  image: static/images/cert-presecurity.png
+  image_alt: TryHackMe Pre Security Learning Path certificate
+  url: https://tryhackme.com/certificate/THM-0KPCRJO92V
+  verified: Verified Certificate
+
+- name: Junior Cybersecurity Analyst Career Path
+  issuer: Cisco Networking Academy
+  image: https://images.credly.com/size/680x680/images/441578ec-c0f3-46cc-95fc-86b27e90cf4f/image.png
+  image_alt: Cisco Junior Cybersecurity Analyst Career Path badge
+  badge: true
+  url: https://www.credly.com/badges/4ddd79d3-1ae3-402b-9956-7e1f3772fda1/public_url
+  verified: Verified Credential

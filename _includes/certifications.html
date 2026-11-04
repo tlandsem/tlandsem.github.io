@@ -1,0 +1,15 @@
+<!-- Lages automatisk fra _data/certifications.yml. Endre listen der, ikke her. -->
+<div class="cert-list">
+{% for c in site.data.certifications %}
+  <div class="cert-card">
+    {% if c.image %}{% if c.url %}<a href="{{ c.url | escape }}" target="_blank" rel="noopener">{% endif %}<img src="{{ c.image | escape }}" alt="{{ c.image_alt | escape }}" loading="lazy"{% if c.badge %} class="cert-badge"{% endif %}>{% if c.url %}</a>{% endif %}{% endif %}
+    <div class="cert-text">
+      <div class="cert-name">{{ c.name | escape }}</div>
+      <div class="cert-org">Issued by {{ c.issuer | escape }}{% if c.date %} · {{ c.date | escape }}{% endif %}</div>
+      {% if c.description %}<div class="cert-desc">{{ c.description | escape }}</div>{% endif %}
+      {% if c.verified %}<div class="cert-meta">✓ {{ c.verified | escape }}</div>{% endif %}
+    </div>
+    {% if c.url %}<a class="cert-btn" href="{{ c.url | escape }}" target="_blank" rel="noopener">Verify →</a>{% endif %}
+  </div>
+{% endfor %}
+</div>

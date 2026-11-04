@@ -1,0 +1,18 @@
+/* Sertifiseringskort – brukes på About me og Labs */
+.cert-list { display: grid; gap: 16px; }
+.cert-card { display: flex; align-items: center; gap: 20px; background: rgba(0,200,160,0.06); border: 1px solid rgba(0,200,160,0.25); border-radius: 10px; padding: 18px 22px; flex-wrap: wrap; margin: 0; }
+.cert-card img { width: 150px; height: auto; border-radius: 6px; border: 1px solid rgba(0,200,160,0.25); flex-shrink: 0; display: block; }
+.cert-card img.cert-badge { width: 110px; border: none; }
+.cert-card .cert-text { flex: 1; min-width: 180px; }
+.cert-name { color: rgba(220,245,238,0.9); font-size: 15px; font-weight: 600; letter-spacing: 0.04em; }
+.cert-org { color: rgba(0,200,160,0.7); font-size: 13px; margin-top: 2px; letter-spacing: 0.04em; }
+.cert-desc { color: rgba(180,220,210,0.6); font-size: 13px; margin-top: 4px; line-height: 1.6; }
+.cert-meta { color: rgba(0,200,160,0.5); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; margin-top: 6px; }
+.cert-btn { background: rgba(0,200,160,0.12); border: 1px solid rgba(0,200,160,0.4); border-radius: 6px; color: #00e5b3; font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; padding: 9px 18px; text-decoration: none; transition: background 0.2s; }
+.cert-btn:hover { background: rgba(0,200,160,0.22); }
+@media (max-width: 600px) {
+  .cert-card { flex-direction: column; align-items: flex-start; padding: 16px; gap: 14px; }
+  .cert-card .cert-text { min-width: 0; width: 100%; }
+  .cert-card img { width: 100%; max-width: 280px; }
+  .cert-card img.cert-badge { width: 110px; }
+}

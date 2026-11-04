@@ -1,3 +1,5 @@
+---
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,6 +12,7 @@
     <meta property="og:url" content="https://trinelandsem.no">
     <meta property="og:type" content="website">
   <link rel="icon" type="image/png" href="static/images/favicon.png">
+  <link rel="stylesheet" href="static/css/certifications.css">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html, body { width: 100%; height: 100%; font-family: 'Bahnschrift SemiCondensed', 'Bahnschrift', 'Avenir Next Condensed', 'Roboto Condensed', 'sans-serif-condensed', 'Arial Narrow', sans-serif; background: #080d12; }
@@ -114,25 +117,7 @@
 
   <div class="cv-section">
     <h2>// Certificates</h2>
-    <div class="cert-card">
-      <a href="https://www.credly.com/badges/4ddd79d3-1ae3-402b-9956-7e1f3772fda1/public_url" target="_blank" rel="noopener"><img src="https://images.credly.com/size/680x680/images/441578ec-c0f3-46cc-95fc-86b27e90cf4f/image.png" alt="Cisco Junior Cybersecurity Analyst Career Path badge" loading="lazy" style="width: 110px; border: none;"></a>
-      <div class="cert-text">
-        <div class="cv-role">Junior Cybersecurity Analyst Career Path</div>
-        <div class="cv-org">Issued by Cisco Networking Academy</div>
-        <div class="thm-meta">✓ Verified Credential</div>
-      </div>
-      <a class="cert-btn" href="https://www.credly.com/badges/4ddd79d3-1ae3-402b-9956-7e1f3772fda1/public_url" target="_blank" rel="noopener">Verify →</a>
-    </div>
-    <div class="cert-card">
-      <a href="https://tryhackme.com/certificate/THM-0KPCRJO92V" target="_blank" rel="noopener"><img src="static/images/cert-presecurity.png" alt="TryHackMe Pre Security Learning Path certificate" loading="lazy"></a>
-      <div class="cert-text">
-        <div class="cv-role">Pre Security Learning Path</div>
-        <div class="cv-org">Issued by TryHackMe · Oct 2026</div>
-        <div class="cv-desc">7 modules and 31 hands-on labs covering computer basics, first lines of code, networking, the web, and cyber attacks and defences.</div>
-        <div class="thm-meta">✓ Verified Certificate</div>
-      </div>
-      <a class="cert-btn" href="https://tryhackme.com/certificate/THM-0KPCRJO92V" target="_blank" rel="noopener">Verify →</a>
-    </div>
+    {% include certifications.html %}
   </div>
 
   <div class="cv-section">
