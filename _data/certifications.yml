@@ -14,6 +14,16 @@
 # Tips: Bruker du et bilde fra en annen nettside enn images.credly.com, må den
 # adressen også legges til i img-src i CSP-regelen i Cloudflare. Lokale bilder virker alltid.
 
+- name: Ethical Hacker
+  issuer: Cisco Networking Academy
+  date: Nov 2026
+  description: Vulnerability assessment and penetration testing, from scoping and legal requirements to reporting and mitigation, with hands-on labs in Kali Linux.
+  image: https://images.credly.com/images/242902b5-f527-42ad-865e-977c9e1b5b58/image.png
+  image_alt: Cisco Ethical Hacker badge
+  badge: true
+  url: https://www.credly.com/badges/4fa18765-5234-44ff-9caa-5528bf9d7e47/public_url
+  verified: Verified Credential
+
 - name: Pre Security Learning Path
   issuer: TryHackMe
   date: Oct 2026
