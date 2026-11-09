@@ -1,9 +1,9 @@
 {
   "username": "novaninja",
-  "level": 8,
-  "rank": 158847,
-  "completedRoomsNumber": 83,
-  "badgesNumber": 15,
+  "level": 9,
+  "rank": 154457,
+  "completedRoomsNumber": 85,
+  "badgesNumber": 16,
   "badges": [
     {
       "name": "raffle-royalty",
@@ -79,6 +79,11 @@
       "name": "30-day-streak",
       "image": null,
       "earnedAt": "2026-11-04T20:21:00.639Z"
+    },
+    {
+      "name": "network-and-system-security",
+      "image": null,
+      "earnedAt": "2026-11-09T22:05:20.745Z"
     }
   ],
   "rooms": [
@@ -200,14 +205,6 @@
         "Security analysis",
         "Network security engineering",
         "Network monitoring"
-      ]
-    },
-    {
-      "title": "Extending Your Network",
-      "code": "extendingyournetwork",
-      "difficulty": "info",
-      "tags": [
-        "Network security engineering"
       ]
     },
     {
@@ -630,6 +627,12 @@
       ]
     },
     {
+      "title": "Defensive Security Intro",
+      "code": "defensivesecurityintroexp",
+      "difficulty": "easy",
+      "tags": []
+    },
+    {
       "title": "Linux Fundamentals (Pt1)",
       "code": "linuxfundamentalspt15vm",
       "difficulty": "easy",
@@ -791,6 +794,14 @@
       ]
     },
     {
+      "title": "Extending Your Network",
+      "code": "extendingyournetwork",
+      "difficulty": "info",
+      "tags": [
+        "Network security engineering"
+      ]
+    },
+    {
       "title": "Windows Fundamentals 3",
       "code": "windowsfundamentals3xzx",
       "difficulty": "info",
@@ -891,6 +902,24 @@
         "Exploitation",
         "System administration",
         "Identity and access management (IAC)"
+      ]
+    },
+    {
+      "title": "Auditing and Monitoring",
+      "code": "auditingandmonitoringse",
+      "difficulty": "easy",
+      "tags": [
+        "Windows",
+        "Linux",
+        "Aureport",
+        "Auresearch",
+        "Event Viewer NEW",
+        "Identity and access management (IAC)",
+        "SIEM engineering",
+        "Incident handling",
+        "Digital forensics",
+        "Logging",
+        "Endpoint security monitoring"
       ]
     },
     {
@@ -1013,5 +1042,5 @@
       ]
     }
   ],
-  "updated": "2026-11-04"
+  "updated": "2026-11-09"
 }
