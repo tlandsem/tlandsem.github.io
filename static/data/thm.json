@@ -1,8 +1,8 @@
 {
   "username": "novaninja",
   "level": 9,
-  "rank": 154457,
-  "completedRoomsNumber": 85,
+  "rank": 151819,
+  "completedRoomsNumber": 86,
   "badgesNumber": 16,
   "badges": [
     {
@@ -935,6 +935,14 @@
       ]
     },
     {
+      "title": "Windows Command Line",
+      "code": "windowscommandline",
+      "difficulty": "easy",
+      "tags": [
+        "Windows"
+      ]
+    },
+    {
       "title": "Hashing Basics",
       "code": "hashingbasics",
       "difficulty": "easy",
@@ -1042,5 +1050,5 @@
       ]
     }
   ],
-  "updated": "2026-11-09"
+  "updated": "2026-11-13"
 }
