@@ -3,18 +3,18 @@ layout: veileder
 title: Kunstig intelligens i barnehagen
 permalink: /ki-veileder/
 forside: true
-oppdatert: 29.10.2026
+oppdatert: 14.11.2026
 description: "En veileder for ansatte i barnehagen om trygg, lovlig og faglig forsvarlig bruk av kunstig intelligens (KI)."
 ingress: "En veileder for ansatte i barnehagen om trygg, lovlig og faglig forsvarlig bruk av kunstig intelligens."
 ---
 
-Veilederen forklarer hva du må være oppmerksom på når det gjelder sikkerhet og personvern, gir anbefalinger for hvordan KI kan brukes på en hensiktsmessig og faglig god måte, og kommer med konkrete eksempler på hva KI kan brukes til i barnehagen.
+Veilederen tar for seg flere sider ved bruk av KI, blant annet sikkerhet, personvern og råd om hvordan KI kan brukes faglig. Den viser også konkrete eksempler på hvordan KI kan brukes i barnehagen.
 
 <div class="faktaboks" markdown="1">
 
 Før du starter
 
-Veilederen er veiledende og erstatter ikke lover, forskrifter eller retningslinjer fra barnehagens eier. Dersom eier har egne regler for bruk av KI, er det disse som gjelder. Alle ansatte bør få opplæring i innholdet før de tar KI-verktøy i bruk.
+Veilederen er veiledende og erstatter ikke lover og forskrifter, eller retningslinjer fra barnehagens eier. Eiers egne retningslinjer for KI-bruk skal gå foran anbefalinger i denne veilederen. Alle ansatte bør også få opplæring før de tar KI-verktøy i bruk.
 
 </div>
 

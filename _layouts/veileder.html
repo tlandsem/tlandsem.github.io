@@ -15,7 +15,7 @@
   <link rel="icon" type="image/png" href="/static/images/favicon.png">
   <link rel="stylesheet" href="/static/css/veileder.css">
 </head>
-<body{% if page.kortversjon %} class="kort-side"{% endif %}>
+<body>
 <a class="skip" href="#innhold">Hopp til innholdet</a>
 
 <header class="topbar">
@@ -30,7 +30,6 @@
 <div class="shell">
   <aside class="sidebar" id="sidemeny" aria-label="Kapitler i veilederen">
     <a class="side-home{% if page.url == '/ki-veileder/' %} aktiv{% endif %}" href="/ki-veileder/">Forside</a>
-    <a class="side-home side-kort{% if page.url == '/ki-veileder/kortversjon/' %} aktiv{% endif %}" href="/ki-veileder/kortversjon/">Kortversjon</a>
     <ol class="kapitler">
       {% for k in site.data.veileder.kapitler %}
       <li class="{% if page.url == k.url %}aktiv{% endif %}{% if k.klar != true %} snart{% endif %}">
@@ -51,7 +50,7 @@
   <main id="innhold" class="artikkel">
     {% if page.forside %}<div class="geo geo-stor" aria-hidden="true"><i class="g1 hl"></i><i class="g2 sq"></i><i class="g3 ci"></i><i class="g5 sq"></i><i class="g4 hr"></i><i class="g2 ci"></i><i class="g1 sq"></i><i class="g4 qa"></i><i class="g3 sq"></i><i class="g5 ci"></i><i class="g1 qb"></i><i class="g2 hl"></i></div>{% else %}<div class="geo" aria-hidden="true"><i class="g1 hl"></i><i class="g2 sq"></i><i class="g3 ci"></i><i class="g4 hr"></i><i class="g5 sq"></i><i class="g1 ci"></i><i class="g2 qa"></i><i class="g4 sq"></i><i class="g3 hl"></i><i class="g5 ci"></i><i class="g1 sq"></i><i class="g2 hr"></i></div>{% endif %}
     <div class="art-head">
-      {% if page.kapittel %}<p class="kicker">Kapittel {{ page.kapittel }}</p>{% else %}<p class="kicker">Veileder · 2026</p>{% endif %}
+      {% if page.kapittel %}<p class="kicker">Kapittel {{ page.kapittel }}</p>{% elsif page.forside %}<p class="kicker">Veileder · Versjon {{ site.data.veileder.versjon }}</p>{% else %}<p class="kicker">Veileder · 2026</p>{% endif %}
       <h1>{{ page.title }}</h1>
       {% if page.ingress %}<p class="ingress">{{ page.ingress }}</p>{% endif %}
     </div>
@@ -61,10 +60,6 @@
     </div>
 
     {% if page.forside %}
-    <a class="kort-fremhevet" href="/ki-veileder/kortversjon/">
-      <span class="kort-nr">★</span>
-      <span><strong>Kortversjon</strong><span class="kort-txt">Det viktigste fra veilederen på én side: fem regler, hva som er greit og ikke, og hva du gjør hvis noe går galt.</span></span>
-    </a>
     <ol class="kort-grid">
       {% for k in site.data.veileder.kapitler %}
       <li class="kort{% if k.klar != true %} snart{% endif %}">
@@ -106,7 +101,6 @@
     </nav>
     {% endif %}
 
-    {% if page.kortversjon %}<p class="utskrift-fot">KI i barnehagen · Kortversjon · Hele veilederen: trinelandsem.no/ki-veileder · Trine Landsem, {{ page.oppdatert }}</p>{% endif %}
     <p class="oppdatert">Sist oppdatert {{ page.oppdatert }} · Innholdet er veiledende og erstatter ikke lover, forskrifter eller retningslinjer fra barnehagens eier.</p>
   </main>
 </div>

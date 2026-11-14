@@ -3,16 +3,19 @@ layout: veileder
 title: Forslag til bruk i praksis
 kapittel: 4
 permalink: /ki-veileder/i-praksis/
-oppdatert: 29.10.2026
-description: "Slik skriver du en god prompt, og et eksempel på hvordan en ansatt går fra idé til ferdig opplegg med KI."
+oppdatert: 14.11.2026
+description: "Hva KI kan brukes til i barnehagen, slik skriver du en god prompt, og et eksempel på hvordan en ansatt går fra idé til ferdig opplegg med KI."
 ingress: "Hvordan du får gode svar fra et KI-verktøy, og hvor grensen går mellom det KI gjør og det du bør gjøre selv."
 seksjoner:
+  - id: bruksomrader
+    tittel: Hva KI kan brukes til
   - id: god-prompt
     tittel: Slik skriver du en god prompt
   - id: svak-og-sterk
     tittel: Svak og sterk prompt
   - id: fra-ide-til-opplegg
     tittel: Fra idé til ferdig opplegg
+kilder: [letnes-2026]
 forrige:
   tittel: Anbefalinger for bruk
   url: /ki-veileder/anbefalinger/
@@ -21,9 +24,30 @@ neste:
   url: /ki-veileder/eksempler/
 ---
 
+## Hva KI kan brukes til {#bruksomrader}
+
+Til nå har veilederen i stor grad handlet om hva du må passe på når du bruker KI i barnehagen. Selv om det er mye man må være forsiktig med, kan KI også være til god hjelp i hverdagen.
+
+Mari-Ann Letnes, førsteamanuensis ved Institutt for lærerutdanning, NTNU, trekker frem fire områder KI kan brukes på i barnehagen (Letnes, 2026):
+
+- til å lage fortellinger og bilder som inspirerer til lek og utforsking
+- til å tilpasse aktiviteter og informasjon så alle barn kan være med
+- som støtte i faglig refleksjon
+- til administrative oppgaver som gir mer tid til barna
+
+Felles for alle disse områdene er at KI skal støtte det de ansatte gjør. De gir også et godt bilde av hvor bredt KI faktisk kan brukes i barnehagen.
+
+<div class="faktaboks" markdown="1">
+
+Sitat
+
+«De mest verdifulle bruksområdene er de som styrker barnehagelærerens profesjonsutøvelse og relasjoner med barna, ikke de som erstatter dem» (Letnes, 2026).
+
+</div>
+
 ## Slik skriver du en god prompt {#god-prompt}
 
-En **prompt** er beskjeden du skriver til et KI-verktøy for å få det til å gjøre noe. Det kan være et spørsmål, en instruks eller en beskrivelse av hva du ønsker. Ordet kommer fra engelsk og betyr noe som «å gi et stikkord» eller «å sette i gang», og kan oversettes til noe som en instruks på norsk.
+En **prompt** er beskjeden du skriver til et KI-verktøy for å få det til å gjøre noe. Det kan være et spørsmål, en instruks eller en beskrivelse av hva du ønsker.
 
 Jo mer presis man er, desto bedre blir svaret fra KI-verktøyet. En god prompt inneholder gjerne fire ting:
 

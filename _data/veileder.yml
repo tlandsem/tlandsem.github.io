@@ -1,5 +1,6 @@
 # Kapitlene i KI-veilederen. Sett klar: true når et kapittel er publisert.
 pdf: /static/docs/ki-i-barnehagen-veileder-2026.pdf
+versjon: "1.1"
 kapitler:
   - nr: "1"
     tittel: Om veilederen
@@ -19,7 +20,7 @@ kapitler:
   - nr: "4"
     tittel: Forslag til bruk i praksis
     url: /ki-veileder/i-praksis/
-    ingress: Slik skriver du en god prompt, og et eksempel fra idé til ferdig opplegg.
+    ingress: Hva KI kan brukes til, slik skriver du en god prompt, og et eksempel fra idé til ferdig opplegg.
     klar: true
   - nr: "5"
     tittel: Eksempler på god bruk
@@ -68,6 +69,9 @@ referanser:
   - id: rammeplanen
     tekst: "Kunnskapsdepartementet. (2017). Rammeplan for barnehagen: Forskrift om rammeplan for barnehagens innhold og oppgaver. Udir."
     url: "https://www.udir.no/contentassets/7c4387bb50314f33b828789ed767329e/rammeplan-for-barnehagen---bokmal-pdf.pdf"
+  - id: letnes-2026
+    tekst: "Letnes, M.-A. (2026, mars 8). Generativ KI i skole og barnehage. Digital teknologi i pedagogisk praksis."
+    url: "https://mariannletnes.com/post-ki-i-skole-og-barnehage.html"
   - id: nsm-2023
     tekst: "NSM. (2023). Sikkerhetsfaglig råd – Et motstandsdyktig Norge. Nasjonal sikkerhetsmyndighet."
     url: "https://nsm.no/getfile.php/1312994-1683615611/NSM/Filer/Dokumenter/Rapporter/Sikkerhetsfaglig%20r%C3%A5d%20-%20Et%20motstandsdyktig%20Norge.pdf"

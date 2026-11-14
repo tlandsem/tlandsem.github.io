@@ -3,7 +3,7 @@ layout: veileder
 title: Kontakt, opplæring og revisjon
 kapittel: 7
 permalink: /ki-veileder/kontakt/
-oppdatert: 29.10.2026
+oppdatert: 14.11.2026
 description: "Kontaktpunkter for spørsmål om KI, opplæring av ansatte og revisjon av barnehagens retningslinjer for KI."
 ingress: "Tydelige kontaktpunkter, god opplæring og jevnlig revisjon gjør at retningslinjene holder seg oppdaterte."
 seksjoner:
@@ -28,7 +28,7 @@ Hver barnehage bør ha tydelige kontaktpunkter for spørsmål om KI og personver
 
 ## Opplæring {#opplaering}
 
-Alle ansatte bør få god opplæring og gjennomgang i bruk av KI. Denne veilederen kan brukes for å dele nødvendig informasjon om bruk av KI i barnehagen, og kan gis som en del av opplæringen.
+Alle ansatte bør få god opplæring og gjennomgang i bruk av KI. Denne veilederen kan brukes for å dele nødvendig informasjon om bruk av KI i barnehagen, og kan brukes som en del av opplæringen.
 
 EUs KI-forordning stiller krav om at ansatte som bruker KI har tilstrekkelig kompetanse i bruk av KI. Forordningen er per i dag ikke gjennomført i norsk lov, men er planlagt fremlagt for Stortinget våren 2027 (Digitaliserings- og forvaltningsdepartementet, 2025). Opplæring er uansett god praksis.
 
