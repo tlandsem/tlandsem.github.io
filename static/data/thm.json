@@ -1,8 +1,8 @@
 {
   "username": "novaninja",
   "level": 9,
-  "rank": 151819,
-  "completedRoomsNumber": 86,
+  "rank": 146770,
+  "completedRoomsNumber": 88,
   "badgesNumber": 16,
   "badges": [
     {
@@ -975,6 +975,23 @@
       ]
     },
     {
+      "title": "Humans as Attack Vectors",
+      "code": "humansattackvectors",
+      "difficulty": "easy",
+      "tags": [
+        "Security operations",
+        "Security analysis"
+      ]
+    },
+    {
+      "title": "SOC Role in Blue Team",
+      "code": "socroleinblueteam",
+      "difficulty": "easy",
+      "tags": [
+        "Security operations"
+      ]
+    },
+    {
       "title": "Cryptography Concepts",
       "code": "cryptographyconcepts",
       "difficulty": "easy",
@@ -1050,5 +1067,5 @@
       ]
     }
   ],
-  "updated": "2026-11-13"
+  "updated": "2026-11-25"
 }
