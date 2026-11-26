@@ -1,9 +1,9 @@
 {
   "username": "novaninja",
   "level": 9,
-  "rank": 146770,
-  "completedRoomsNumber": 88,
-  "badgesNumber": 16,
+  "rank": 145615,
+  "completedRoomsNumber": 89,
+  "badgesNumber": 17,
   "badges": [
     {
       "name": "raffle-royalty",
@@ -84,6 +84,11 @@
       "name": "network-and-system-security",
       "image": "static/images/thm/network-and-system-security.png",
       "earnedAt": "2026-11-09T22:05:20.745Z"
+    },
+    {
+      "name": "first-step-into-soc",
+      "image": "static/images/thm/first-step-into-soc.png",
+      "earnedAt": "2026-11-26T19:50:22.465Z"
     }
   ],
   "rooms": [
@@ -984,6 +989,15 @@
       ]
     },
     {
+      "title": "Systems as Attack Vectors",
+      "code": "systemsattackvectors",
+      "difficulty": "easy",
+      "tags": [
+        "Security operations",
+        "Security analysis"
+      ]
+    },
+    {
       "title": "SOC Role in Blue Team",
       "code": "socroleinblueteam",
       "difficulty": "easy",
@@ -1067,5 +1081,5 @@
       ]
     }
   ],
-  "updated": "2026-11-25"
+  "updated": "2026-11-26"
 }
