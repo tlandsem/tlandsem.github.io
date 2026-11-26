@@ -3,7 +3,7 @@ layout: veileder
 title: Om veilederen
 kapittel: 1
 permalink: /ki-veileder/om-veilederen/
-oppdatert: 14.11.2026
+oppdatert: 26.11.2026
 description: "Hva kunstig intelligens er, hvilke KI-verktøy barnehagen bør bruke, og hvordan ansvaret er fordelt mellom eier, styrer og ansatte."
 ingress: "Dette er en veileder for hvordan ansatte i barnehagen kan bruke kunstig intelligens (KI) på en trygg, lovlig og faglig forsvarlig måte."
 seksjoner:
@@ -15,7 +15,7 @@ seksjoner:
     tittel: Godkjente verktøy
   - id: ansvar
     tittel: Ansvar
-kilder: [datatilsynet-2018b, personopplysningsloven, personvernforordningen, udir-2021]
+kilder: [wold-2025, datatilsynet-2026, personvernforordningen, udir-2021]
 neste:
   tittel: Sikkerhet og personvern
   url: /ki-veileder/sikkerhet/
@@ -37,7 +37,7 @@ KI er en samlebetegnelse for datasystemer som kan løse oppgaver vi vanligvis fo
 
 ### Samtaleroboter
 
-Denne veilederen handler mest om generativ KI. Det er samtaleroboter som kan skrive tekst, oppsummere, oversette og lage bilder ut fra en beskrivelse. En samtalerobot er trent på enorme mengder tekst og har lært mønstre i språket. Når du spør om noe, beregner den hvilke ord som mest sannsynlig passer som svar. De slår altså ikke opp i en faktabase, og de «vet» ikke om det de skriver er sant (Datatilsynet, 2018b, s. 10). Derfor kan svarene være velformulerte og overbevisende, og likevel inneholde feil, utdatert informasjon eller oppdiktede fakta og kilder.
+Denne veilederen handler mest om generativ KI. Det er samtaleroboter som kan skrive tekst, oppsummere, oversette og lage bilder ut fra en beskrivelse. En samtalerobot er trent på enorme mengder tekst og har lært mønstre i språket. Når du spør om noe, beregner den hvilke ord som mest sannsynlig passer som svar (Wold, 2025). De slår altså ikke opp i en faktabase, og de «vet» ikke om det de skriver er sant. Derfor kan svarene være velformulerte og overbevisende, og likevel inneholde feil, utdatert informasjon eller oppdiktede fakta og kilder.
 
 Verktøyene forstår ikke mennesker. De kjenner ikke barnehagen, ansatte, barnegruppa eller det enkelte barnet. De har ingen erfaring, følelser eller faglig skjønn. Svarene kan speile skjevheter og stereotypier fra tekstene de er trent på, for eksempel om kjønn og kultur.
 
@@ -45,7 +45,7 @@ Verktøyene forstår ikke mennesker. De kjenner ikke barnehagen, ansatte, barneg
 
 Husk
 
-Det du skriver inn i et KI-verktøy, sendes til leverandøren av tjenesten og kan bli lagret der (Datatilsynet, 2018b, s. 6). Derfor er det viktig å være oppmerksom på hvilke opplysninger du deler, og hvilket verktøy du bruker.
+Det du skriver inn i et KI-verktøy, sendes til leverandøren av tjenesten og kan bli lagret der (Datatilsynet, 2026). Derfor er det viktig å være oppmerksom på hvilke opplysninger du deler, og hvilket verktøy du bruker.
 
 </div>
 
@@ -73,11 +73,11 @@ Vær ekstra oppmerksom på funksjoner som slår seg på automatisk, for eksempel
 
 ## Godkjente verktøy {#godkjente-verktoy}
 
-Barnehagen bør ha klare regler for hvilke KI-verktøy som kan brukes. Dersom et verktøy behandler personopplysninger, skal eier ha inngått en **databehandleravtale** med leverandøren før det tas i bruk (Personopplysningsloven, 2018, personvernforordningen art. 28 nr. 3). Avtalen bestemmer hva leverandøren har lov til å gjøre med opplysningene, hvor de lagres, hvem som har tilgang, hvilke sikkerhetstiltak som gjelder og at opplysningene slettes når avtalen opphører. Avtalen bør også si at innholdet ikke skal brukes til å trene leverandørens KI-modeller.
+Barnehagen bør ha klare regler for hvilke KI-verktøy som kan brukes. Dersom en leverandør behandler personopplysninger, skal eier ha inngått en **databehandleravtale** med leverandøren før det tas i bruk (Personvernforordningen, 2016, art. 28 nr. 3). Avtalen bestemmer hva leverandøren har lov til å gjøre med opplysningene, hvor de lagres, hvem som har tilgang, hvilke sikkerhetstiltak som gjelder og at opplysningene slettes når avtalen opphører. Avtalen bør også si at innholdet ikke skal brukes til å trene leverandørens KI-modeller.
 
 Slike avtaler tilbys ofte gjennom bedrifts- og virksomhetsversjoner av verktøyene. Gratisversjoner og private abonnementer er som regel ikke dekket. Der gjelder som regel leverandørens vanlige brukervilkår, og bruker har ingen kontroll over hva som skjer med innholdet. **Private kontoer bør derfor ikke brukes til arbeidsrelaterte oppgaver.**
 
-I tillegg til en slik avtale bør det gjennomføres en risikovurdering av verktøyet før det godkjennes (Personvernforordningen, 2016).
+I tillegg til en slik avtale bør det gjennomføres en risikovurdering av verktøyet før det godkjennes (Personvernforordningen, 2016, art. 35).
 
 <div class="faktaboks viktig" markdown="1">
 

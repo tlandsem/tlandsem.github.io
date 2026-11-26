@@ -3,7 +3,7 @@ layout: veileder
 title: Eksempler på god bruk av KI i barnehagen
 kapittel: 5
 permalink: /ki-veileder/eksempler/
-oppdatert: 29.10.2026
+oppdatert: 26.11.2026
 description: "En idébank med eksempler på trygg og nyttig bruk av KI i barnehagen, med forslag til prompter."
 ingress: "En idébank og inspirasjon. Eksemplene er trygge, så lenge man holder personopplysninger utenfor."
 forrige:
@@ -40,7 +40,7 @@ Ansatte må prøve seg frem og finne hva som fungerer for den enkelte i de ulike
 
 **Sammen med barna:** La barna komme med ideer til fortellingen, og bruk KI som et verktøy for å produsere teksten.
 
-<p class="prompt">Lag en barnefortelling basert på barnas (3–4 år) innspill: Det skal handle om en gutt som heter Ola. En dag finner han en skatt i skogen, som sjørøvere har gravd ned. Gutten tar den med tilbake til landsbyen, og moren ber ham ta den med til politiet. Politiet takker ham for at han fant kongens skatt, og gutten får bli med til slottet. Da blir kongen så glad at han får gifte seg med prinsessa. Lykkelig slutt på fortellingen.</p>
+<p class="prompt">Lag en barnefortelling basert på barnas (3–4 år) innspill: Det skal handle om en gutt som heter Ola. En dag finner han en skatt i skogen, som sjørøvere har gravd ned. Gutten tar den med tilbake til landsbyen, og broren hans ber ham ta den med til politiet …</p>
 
 </div>
 
@@ -102,7 +102,7 @@ Ansatte må prøve seg frem og finne hva som fungerer for den enkelte i de ulike
 
 **KI kan hjelpe med:** Forslag til bøker, sanger og leker som speiler ulike kulturer. Bakgrunn om høytider og tradisjoner.
 
-<p class="prompt">Foreslå fem bildebøker for barn på 3–5 år som handler om å feire jul i gamle dager.</p>
+<p class="prompt">Lag en oversikt over høytider som feires av familier med ulik kulturell og religiøs bakgrunn i Norge, for eksempel jul, eid, divali og kinesisk nyttår. For hver høytid: skriv kort hva den handler om, når den feires, og gi ett forslag til en enkel aktivitet for barn på 4–5 år.</p>
 
 <p class="merk">Merk: Må kontrolleres mot pålitelige kilder.</p>
 

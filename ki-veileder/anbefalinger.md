@@ -3,7 +3,7 @@ layout: veileder
 title: Anbefalinger for bruk
 kapittel: 3
 permalink: /ki-veileder/anbefalinger/
-oppdatert: 14.11.2026
+oppdatert: 26.11.2026
 description: "Seks prinsipper for bruk av KI i barnehagen, faglige vurderinger, barn og KI, opphavsrett og merking."
 ingress: "KI kan være et nyttig verktøy i barnehagen, men det er viktig å bruke verktøyet med omhu."
 seksjoner:
@@ -126,7 +126,7 @@ Vær også oppmerksom på at KI-verktøy kan gjengi beskyttede tekster nesten or
 
 ### Merking
 
-Foresatte, kollegaer og andre samarbeidspartnere skal kunne stole på alt barnehagen deler. Det bør derfor komme tydelig fram når innhold er laget med KI (KI-forordningen, 2021, artikkel 50).
+Foresatte, kollegaer og andre samarbeidspartnere skal kunne stole på alt barnehagen deler. Det bør derfor komme tydelig fram når innhold er laget med KI (KI-forordningen, 2024, art. 50).
 
 - Merk KI-genererte bilder og tekster.
 - Bruk aldri KI-genererte bilder som om de var ekte.

@@ -3,7 +3,7 @@ layout: veileder
 title: Sikkerhet og personvern
 kapittel: 2
 permalink: /ki-veileder/sikkerhet/
-oppdatert: 14.11.2026
+oppdatert: 26.11.2026
 description: "Taushetsplikt, anonymisering, bilder, kontoer og enheter, KI-svindel, avvik og åpenhet ved bruk av KI i barnehagen."
 ingress: "Barnehagen forvalter opplysninger om barn og familiene deres. Når du skriver noe inn i et KI-verktøy, forlater opplysningene barnehagen."
 seksjoner:
@@ -21,7 +21,7 @@ seksjoner:
     tittel: Hvis noe går galt
   - id: apenhet
     tittel: Åpenhet
-kilder: [datatilsynet-2024, barnehageloven, forvaltningsloven, datatilsynet-2018a, nsm-2023, personopplysningsloven, personvernforordningen]
+kilder: [personopplysningsloven, personvernforordningen, barnehageloven, forvaltningsloven, datatilsynet-2018, nsm-2023]
 forrige:
   tittel: Om veilederen
   url: /ki-veileder/om-veilederen/
@@ -30,13 +30,13 @@ neste:
   url: /ki-veileder/anbefalinger/
 ---
 
-Barna kan ikke selv vurdere hva som deles om dem, og personvernregelverket gir derfor barn et særlig vern (Datatilsynet, 2024). Foresatte deler opplysninger i tillit til at de bare brukes til barnets beste og ikke kommer på avveie.
+Hvordan slike opplysninger skal behandles er regulert i personvernforordningen (GDPR), som gjelder som norsk lov gjennom personopplysningsloven (Personopplysningsloven, 2018, § 1). Barna kan ikke selv vurdere hva som deles om dem, og personvernregelverket gir derfor barn et særlig vern (Personvernforordningen, 2016, fortalepunkt 38). Foresatte deler opplysninger i tillit til at de bare brukes til barnets beste og ikke kommer på avveie.
 
 Mye av den informasjonen barnehagen sitter med er taushetsbelagt. Noe er også ekstra sensitivt, som opplysninger om helse, familieforhold, språk og utvikling, og behov for spesialpedagogisk hjelp. Når man skriver noe i et KI-verktøy, forlater opplysningene barnehagen. De sendes til en ekstern leverandør, kan bli lagret der og være vanskelige å få slettet.
 
 ## Taushetsplikten gjelder også overfor KI {#taushetsplikt}
 
-Ansatte i barnehagen har taushetsplikt (Barnehageloven, 2005, § 44). Dermed vil det å lime taushetsbelagte opplysninger inn i et KI-verktøy være det samme som å dele dem med en ekstern leverandør. Det kan være et brudd på taushetsplikten, selv om ingen mennesker leser teksten. Taushetsplikten gjelder opplysninger om barn, foresatte og kollegaer, og den gjelder også etter at arbeidsforholdet er avsluttet (Forvaltningsloven, 1970, § 13).
+Ansatte i barnehagen har taushetsplikt (Barnehageloven, 2005, § 44). Dermed vil det å lime taushetsbelagte opplysninger inn i et KI-verktøy være det samme som å dele dem med en ekstern leverandør. Det kan være et brudd på taushetsplikten, selv om ingen mennesker leser teksten. Taushetsplikten gjelder opplysninger om barn, foresatte og kollegaer, og den gjelder også etter at arbeidsforholdet er avsluttet (Forvaltningsloven, 1967, § 13).
 
 Det har ingen betydning at KI-verktøyet kan oppleves som en privat samtale. En samtalerobot er ingen kollega med taushetsplikt, men en tjeneste levert av et selskap. Det samme gjelder funksjoner som tar opp, transkriberer eller oppsummerer møter og samtaler.
 
@@ -66,7 +66,7 @@ Kunne en forelder, en kollega eller en nabo ha skjønt hvem dette handler om? Er
 
 Bilder, video og lydopptak av mennesker er personopplysninger. Et ansikt eller en stemme kan kjennes igjen, og et bilde forteller ofte mer enn det var ment å vise.
 
-Barnehagen må ha skriftlig samtykke fra foresatte for å ta bilde av barnet og for å kunne bruke bildet etterpå (Datatilsynet, 2018a, s. 4). Samtykket gjelder bare det formålet det er gitt for. Har foresatte samtykket til at bilder brukes i barnehagens dokumentasjon eller deles i en lukket foreldregruppe, gjelder **ikke** samtykket til at bildene lastes opp i en KI-tjeneste. Det gjelder også når hensikten er uskyldig, som å forbedre et bilde, fjerne en bakgrunn eller lage en morsom variant.
+Barnehagen må ha skriftlig samtykke fra foresatte for å ta bilde av barnet og for å kunne bruke bildet etterpå (Datatilsynet, 2018, s. 4). Samtykket gjelder bare det formålet det er gitt for. Har foresatte samtykket til at bilder brukes i barnehagens dokumentasjon eller deles i en lukket foreldregruppe, gjelder **ikke** samtykket til at bildene lastes opp i en KI-tjeneste. Det gjelder også når hensikten er uskyldig, som å forbedre et bilde, fjerne en bakgrunn eller lage en morsom variant.
 
 KI kan også lage nye bilder, videoer og stemmer som ser ekte ut. Slike kan oppleves krenkende og kan misbrukes. Det bør derfor ikke lages KI-bilder som forestiller eller ligner virkelige barn, foresatte eller kollegaer. KI-genererte bilder av oppdiktede motiver, for eksempel en tegning av en rev til et oppslag, er noe annet og kan brukes når de merkes som KI-generert.
 
@@ -105,7 +105,7 @@ Det haster, du blir bedt om å holde noe hemmelig, henvendelsen kommer i en uvan
 
 Alle kan gjøre feil. Det kan skje at du limer inn en tekst med et navn i, laster opp feil fil eller oppdager i etterkant at et verktøy tok opp et møte. Det viktigste er da å varsle raskt. Det er ikke farlig å melde fra, men det kan bli alvorlig å la være. Jo tidligere feilen blir kjent, desto enklere er det å begrense skaden.
 
-Når personopplysninger kommer på avveie, er dette et brudd på personvernreglene, og skal meldes som avvik (Personopplysningsloven, 2018, artikkel 33). Barnehagens eier har plikt til å håndtere slike brudd, men kan bare gjøre det om den som oppdager feilen varsler om den. Styrer kan på vegne av eller sammen med eier vurdere saken og sørge for at avviket blir registrert. Eier må vurdere om bruddet skal meldes til Datatilsynet. Det skal i så fall skje **innen 72 timer** etter at bruddet ble oppdaget (Personvernforordningen, 2016, artikkel 33 og 34). Hvis bruddet innebærer høy risiko for den det gjelder, skal også de berørte, for eksempel foresatte, få beskjed.
+Når personopplysninger kommer på avveie, er dette et brudd på personvernreglene, og skal meldes som avvik (Personvernforordningen, 2016, art. 33). Barnehagens eier har plikt til å håndtere slike brudd, men kan bare gjøre det om den som oppdager feilen varsler om den. Styrer kan på vegne av eller sammen med eier vurdere saken og sørge for at avviket blir registrert. Eier må vurdere om bruddet skal meldes til Datatilsynet. Det skal i så fall skje **innen 72 timer** etter at bruddet ble oppdaget (Personvernforordningen, 2016, art. 33 og 34). Hvis bruddet innebærer høy risiko for den det gjelder, skal også de berørte, for eksempel foresatte, få beskjed.
 
 Etter en hendelse må barnehagen gå gjennom hva som skjedde og vurdere om rutiner, opplæring eller verktøy må endres. Målet er å lære av feilen, ikke å finne noen å legge skylden på.
 
@@ -121,7 +121,7 @@ En kultur der ansatte tør å melde fra, er den beste beskyttelsen barnehagen ha
 
 Foresatte gir barnehagen opplysninger om barna sine i tillit. De skal kunne stole på at opplysningene bare brukes til barnets beste, og at de ikke havner i KI-verktøy. Åpenhet om hvordan barnehagen bruker KI, er derfor en forutsetning for et godt foreldresamarbeid.
 
-Foresatte har også rett til å vite hvordan opplysninger om dem og barna behandles (Personopplysningsloven, 2018, artikkel 13). Personvernregelverket krever at barnehagen informerer om dette på en måte som er lett å forstå.
+Foresatte har også rett til å vite hvordan opplysninger om dem og barna behandles (Personvernforordningen, 2016, art. 13). Personvernregelverket krever at barnehagen informerer om dette på en måte som er lett å forstå.
 
 Barnehagen bør derfor fortelle foresatte:
 

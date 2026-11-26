@@ -9,7 +9,7 @@ The site also hosts an online version of my guide on safe use of AI in kindergar
 
 ## Pages
 - **Home** — Landing page
-- **News** — Latest updates and announcements
+- **Updates** (`news.html`) — Latest updates and announcements
 - **About me** — Background, experience, education, certifications and courses
 - **Labs** — Certificates, TryHackMe badges and completed rooms
 - **Projects** — Portfolio of projects

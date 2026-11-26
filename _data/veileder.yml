@@ -46,26 +46,23 @@ kapitler:
 # Referanseliste. Kapitlene viser til disse med id under «kilder:».
 referanser:
   - id: barnehageloven
-    tekst: "Barnehageloven, LOV-2005-06-17-64, Lov om barnehager (2005)."
+    tekst: "Barnehageloven, Lov om barnehager (2005)."
     url: "https://lovdata.no/lov/2005-06-17-64"
-  - id: datatilsynet-2018a
-    tekst: "Datatilsynet. (2018a). I beste mening: Om bilder av barn på nett. Datatilsynet."
+  - id: datatilsynet-2018
+    tekst: "Datatilsynet. (2018). I beste mening: Om bilder av barn på nett. Datatilsynet."
     url: "https://www.datatilsynet.no/link/139245931b39473297b94994462b5c3a.aspx/download"
-  - id: datatilsynet-2018b
-    tekst: "Datatilsynet. (2018b). Kunstig intelligens og personvern."
-    url: "https://www.datatilsynet.no/globalassets/global/dokumenter-pdfer-skjema-ol/rettigheter-og-plikter/rapporter/rapport-om-ki-og-personvern.pdf"
-  - id: datatilsynet-2024
-    tekst: "Datatilsynet. (2024, november 4). Digitale tjenester og forbrukeres personopplysninger. Datatilsynet."
-    url: "https://www.datatilsynet.no/personvern-pa-ulike-omrader/kundehandtering-handel-og-medlemskap/digitale-tjenester-og-forbrukeres-personopplysninger/"
+  - id: datatilsynet-2026
+    tekst: "Datatilsynet. (2026, oktober 29). Personvern og KI. Datatilsynet."
+    url: "https://www.datatilsynet.no/personvern-pa-ulike-omrader/kunstig-intelligens-og-personvern/personvern-og-generativ-ki-slik-beskytter-du-deg-selv-og-andre/"
   - id: dfd-2025
     tekst: "Digitaliserings- og forvaltningsdepartementet. (2025, juni 30). Høring – utkast til ny lov om kunstig intelligens – gjennomføring av EUs forordning om kunstig intelligens i norsk rett [Høring]. Regjeringen.no."
     url: "https://www.regjeringen.no/no/dokumenter/3112327/id3112327/"
   - id: forvaltningsloven
-    tekst: "Forvaltningsloven, LOV-1967-02-10 Lov om behandlingsmåten i forvaltningssaker (1970)."
+    tekst: "Forvaltningsloven, LOV-1967-02-10 Lov om behandlingsmåten i forvaltningssaker (1967)."
     url: "https://lovdata.no/dokument/NL/lov/1967-02-10/"
   - id: ki-forordningen
-    tekst: "KI-forordningen, Forordning om kunstig intelligens (2021)."
-    url: "https://www.regjeringen.no/no/sub/eos-notatbasen/notatene/2021/juni/forslag-til-forordning-om-kunstig-intelligens-ki-forordningen/id2884935/"
+    tekst: "KI-forordningen, Europaparlaments- og rådsforordning (EU) 2024/1689 om harmoniserte regler for kunstig intelligens (2024)."
+    url: "https://eur-lex.europa.eu/eli/reg/2024/1689/oj"
   - id: rammeplanen
     tekst: "Kunnskapsdepartementet. (2017). Rammeplan for barnehagen: Forskrift om rammeplan for barnehagens innhold og oppgaver. Udir."
     url: "https://www.udir.no/contentassets/7c4387bb50314f33b828789ed767329e/rammeplan-for-barnehagen---bokmal-pdf.pdf"
@@ -82,8 +79,11 @@ referanser:
     tekst: "Personvernforordningen, Lovdata (2016)."
     url: "https://lovdata.no/dokument/NL/lov/2018-06-15-38/KAPITTEL_1"
   - id: udir-2021
-    tekst: "Utdanningsdirektoratet. (2021, desember 9). Personvern i barnehage og skole. Utdanningsdirektoratet."
-    url: "https://www.udir.no/regelverk-og-tilsyn/personvern-for-barnehage-og-skole/personvern-i-barnehage-og-skole/#a165147"
+    tekst: "Utdanningsdirektoratet. (2021, desember 9). Personvern i barnehage og skole."
+    url: "https://www.udir.no/regelverk-og-tilsyn/personvern-for-barnehage-og-skole/personvern-i-barnehage-og-skole/"
+  - id: wold-2025
+    tekst: "Wold, S. (2025). Språkmodell. I Store norske leksikon."
+    url: "https://snl.no/spr%C3%A5kmodell"
   - id: andsverkloven
-    tekst: "Åndsverkloven, LOV-2018-06-15-40, Lov om opphavsrett til åndsverk mv. (2018)."
+    tekst: "Åndsverkloven, Lov om opphavsrett til åndsverk mv. (2018)."
     url: "https://lovdata.no/dokument/NL/lov/2018-06-15-40"

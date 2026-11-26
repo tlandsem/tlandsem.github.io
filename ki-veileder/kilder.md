@@ -2,7 +2,7 @@
 layout: veileder
 title: KI-erklæring og kilder
 permalink: /ki-veileder/kilder/
-oppdatert: 29.10.2026
+oppdatert: 26.11.2026
 description: "Hvordan kunstig intelligens er brukt i arbeidet med veilederen KI i barnehagen, og full referanseliste."
 ingress: "Veilederen følger sine egne anbefalinger om åpenhet. Her står hvordan KI er brukt i arbeidet, og alle kildene."
 referanseliste: true
@@ -18,15 +18,16 @@ forrige:
 
 ## KI-erklæring {#ki-erklaering}
 
-Denne veilederen er utarbeidet av Trine Landsem, barnehagelærer og HMS-koordinator, med støtte fra kunstig intelligens. Erklæringen beskriver hvordan KI er brukt, i tråd med veilederens egne anbefalinger om åpenhet.
-
 <div class="erklaering" markdown="1">
 
 <div class="erkl-del" markdown="1">
 
 ### 1. KI-verktøy som er brukt
 
-Claude, utviklet av Anthropic. Brukt til språklig bearbeiding, forslag til disposisjon og illustrasjoner.
+- **Claude**, utviklet av Anthropic. Brukt til forslag til disposisjon og innhold, utkast til enkelte avsnitt, språklig bearbeiding og illustrasjoner.
+- **ChatGPT**, utviklet av OpenAI. Brukt til bilder og illustrasjoner.
+
+Verktøyene ble brukt i perioden oktober–november 2026. KI er ikke brukt til faglige vurderinger, juridiske tolkninger eller valg av hvilke regler som gjelder. Dette er gjort av meg, med utgangspunkt i kildene i referanselista. Veilederen er ikke juridisk rådgivning. Regelverket om KI er under utvikling, og leseren bør sjekke gjeldende regler.
 
 </div>
 
@@ -37,7 +38,7 @@ Claude, utviklet av Anthropic. Brukt til språklig bearbeiding, forslag til disp
 <ul class="avkrysset">
 <li class="ja">Ideer og forslag til innhold</li>
 <li class="ja">Disposisjon og struktur</li>
-<li class="nei">Utkast til tekst</li>
+<li class="ja">Utkast til tekst</li>
 <li class="ja">Språkvask og klarspråk</li>
 <li class="nei">Oversettelse</li>
 <li class="nei">Oppsummering av fagstoff eller kilder</li>
@@ -55,7 +56,7 @@ Claude, utviklet av Anthropic. Brukt til språklig bearbeiding, forslag til disp
 <li class="ja">Fakta, lovhenvisninger og kilder er kontrollert</li>
 <li class="ja">Innholdet er vurdert for skjevheter og stereotypier</li>
 <li class="ja">KI-genererte bilder er merket</li>
-<li class="ja">Alle illustrasjoner og forsiden i veilederen er også generert av KI</li>
+<li class="ja">Forsiden, sjekklisten og alle illustrasjoner i veilederen er laget med KI (Claude og ChatGPT)</li>
 </ul>
 
 </div>
@@ -65,7 +66,7 @@ Claude, utviklet av Anthropic. Brukt til språklig bearbeiding, forslag til disp
 ### 4. Personvern
 
 <ul class="avkrysset">
-<li class="ja">Det er ikke lagt inn personopplysninger eller taushetsbelagt informasjon i KI-verktøyet</li>
+<li class="ja">Det er ikke lagt inn personopplysninger eller taushetsbelagt informasjon i KI-verktøyene</li>
 </ul>
 
 </div>
@@ -74,7 +75,7 @@ Claude, utviklet av Anthropic. Brukt til språklig bearbeiding, forslag til disp
 
 ### 5. Ansvar
 
-Jeg står ansvarlig for innholdet i dokumentet. Spørsmål eller merknader kan rettes til [kontaktskjemaet på nettsiden](/contact.html).
+Jeg står ansvarlig for innholdet i dokumentet. Spørsmål eller merknader kan rettes via [kontaktskjemaet på nettsiden](/contact.html).
 
 Trondheim, 16.10.2026<br>
 Trine Landsem
